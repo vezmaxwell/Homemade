@@ -1,3 +1,4 @@
+import recipes from '../db/data/recipes.js'
 import recipe from '../models/recipe.js'
 import Recipe from '../models/recipe.js'
 
@@ -69,7 +70,35 @@ export const deleteRecipe = async (req, res) => {
 }
 
 //* Post /recipe/:id/review -> add review to specific recipe -> user only
-
+export const addReview = async (req, res) => {
+  const { id } = req.params
+  try {
+    const recipe = await Recipe.findById(id)
+    if (!recipe) throw new Error()
+    const newReview = { ...req.body, owner: req.currentUser._id }
+    recipe.reviews.push(newReview)
+    await recipe.save()
+    return res.status(200).json(recipe)
+  } catch (error) {
+    console.log(error)
+    return res.status(404).json(error)
+  }
+}
 
 //* Delete /recipe/:id/review -> delete review, maybe only admin
-
+export const deleteReview = async (req, res) => {
+  const { id, reviewId } = req.params
+  try {
+    const recipe = await Recipe.findById(id)
+    if (!recipe) throw new Error()
+    const reviewToDelete = recipe.reviews.id(reviewId)
+    if (!reviewToDelete) throw new Error('Review not found')
+    if (!reviewToDelete.owner.equals(req.currentUser._id) && (!recipe.owner.equals(req.currentUser._id))) throw new Error('Unauthorised')
+    await reviewToDelete.remove()
+    await recipe.save()
+    return res.sendStatus(204).json(recipe)
+  } catch (error) {
+    console.log(error)
+    return res.status(404).json(error)
+  }
+}

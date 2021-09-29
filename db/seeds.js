@@ -1,11 +1,14 @@
 import mongoose from 'mongoose'
 import 'dotenv/config'
+import User from '../models/user.js'
 
 // Models
 import Recipe from '../models/recipe.js'
 
 // Data
 import recipeData from './data/recipes.js'
+import userData from './data/users.js'
+
 
 //* Seed database
 const seedDatabase = async () => {
@@ -21,6 +24,10 @@ const seedDatabase = async () => {
 
     await mongoose.connection.close()
     console.log('Bye')
+
+    //* Create users
+    const users = await User.create(userData)
+    console.log(`${users.length}`)
 
   } catch (error) {
     console.log('Something went wrong')
