@@ -1,5 +1,3 @@
-import recipes from '../db/data/recipes.js'
-import recipe from '../models/recipe.js'
 import Recipe from '../models/recipe.js'
 
 
@@ -13,8 +11,10 @@ export const getAllRecipes = async (_req, res) => {
 //* Post /recipe -> create new recipe
 export const createRecipe = async (req, res) => {
   try {
+    const recipeWithOwner = { ...req.body, owner: req.currentUser._id }
+    console.log(recipeWithOwner)
     console.log(req.body)
-    const recipeToAdd = await Recipe.create(req.body)
+    const recipeToAdd = await Recipe.create(recipeWithOwner)
     res.status(201).json(recipeToAdd)
   } catch (error) {
     console.log('Recipe failed to add')
@@ -29,7 +29,7 @@ export const getSingleRecipe = async (req, res) => {
   try {
     const { id } = req.params
     console.log(id)
-    const recipe = await Recipe.findById(id)
+    const recipe = await Recipe.findById(id).populate('owner').populate('reviews.owner')
     console.log(recipe)
     return res.status(200).json(recipe)
   } catch (error) {

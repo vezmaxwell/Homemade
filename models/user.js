@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 import bcrypt from 'bcrypt'
-import mongooseUniqueValidator from 'mongoose-unique-validator'
+import uniqueValidator from 'mongoose-unique-validator'
 
 //* User Schema
 const userSchema = new mongoose.Schema({
@@ -16,10 +16,27 @@ userSchema
     this._passwordConfirmation = passwordConfirmation
   })
 
+
+//* Virtual field of created recipes
+userSchema.virtual('createdRecipes', {
+  ref: 'Recipe',
+  localField: '_id',
+  foreignField: 'owner'
+})
+
+//* Remove password
+userSchema.set('toJSON', {
+  virtuals: true,
+  transform(_doc, json){
+    delete json.password
+    return json
+  }
+})
+
 //* Custom pre-validation
 userSchema
   .pre('validate', function(next){
-    if (this.isModified('passwprd') && this.password !== this._passwordConfirmation){
+    if (this.isModified('password') && this.password !== this._passwordConfirmation){
       this.invalidate('passwordConfirmation', 'Passwords don\'t match')
     }
     next()
@@ -40,7 +57,7 @@ userSchema.methods.validatePassword = function(password){
 }
 
 
-userSchema.plugin(mongooseUniqueValidator)
+userSchema.plugin(uniqueValidator)
 
 //* Export 
 export default mongoose.model('User', userSchema)

@@ -15,14 +15,13 @@ const startServer = async () => {
     app.use(express.json())
 
     // Router middleware
-    app.use(router)
+    app.use('/api', router)
 
     // Log requests
     app.use((req, _res, next) => {
       console.log(`🧁 Request recieved: ${req.method} - ${req.url}`)
       next()
     })
-
 
     // Catcher
     app.use((_req, res) => {

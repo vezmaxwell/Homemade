@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, input {
+  font-family: 'Kefa';
+  letter-spacing: 0.5px;
+}
+
+// * {
+//   font-size: 93px;
+//   font-family: "Kefa";
+//   color: rgb(0, 0, 0);
+//   line-height: 1.2;
+//   text-align: center;
+//   -moz-transform: matrix( 0.17058187151651,0,0,0.17058187151651,0,0);
+//   -webkit-transform: matrix( 0.17058187151651,0,0,0.17058187151651,0,0);
+//   -ms-transform: matrix( 0.17058187151651,0,0,0.17058187151651,0,0);
+//   position: absolute;
+//   left: 740.264px;
+//   top: 406.162px;
+//   z-index: 11;
+// }
+
+
+.homemade {
+  font-size: 20px;
+  font-family: "WTR Gothic Open Shaded";
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-left: 40%;
+}
+
+.container {
+  background-color: #ff5353;
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  float: right;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+li, .search-bar {
+  text-transform: uppercase;
+  padding-right: 10px;
+}
+
+// li {
+//   cursor: pointer;
+// }
+
+input {
+  height: 40px;
+  width: 180px;
+  border: none;
+  padding-left: 8px;
+}
+
+input {
+  cursor: text;
+}
