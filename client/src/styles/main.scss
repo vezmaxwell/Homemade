@@ -23,13 +23,31 @@ body, input {
 //   z-index: 11;
 // }
 
+.carousel {
+  display: flex;
+  flex-direction: row;
+ 
+}
+.carouselInfo {
+  background-color: brown;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.imageCarousel {
+  width: 500px;
+  height: 500px;
+  background-color: blueviolet;
 
+}
 .homemade {
-  font-size: 20px;
+  font-size: 40px;
   font-family: "WTR Gothic Open Shaded";
   color: rgb(0, 0, 0);
   text-align: center;
-  margin-left: 40%;
+  margin-left: 50%;
 }
 
 .container {
@@ -58,7 +76,10 @@ li, .search-bar {
   text-transform: uppercase;
   padding-right: 10px;
 }
-
+a {
+  color: inherit;
+  text-decoration: none;
+}
 // li {
 //   cursor: pointer;
 // }
@@ -72,4 +93,23 @@ input {
 
 input {
   cursor: text;
+}
+
+
+
+
+.loginPage {
+  background-color: rgb(106, 167, 236);
+  width: 100vw;
+  min-height: 100vh;
+}
+.signUpPage {
+  background-color: rgb(110, 236, 106);
+  width: 100vw;
+  min-height: 100vh;
+}
+.searchPage{
+  background-color: rgb(236, 106, 236);
+  width: 100vw;
+  min-height: 100vh;
 }

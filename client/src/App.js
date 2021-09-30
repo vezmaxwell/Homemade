@@ -1,43 +1,40 @@
-import axios from 'axios'
-import React, { useState, useEffect } from 'react'
 
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 //* Componenets
 import Navbar from './components/common/Navbar'
+import Home from './components/Home'
+import Login from './components/Login'
+import SignUp from './components/SignUp'
+import SearchRecipe from './components/SearchRecipe'
+
 
 function App() {
 
-  const [ recipes, setRecipes ] = useState([])
-
-  useEffect(() => {
-    const getData = async () => {
-      const { data } = await axios.get('/api/recipes')
-      setRecipes(data)
-    }
-    getData()
-  }, [])
-
   return (
-    <>
-    <Navbar />
 
-
-      {recipes.map(recipe => {
-        return <h3 key ={recipe._id}>{recipe.name}</h3>
-      })}
-    </>
+    <div className='site-wrapper'>
+      <BrowserRouter>
+        <Navbar />
+        <Switch>
+          <Route exact path='/'>
+            <Home />
+          </Route>
+          <Route exact path='/login'>
+            <Login />
+          </Route>
+          <Route exact path='/signUp'>
+            <SignUp />
+          </Route>
+          <Route exact path='/searchRecipe'>
+            <SearchRecipe />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    </div>
   )
-}
 
+}
 export default App
 
 
-
-// <BrowserRouter>
-// <Navbar />
-//   <Switch>
-//     <Root>
-//     <Home />
-//     </Root>
-//   </Switch>
-// </BrowserRouter>

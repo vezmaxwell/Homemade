@@ -22,12 +22,14 @@ const seedDatabase = async () => {
     const recipes = await Recipe.create(recipeData)
     console.log(`Database seeded with ${recipes.length} recipes`)
 
-    await mongoose.connection.close()
-    console.log('Bye')
+
 
     //* Create users
     const users = await User.create(userData)
-    console.log(`${users.length}`)
+    console.log(`Database seeded with ${users.length} users`)
+
+    await mongoose.connection.close()
+    console.log('Bye')
 
   } catch (error) {
     console.log('Something went wrong')
