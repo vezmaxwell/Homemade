@@ -20,20 +20,20 @@ const recipeSchema = new mongoose.Schema({
   cuisine: { type: String },
   method: [{ type: String, required: true }],
   difficulty: { type: String },
-  owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
+  owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: false },
   reviews: [reviewSchema]
 })
 
 recipeSchema.virtual('averageRating')
-  .get(function(){
+  .get(function () {
     if (!this.reviews.length) return 'Not yet rated'
     const sum = this.reviews.reduce((acc, review) => {
       return acc + review.rating
     }, 0)
-    return ( sum / this.reviews.length ) .toFixed(2)
-  }) 
+    return (sum / this.reviews.length).toFixed(2)
+  })
 
-recipeSchema.set('toJSON', { virtual: true } )
+recipeSchema.set('toJSON', { virtual: true })
 
 
 export default mongoose.model('Recipe', recipeSchema)

@@ -30,7 +30,6 @@ const Home = () => {
               <div className='carousel'>
                 <div className="carouselInfo">
                   <h2 key={recipe._id}>{recipe.name}</h2>
-                  <hr />
                   <h3 >{recipe.time}</h3>
                 </div>
                 <div className="imageCarousel">

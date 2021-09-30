@@ -51,7 +51,7 @@ export default [
       '1 tsp ketchup or sugar',
       '6 medium tortillas',
       '50g mature cheddar , grated',
-      'green salad , to serve'], 
+      'green salad , to serve'],
     time: '55ms',
     image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chickenbean-enchiladas-1044331.jpg?quality=90&webp=true&resize=440,400',
     cousine: 'Mexican',
@@ -60,7 +60,7 @@ export default [
       'Stir in the beans, coriander and 150ml of the passata, then take the pan off the heat. Mix the rest of the passata with the remaining crushed garlic and the ketchup.',
       'Divide the mixture between the tortillas, then fold the sides in and roll them up. Pour half the passata sauce into a 22cm square baking dish, then place the enchiladas on top, side by side. Dot over the remaining sauce and sprinkle over the grated cheese, then bake for 25-30 mins until golden brown.'],
     difficulty: 'medium'
-  }, 
+  },
   {
     name: 'Vegetarian lasagne',
     vegan: 'false',

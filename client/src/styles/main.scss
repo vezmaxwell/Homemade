@@ -50,12 +50,13 @@ body, input {
   margin-left: 50%;
 }
 
-.container {
+.navBackground {
   background-color: #ff5353;
   height: 7vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100vw;
 }
 
 .links {
@@ -80,9 +81,14 @@ a {
   color: inherit;
   text-decoration: none;
 }
-// li {
-//   cursor: pointer;
-// }
+.welcomeIMG {
+  height: 500px;
+ 
+}
+.createIMG {
+  height: 200px;
+  margin-left: 10px;
+}
 
 input {
   height: 40px;
@@ -108,11 +114,7 @@ input {
   width: 100vw;
   min-height: 100vh;
 }
-.searchPage{
-  background-color: rgb(236, 106, 236);
-  width: 100vw;
-  min-height: 100vh;
-}
+
 .recipeCard{
   border: 1px solid black;
   width: 100px;

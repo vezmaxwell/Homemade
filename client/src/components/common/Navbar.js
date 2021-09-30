@@ -5,15 +5,16 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div className="container">
+      <div className="navBackground">
         <Link className="navLink" to='/'>
 
           <h1 className="homemade">Homemade</h1>
 
+
         </Link>
         <div className="links">
           <ul>
-            {/* these will be links */}
+
             <li><Link className="navLink" to='/Login'>Login</Link></li>
             <li><Link className="navLink" to='/SignUp'>SignUp</Link></li>
             <li><Link className="navLink" to='/SearchRecipe'>All Recipes</Link></li>
