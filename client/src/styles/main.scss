@@ -1,12 +1,11 @@
-
 * {
   margin: 0;
   padding: 0;
 }
 
-
-body, input {
-  font-family: 'Kefa';
+body,
+input {
+  font-family: "Kefa";
   letter-spacing: 0.5px;
 }
 
@@ -28,7 +27,6 @@ body, input {
 .carousel {
   display: flex;
   flex-direction: row;
- 
 }
 .carouselInfo {
   background-color: brown;
@@ -42,14 +40,12 @@ body, input {
   width: 500px;
   height: 500px;
   background-color: blueviolet;
-
 }
 .homemade {
   font-size: 40px;
   font-family: "WTR Gothic Open Shaded";
   color: rgb(0, 0, 0);
   text-align: center;
-  margin-left: 50%;
 }
 
 .container {
@@ -74,7 +70,8 @@ ul {
   list-style-type: none;
 }
 
-li, .search-bar {
+li,
+.search-bar {
   text-transform: uppercase;
   padding-right: 10px;
 }
@@ -82,11 +79,13 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
 // li {
 //   cursor: pointer;
 // }
 
-input, button {
+input,
+button {
   height: 40px;
   width: 180px;
   border: none;
@@ -96,7 +95,6 @@ input, button {
 input {
   cursor: text;
 }
-
 
 //* Form Container
 .form-header {
@@ -115,7 +113,8 @@ input {
   justify-content: space-evenly;
 }
 
-.loginPage {
+.loginPage,
+.signUpPage {
   background-color: white;
   width: 100vw;
   min-height: 85vh;
@@ -125,7 +124,8 @@ input {
   flex-direction: column;
 }
 
-.formfield > input, button {
+.formfield > input,
+button {
   width: calc(var(--width) * 0.8);
   margin-top: 2vh;
 }
@@ -135,11 +135,11 @@ input {
   margin-bottom: 6vh;
   background-color: #f69679;
   font-size: 4vh;
-  font-family: 'Kefa';
+  font-family: "Kefa";
 }
 
 .formfield {
-  margin: 50px 0px 50px 0px;
+  margin: 30px 0px 30px 0px;
 }
 
 h2 {
@@ -155,20 +155,35 @@ p {
   text-transform: uppercase;
 }
 
-
-.signUpPage {
-  background-color: rgb(110, 236, 106);
-  width: 100vw;
-  min-height: 100vh;
+.sign-up-form-container {
+  height: 65vh;
 }
-.searchPage{
+
+.sign-up-form-header {
+  margin-top: 3vh;
+}
+
+// .signUpPage {
+//   background-color: rgb(110, 236, 106);
+//   width: 100vw;
+//   min-height: 100vh;
+// }
+
+.searchPage {
   background-color: rgb(236, 106, 236);
   width: 100vw;
   min-height: 100vh;
 }
-.recipeCard{
+.recipeCard {
   border: 1px solid black;
   width: 100px;
+}
 
+.logo-container {
+  height: 80px;
+  width: 80px;
+}
 
+.logo {
+  width: 100%;
 }

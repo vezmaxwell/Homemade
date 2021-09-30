@@ -13,6 +13,7 @@ const Login = () => {
         <h3>Don't have an account? 
           <a href="/">Get one here.</a> 
         </h3> 
+        
         </div>
 
         <div className="form-container">
@@ -23,7 +24,6 @@ const Login = () => {
             <input type="text" placeholder="Your email goes here"/>
           </div>
         
-
           <div className="formfield">
             <p>Password</p>
             <input type="text" placeholder="Your email goes here"/>
@@ -31,9 +31,7 @@ const Login = () => {
 
           <button className="form-button">LOGIN</button>
 
-        </form>
-        
-        
+        </form>    
         </div>
 
       </div>
