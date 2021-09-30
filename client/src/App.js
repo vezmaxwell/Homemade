@@ -3,11 +3,12 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 //* Componenets
 import Navbar from './components/common/Navbar'
-import Home from './components/Home'
-import Login from './components/Login'
-import SignUp from './components/SignUp'
-import SearchRecipe from './components/SearchRecipe'
-import SingleRecipe from './components/SingleRecipe'
+import Home from './components/common/Home'
+
+import Login from './components/auth/Login'
+import SignUp from './components/auth/SignUp'
+import SearchRecipe from './components/recipes/SearchRecipe'
+import SingleRecipe from './components/recipes/SingleRecipe'
 
 
 function App() {
