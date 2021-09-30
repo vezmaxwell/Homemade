@@ -1,7 +1,9 @@
+
 * {
   margin: 0;
   padding: 0;
 }
+
 
 body, input {
   font-family: 'Kefa';
@@ -84,7 +86,7 @@ a {
 //   cursor: pointer;
 // }
 
-input {
+input, button {
   height: 40px;
   width: 180px;
   border: none;
@@ -96,13 +98,64 @@ input {
 }
 
 
+//* Form Container
+.form-header {
+  text-align: center;
+  margin-bottom: 5vh;
+}
 
+.form-container {
+  background-color: #ff5353;
+  --width: 60vh;
+  width: 60vh;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
 
 .loginPage {
-  background-color: rgb(106, 167, 236);
+  background-color: white;
   width: 100vw;
-  min-height: 100vh;
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
+.formfield > input, button {
+  width: calc(var(--width) * 0.8);
+  margin-top: 2vh;
+}
+
+.form-button {
+  height: 8vh;
+  margin-bottom: 6vh;
+  background-color: #f69679;
+  font-size: 4vh;
+  font-family: 'Kefa';
+}
+
+.formfield {
+  margin: 50px 0px 50px 0px;
+}
+
+h2 {
+  font-size: 4vh;
+  margin-bottom: 2vh;
+}
+
+h3 {
+  font-size: 1.5vh;
+}
+
+p {
+  text-transform: uppercase;
+}
+
+
 .signUpPage {
   background-color: rgb(110, 236, 106);
   width: 100vw;
@@ -116,4 +169,6 @@ input {
 .recipeCard{
   border: 1px solid black;
   width: 100px;
+
+
 }
