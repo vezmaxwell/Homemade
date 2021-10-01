@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, input {
+  font-family: 'Kefa';
+  letter-spacing: 0.5px;
+}
+
+.carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.carouselInfo {
+  background-color: brown;
+  width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.imageCarousel {
+  width: 500px;
+  height: 500px;
+  background-color: blueviolet;
+}
+
+.homemade {
+  font-size: 40px;
+  font-family: "WTR Gothic Open Shaded";
+  color: black;
+  text-align: center;
+  margin-left: 50%;
+}
+
+.navBackground {
+  background-color: #ff5353;
+  height: 7vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: right;
+  height: 50px;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+li, .search-bar {
+  text-transform: uppercase;
+  padding-right: 10px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input {
+  height: 40px;
+  width: 180px;
+  border: none;
+  padding-left: 8px;
+}
+
+input {
+  cursor: text;
+}
+
+.loginPage {
+  background-color: #6aa7ec;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.signUpPage {
+  background-color: #6eec6a;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.searchPage {
+  background-color: #ec6aec;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.recipeCard {
+  border: 1px solid black;
+  width: 100px;
+}
+/*# sourceMappingURL=main.css.map */

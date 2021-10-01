@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 const Home = () => {
@@ -23,25 +23,32 @@ const Home = () => {
   }
   return (
     <>
-      <Carousel autoPlay infiniteLoop>
-        {recipes.slice(0, 3).map(recipe => {
-          return (
-            <>
-              <div className='carousel'>
-                <div className="carouselInfo">
-                  <h2 key={recipe._id}>{recipe.name}</h2>
-                  <hr />
-                  <h3 >{recipe.time}</h3>
-                </div>
-                <div className="imageCarousel">
-                  <img className="countryImg" src={recipe.image} alt={recipe.name} />
-                </div>
-              </div>
-            </>
-          )
-        })
-        }
-      </Carousel>
+      <div className="homePage">
+        <div className="container">
+          <h2 className="monthRecipes">Recipes of the month:</h2>
+          <Carousel showIndicators={false} showStatus={false} autoPlay infiniteLoop>
+            {recipes.slice(0, 3).map(recipe => {
+              return (
+                <>
+                  <div className='carouselItem'>
+                    <div className="carouselImage">
+                      <img src={recipe.image} alt={recipe.name} />
+                    </div>
+                    <div className="carouselInfo">
+                      <h2 key={recipe._id}>{recipe.name}</h2>
+                      <h3 >Recipe time: {recipe.time}mins</h3>
+
+                      <Link className="viewRecipe" to={`SearchRecipe/${recipe._id}`}>See full recipe</Link>
+                    </div>
+
+                  </div>
+                </>
+              )
+            })
+            }
+          </Carousel>
+        </div>
+      </div>
     </>
 
 

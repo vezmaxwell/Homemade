@@ -5,12 +5,16 @@ import logo from '../../images/fork.png'
 const Navbar = () => {
 
   return (
-    <div className="navbar">
-      <div className="container">
 
-        <div className="logo-container">
-          <img src= { logo } alt="" className="logo"/>
-        </div>
+    <div className="navBar">
+      <div className="container">
+        <Link className="navLink" to='/'>
+
+
+          <div className="logo-simble">
+            <img src={logo} alt="" className="logo" />
+          </div>
+        </Link>
 
         <Link className="navLink" to='/'>
           <h1 className="homemade">Homemade</h1>
@@ -18,7 +22,7 @@ const Navbar = () => {
 
         <div className="links">
           <ul>
-            {/* these will be links */}
+
             <li><Link className="navLink" to='/Login'>Login</Link></li>
             <li><Link className="navLink" to='/SignUp'>SignUp</Link></li>
             <li><Link className="navLink" to='/SearchRecipe'>All Recipes</Link></li>
@@ -28,10 +32,9 @@ const Navbar = () => {
           </div>
 
         </div>
-
       </div>
-
     </div>
+
   )
 
 }

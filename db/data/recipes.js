@@ -21,7 +21,7 @@ export default [
       'juice of ½ lime',
       '1 avocado'
     ],
-    time: '20ms',
+    time: 20,
     image: 'https://thehappypear.ie/wp-content/uploads/2020/08/FullSizeRender-53-scaled.jpg',
     cousine: 'Indian',
     method: ['½ red onion',
@@ -51,8 +51,8 @@ export default [
       '1 tsp ketchup or sugar',
       '6 medium tortillas',
       '50g mature cheddar , grated',
-      'green salad , to serve'], 
-    time: '55ms',
+      'green salad , to serve'],
+    time: 55,
     image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chickenbean-enchiladas-1044331.jpg?quality=90&webp=true&resize=440,400',
     cousine: 'Mexican',
     method: ['½ red onion',
@@ -60,7 +60,7 @@ export default [
       'Stir in the beans, coriander and 150ml of the passata, then take the pan off the heat. Mix the rest of the passata with the remaining crushed garlic and the ketchup.',
       'Divide the mixture between the tortillas, then fold the sides in and roll them up. Pour half the passata sauce into a 22cm square baking dish, then place the enchiladas on top, side by side. Dot over the remaining sauce and sprinkle over the grated cheese, then bake for 25-30 mins until golden brown.'],
     difficulty: 'medium'
-  }, 
+  },
   {
     name: 'Vegetarian lasagne',
     vegan: 'false',
@@ -74,7 +74,7 @@ export default [
       'fresh pesto 4 tbsp',
       'fresh lasagne 250g, about 8 sheets',
       'parmesan (or veggie alternative) 30g, finely grated'],
-    time: '50ms',
+    time: 50,
     image: 'https://images.immediate.co.uk/production/volatile/sites/2/2017/10/OLI1117-CookEday-KaleLasagne_014954-21efe7d.jpg?webp=true&quality=45&crop=15px%2C1882px%2C5462px%2C2350px&resize=1880%2C799',
     cousine: '',
     method: ['½ red onion',
@@ -102,7 +102,7 @@ export default [
       '70g spaghetti',
       'Salt and pepper to taste'
     ],
-    time: '20ms',
+    time: 20,
     image: 'https://144f2a3a2f948f23fc61-ca525f0a2beaec3e91ca498facd51f15.ssl.cf3.rackcdn.com/uploads/food_portal_data/recipes/recipe/hero_article_image/4582/letterbox_prawn_still.jpg',
     cuisine: 'Italian',
     method: ['In a bowl combine the teaspoons of chopped chervil and dill, the lemon juice and add a dash of olive oil, add the prawns to this mix to marinade for about 20 minutes',
@@ -124,7 +124,7 @@ export default [
       '150ml apple and mango juice, chilled',
       '6 ice cubes'
     ],
-    time: '10ms',
+    time: 10,
     image: 'https://144f2a3a2f948f23fc61-ca525f0a2beaec3e91ca498facd51f15.ssl.cf3.rackcdn.com/uploads/food_portal_data/recipes/recipe/hero_article_image/4090/bcac0b19cd80cea9786f/letterbox_FruitSalad5965.jpg',
     cuisine: 'None',
     method: ['Peel, stone and roughly chop the mango, and put the flesh into a blender. ',
@@ -153,7 +153,7 @@ export default [
       '800g potatoes, peeled & quartered - (King Edward, Maris Piper work well)',
       '50ml skimmed milk'
     ],
-    time: '10ms',
+    time: 10,
     image: 'https://144f2a3a2f948f23fc61-ca525f0a2beaec3e91ca498facd51f15.ssl.cf3.rackcdn.com/uploads/food_portal_data/recipes/recipe/hero_article_image/4090/bcac0b19cd80cea9786f/letterbox_FruitSalad5965.jpg',
     cuisine: 'None',
     method: ['Into a heated, large pan, add the oil or Frylight and add the lamb, and fry for approx 8-10 mins, until browned, stirring occasionally to break any lumps',
