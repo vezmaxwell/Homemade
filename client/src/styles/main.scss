@@ -1,13 +1,61 @@
+@import './singleRecipe';
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body, input {
-  font-family: 'Kefa';
+  font-family: "Kefa";
   letter-spacing: 0.5px;
 }
-
+.monthRecipes {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: #ff5353;
+  align-items: center;
+  height: 50px;
+}
+.homePage {
+  margin-top: 50px;
+}
+.viewRecipe {
+ background-color: #ff5353;
+ padding: 10px 20px;
+ margin: 20px;
+font-size: 20px;
+border-radius: 5px;
+}
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carouselImage {
+  
+  img{
+    object-fit: cover;
+    height: 600px;
+    width: 500px!important;
+  }
+}
+.recipeSearch {
+  background-color: rgb(247, 247, 247);
+  border-radius: 5px;
+  font-size: 15px;
+}
+.searchBackground {
+  background-color: #ff5353;
+  margin: 20px;
+  height: 50px;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  
+}
 // * {
 //   font-size: 93px;
 //   font-family: "Kefa";
@@ -22,41 +70,51 @@ body, input {
 //   top: 406.162px;
 //   z-index: 11;
 // }
+.carousel.carousel-slider .control-arrow {
+  top: 0;
+ 
+  font-size: 26px;
+  bottom: 0;
+  margin-top: 0;
+  padding: 5px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+}
 
-.carousel {
+.carouselItem {
   display: flex;
   flex-direction: row;
+  flex: 1;
  
 }
 .carouselInfo {
-  background-color: brown;
-  width: 800px;
+  padding: 0 50px;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+   h2 {
+     font-size: 50px;
+   }
 }
-.imageCarousel {
-  width: 500px;
-  height: 500px;
-  background-color: blueviolet;
 
-}
 .homemade {
   font-size: 40px;
   font-family: "WTR Gothic Open Shaded";
   color: rgb(0, 0, 0);
   text-align: center;
-  margin-left: 50%;
 }
 
-.navBackground {
+.navBar {
   background-color: #ff5353;
-  height: 7vh;
-  display: flex;
+  height: 78px;
+  .container {
+    display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  }
 }
 
 .links {
@@ -90,7 +148,7 @@ a {
   margin-left: 10px;
 }
 
-input {
+input, button {
   height: 40px;
   width: 180px;
   border: none;
@@ -102,20 +160,106 @@ input {
 }
 
 
-
-
-.loginPage {
-  background-color: rgb(106, 167, 236);
-  width: 100vw;
-  min-height: 100vh;
-}
-.signUpPage {
-  background-color: rgb(110, 236, 106);
-  width: 100vw;
-  min-height: 100vh;
+.form-header {
+  text-align: center;
+  margin-bottom: 5vh;
 }
 
-.recipeCard{
-  border: 1px solid black;
+.form-container {
+  background-color: #ff5353;
+  --width: 60vh;
+  width: 60vh;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+.signUpPage, .loginPage {
+  background-color: white;
+  width: 100vw;
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.formfield > input, button {
+  width: calc(var(--width) * 0.8);
+  margin-top: 2vh;
+}
+
+.form-button {
+  height: 8vh;
+  margin-bottom: 6vh;
+  background-color: #f69679;
+  font-size: 4vh;
+  font-family: "Kefa";
+}
+
+
+.formfield {
+  margin: 30px 0px 30px 0px;
+}
+
+h2 {
+  font-size: 4vh;
+  margin-bottom: 2vh;
+}
+
+h3 {
+  font-size: 1.5vh;
+}
+
+p {
+  text-transform: uppercase;
+}
+
+.sign-up-form-container {
+  height: 65vh;
+}
+
+.sign-up-form-header {
+  margin-top: 3vh;
+}
+.serachedCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+// .signUpPage {
+//   background-color: rgb(110, 236, 106);
+//   width: 100vw;
+//   min-height: 100vh;
+// }
+
+.searchIMG {
+  height: 500px;
+  width: 750px;
+  margin-top: 65px;
+}
+.recipeCard {
+  background-color:  #f69679;
   width: 100px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 750px;
+  background-size: cover;
+  
 }
+
+.logo-simble {
+  height: 80px;
+  width: 80px;
+}
+
+.logo {
+  width: 100%;
+}
+

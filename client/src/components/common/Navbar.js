@@ -1,17 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import logo from '../../images/fork.png'
 
 const Navbar = () => {
 
   return (
-    <div className="navbar">
-      <div className="navBackground">
+
+    <div className="navBar">
+      <div className="container">
         <Link className="navLink" to='/'>
 
-          <h1 className="homemade">Homemade</h1>
 
-
+          <div className="logo-simble">
+            <img src={logo} alt="" className="logo" />
+          </div>
         </Link>
+
+        <Link className="navLink" to='/'>
+          <h1 className="homemade">Homemade</h1>
+        </Link>
+
         <div className="links">
           <ul>
 
@@ -24,10 +32,9 @@ const Navbar = () => {
           </div>
 
         </div>
-
       </div>
-
     </div>
+
   )
 
 }
