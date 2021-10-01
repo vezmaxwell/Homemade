@@ -72,7 +72,7 @@ const RecipeForm = ({ handleSubmit, handleChange, errors, formData, title, btnTe
 
           <div className="formfield">
           <ImageUpload 
-              value={formData.profileImage}
+              value={formData.image}
               name="image"
               handleImageURL={handleImageURL}
           />

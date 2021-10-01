@@ -9,6 +9,7 @@ import Login from './components/auth/Login'
 import SignUp from './components/auth/SignUp'
 import SearchRecipe from './components/recipes/SearchRecipe'
 import SingleRecipe from './components/recipes/SingleRecipe'
+import RecipeNew from './components/recipes/RecipeNew'
 
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route exact path='/signUp'>
             <SignUp />
+          </Route>
+          <Route exact path='/addRecipe'>
+            <RecipeNew />
           </Route>
           <Route exact path='/searchRecipe'>
             <SearchRecipe />

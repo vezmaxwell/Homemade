@@ -24,7 +24,7 @@ const RecipeNew = () => {
     name: '',
     summary: '',
     ingredients: [],
-    time: 0,
+    time: '',
     image: '',
     cuisine: '',
     method: [],

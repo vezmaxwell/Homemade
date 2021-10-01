@@ -4,17 +4,15 @@ import axios from 'axios'
 
 const ImageUpload = ({ value, name, handleImageURL }) => {
 
-  const url = process.env.REACT_APP_CLOUDINARY_URL
-  const preset = process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET
 
   const handleChange = async (e) => {
     const formData = new FormData()
-    formData.append('image', e.target.files[0])
-    formData.append('upload_preset', preset)
-    const { data } = await axios.post(url, data)
-    handleImageURL(data.url)
+    formData.append('file', e.target.files[0])
+    formData.append('upload_preset', process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET)
+    const { data } = await axios.post(process.env.REACT_APP_CLOUDINARY_URL, formData)
+    handleImageURL(data.url) 
   }
-
+  
   return (
     <>
         <p htmlFor={name}>Upload Image</p>
