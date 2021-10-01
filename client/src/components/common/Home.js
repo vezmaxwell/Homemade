@@ -25,7 +25,7 @@ const Home = () => {
     <>
       <div className="homePage">
         <div className="container">
-          <h2 className="monthRecipes">Recipes of the month:</h2>
+          <p className="monthRecipes">Recipes of the month:</p>
           <Carousel showIndicators={false} showStatus={false} autoPlay infiniteLoop>
             {recipes.slice(0, 3).map(recipe => {
               return (

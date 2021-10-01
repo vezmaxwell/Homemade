@@ -3,7 +3,7 @@ import Recipe from '../models/recipe.js'
 
 //* Get /recipes
 export const getAllRecipes = async (_req, res) => {
-  const recipes = await Recipe.find()
+  const recipes = await Recipe.find().populate('owner')
   console.log('Get Recipes ->', recipes)
   return res.status(200).json(recipes)
 }
@@ -56,7 +56,7 @@ export const editRecipe = async (req, res) => {
 
 //* Delete /recipe/:id 
 export const deleteRecipe = async (req, res) => {
-  const { id } = req.params 
+  const { id } = req.params
   try {
     const recipeToDelete = await Recipe.findById(id)
     if (!recipeToDelete) throw new Error('Recipe not found')

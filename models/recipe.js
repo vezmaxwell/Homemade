@@ -10,7 +10,7 @@ const reviewSchema = new mongoose.Schema({
 })
 
 const recipeSchema = new mongoose.Schema({
-  name: { type: String, required: true, unique: true },
+  name: { type: String, required: true, unique: false },
   summary: { type: String },
   vegan: { type: Boolean, required: true },
   vegetarian: { type: Boolean, required: true },
@@ -33,7 +33,7 @@ recipeSchema.virtual('averageRating')
     return (sum / this.reviews.length).toFixed(2)
   })
 
-recipeSchema.set('toJSON', { virtual: true })
+recipeSchema.set('toJSON', { virtuals: true })
 
 
 export default mongoose.model('Recipe', recipeSchema)

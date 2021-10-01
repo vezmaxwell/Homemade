@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body, input {
@@ -16,7 +17,9 @@ body, input {
   margin-bottom: 20px;
   background-color: #ff5353;
   align-items: center;
-  height: 50px;
+  height: 80px;
+  font-size: 35px;
+  
 }
 .homePage {
   margin-top: 50px;
@@ -28,8 +31,19 @@ margin: 20px;
 font-size: 20px;
 border-radius: 5px;
 }
+.searchPage {
+  margin-bottom: 90px;
+}
+.viewRecipeSearch {
+  background-color: #ff5353;
+ padding: 8px 10px;
+ align-items: flex-end;
+justify-content: center;
+font-size: 20px;
+border-radius: 5px;
+}
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -48,13 +62,13 @@ border-radius: 5px;
 }
 .searchBackground {
   background-color: #ff5353;
-  margin: 20px;
-  height: 50px;
-  padding: 8px 20px;
+  margin: 30px 10px;
+  height: 90px;
+  padding: 5px 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
+  font-size: 30px;
   
 }
 // * {
@@ -96,6 +110,7 @@ border-radius: 5px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: rgb(252, 252, 252);
    h2 {
      font-size: 50px;
    }
@@ -126,6 +141,7 @@ border-radius: 5px;
   display: flex;
   align-items: center;
   cursor: pointer;
+
 }
 
 ul {
@@ -141,6 +157,7 @@ li, .search-bar {
 a {
   color: inherit;
   text-decoration: none;
+  margin-left: 10px;
 }
 .welcomeIMG {
   height: 500px;
@@ -218,7 +235,20 @@ h2 {
 h3 {
   font-size: 1.5vh;
 }
-
+h4 {
+  font-size: 28px;
+  text-align: center;
+  margin: 5px 10px;
+}
+.tittle {
+  height: 65px;
+}
+.avr {
+  font-size: 45px;
+  color:#ff5353;
+  margin: 10px;
+  height: 65px;
+}
 p {
   text-transform: uppercase;
 }
@@ -230,33 +260,43 @@ p {
 .sign-up-form-header {
   margin-top: 3vh;
 }
-.serachedCards {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
+
 // .signUpPage {
 //   background-color: rgb(110, 236, 106);
 //   width: 100vw;
 //   min-height: 100vh;
 // }
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+ 
+}
 .searchIMG {
-  height: 500px;
-  width: 750px;
-  margin-top: 65px;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+ 
 }
 .recipeCard {
-  background-color:  #f69679;
-  width: 100px;
-  margin: 20px;
+  background-color: #fafafa;
   display: flex;
   flex-direction: column;
-  height: 600px;
-  width: 750px;
+  height: 400px;
+  width: calc(25% - 20px);
   background-size: cover;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  margin: 10px 10px;
   
+}
+.cardDetails {
+
+display:flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
 }
 
 .logo-container {
