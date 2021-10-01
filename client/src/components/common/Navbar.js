@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link, useHistory, useLocation } from 'react-router-dom'
 import logo from '../../images/fork.png'
+import homemade from '../../images/homemade.png'
 import { userIsAuthenticated } from '../helpers/auth'
 
 const Navbar = () => {
@@ -32,16 +33,18 @@ const Navbar = () => {
 
 {/* Logo Img */}
 
-          <div className="logo-simble">
+          <div className="logo-container">
             <img src={logo} alt="" className="logo" />
           </div>
         </Link>
 
 {/* Logo Name */}
 
-        <Link className="navLink" to='/'>
-          <h1 className="homemade">Homemade</h1>
-        </Link>
+        <div className="homemade-container">
+          <Link className="navLink" to='/'>
+            <img src={homemade} alt="" className="homemade-logo" />
+          </Link>
+        </div>
 
 {/* Navigation Links */}
 

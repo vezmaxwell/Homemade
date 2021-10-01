@@ -112,6 +112,7 @@ border-radius: 5px;
   background-color: #ff5353;
   height: 78px;
   .container {
+    height: 100%;
     display: flex;
   justify-content: space-between;
   align-items: center;
@@ -258,12 +259,17 @@ p {
   
 }
 
-.logo-simble {
+.logo-container {
   height: 80px;
   width: 80px;
 }
 
-.logo {
+.homemade-container {
+  height: 80px;
+}
+
+.logo, .homemade-logo {
+  height: 100%;
   width: 100%;
 }
 
