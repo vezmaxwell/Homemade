@@ -9,6 +9,7 @@ body, input {
   font-family: "Kefa";
   letter-spacing: 0.5px;
 }
+
 .monthRecipes {
   display: flex;
   justify-content: center;
@@ -21,9 +22,9 @@ body, input {
   margin-top: 50px;
 }
 .viewRecipe {
- background-color: #ff5353;
- padding: 10px 20px;
- margin: 20px;
+background-color: #ff5353;
+padding: 10px 20px;
+margin: 20px;
 font-size: 20px;
 border-radius: 5px;
 }
@@ -135,13 +136,13 @@ li, .search-bar {
   text-transform: uppercase;
   padding-right: 10px;
 }
+
 a {
   color: inherit;
   text-decoration: none;
 }
 .welcomeIMG {
   height: 500px;
- 
 }
 .createIMG {
   height: 200px;
@@ -158,7 +159,6 @@ input, button {
 input {
   cursor: text;
 }
-
 
 .form-header {
   text-align: center;
@@ -195,11 +195,15 @@ input {
 .form-button {
   height: 8vh;
   margin-bottom: 6vh;
-  background-color: #f69679;
+  background-color: rgb(246,150,121);
   font-size: 4vh;
   font-family: "Kefa";
 }
 
+button:hover {
+  background-color: rgba(250, 154, 102, 0.735);
+  cursor: pointer;
+}
 
 .formfield {
   margin: 30px 0px 30px 0px;
