@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Link } from 'react-router-dom'
+import Stars from '../Stars'
 
 
 const Home = () => {
@@ -22,8 +23,8 @@ const Home = () => {
   }
   return (
     <>
-      <div className="homePage">
-        <div className="container">
+      <div className="container">
+        <div className="homePage">
           <p className="monthRecipes">Recipes of the month:</p>
           <Carousel showIndicators={false} showStatus={false} autoPlay infiniteLoop>
             {recipes.slice(0, 3).map(recipe => {
@@ -35,7 +36,8 @@ const Home = () => {
                     </div>
                     <div className="carouselInfo">
                       <h2 key={recipe._id}>{recipe.name}</h2>
-                      <h3 >Recipe time: {recipe.time}mins</h3>
+                      <h3 >Average Rating:</h3>
+                      <Stars rating={recipe.averageRating} />
 
                       <Link className="viewRecipe" to={`SearchRecipe/${recipe._id}`}>See full recipe</Link>
                     </div>
