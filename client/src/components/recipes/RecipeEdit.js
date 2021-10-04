@@ -1,32 +1,33 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
 import axios from 'axios'
 import { getTokenFromLocalStorage } from '../helpers/auth'
 import ImageUpload from '../helpers/ImageUpload'
 
-const RecipeNew = () => {
+const RecipeEdit = () => {
 
+  const { id } = useParams()
   const history = useHistory()
 
   const [ formData, setFormData ] = useState({
-    name: '',
-    summary: '',
-    ingredients: [],
-    time: '',
-    image: '',
-    cuisine: '',
-    method: [],
-    difficulty: '',
-    vegan: false,
-    vegetarian: false
+    // name: '',
+    // summary: '',
+    // ingredients: [],
+    // time: '',
+    // image: '',
+    // cuisine: '',
+    // method: [],
+    // difficulty: '',
+    // vegan: false,
+    // vegetarian: false
   })
 
   const [ errors, setErrors ] = useState({
-    name: { message: '' },
-    time: { message: '' },
-    image: { message: '' },
-    cuisine: { message: '' },
-    difficulty: { message: '' }
+    name: {},
+    time: {},
+    image: {},
+    cuisine: {},
+    difficulty: {}
   })
 
 
@@ -46,8 +47,8 @@ const RecipeNew = () => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     try {
-      await axios.post(
-        '/api/recipes',
+      await axios.put(
+        `/api/recipes/${id}`,
         formData,
         { headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` } }
       )
@@ -70,7 +71,7 @@ const RecipeNew = () => {
 <div className="signUpPage">
 
 <div className="form-header sign-up-form-header">
-  <h2>New Recipe</h2> 
+  <h2>Edit Recipe</h2> 
   
   </div>
 
@@ -80,30 +81,30 @@ const RecipeNew = () => {
 
     <div className="formfield">
       <p>Recipe Name</p>
-      <input onInput={handleChange} name="name" type="text" placeholder="Recipe Name" value={formData.name}/>
-      {errors.name && <p className="error">{errors.name.message}</p>}
+      <input onInput={handleChange} name="name" type="text" placeholder="Recipe Name" />
+      {errors.name.message && <p className="error">{errors.name.message}</p>}
     </div>
 
     <div className="formfield">
       <p>Summary</p>
-      <textarea onInput={handleChange} name="summary" type="text" placeholder="Summary" maxLength="500" value={formData.summary}/>
+      <textarea onInput={handleChange} name="summary" type="text" placeholder="Summary" maxLength="500" />
     </div>
   
     <div className="formfield">
       <p>Ingredients</p>
-      <textarea onInput={handleMultiEnter} name="ingredients" type="text" placeholder="Ingredients ex: 1 pepper, 2 cloves of garlic,..." value={formData.ingredients}/>
+      <textarea onInput={handleMultiEnter} name="ingredients" type="text" placeholder="Ingredients ex: 1 pepper, 2 cloves of garlic,..." />
     </div>
 
     <div className="formfield">
       <p>Time</p>
-      <input onInput={handleChange} name="time" type="number" placeholder="Time in mins" value={formData.time}/>
-      {errors.time && <p className="error">{errors.time.message}</p>}
+      <input onInput={handleChange} name="time" type="number" placeholder="Time in mins" />
+      {errors.time.message && <p className="error">{errors.time.message}</p>}
     </div>
 
     <div className="formfield">
       <p>Cuisine</p>
-      <select onInput={handleChange} name="cuisine" type="text" value={formData.cuisine}>
-      <option value="" disabled></option>
+      <select onInput={handleChange} name="cuisine" type="text" >
+      <option value="" ></option>
         <option value="american">American</option>
         <option value="chinese">Chinese</option>
         <option value="continental">Continental</option>
@@ -127,41 +128,41 @@ const RecipeNew = () => {
         <option value="vietnamese">Vietnamese</option>
         <option value="other">Other</option>
       </select>
-      {errors.cuisine && <p className="error">{errors.cuisine.message}</p>}
+      {errors.cuisine.message && <p className="error">{errors.cuisine.message}</p>}
     </div>
 
     <div className="formfield">
       <p>Method</p>
-      <textarea onInput={handleMultiEnter} name="method" type="text" placeholder="Method ex: 1 pepper, 2 cloves of garlic,..." value={formData.method}/>
+      <textarea onInput={handleMultiEnter} name="method" type="text" placeholder="Method ex: 1 pepper, 2 cloves of garlic,..." />
     </div>
 
     <div className="formfield">
       <p>Difficulty</p>
-      <select onInput={handleChange} name="difficulty" type="text" value={formData.difficulty}>
-        <option value="" disabled></option>
+      <select onInput={handleChange} name="difficulty" type="text" >
+        <option value=""></option>
         <option value="easy">Easy</option>
         <option value="medium">Medium</option>
         <option value="hard">Hard</option>
       </select>
-      {errors.difficulty && <p className="error">{errors.difficulty.message}</p>}
+      {errors.difficulty.message && <p className="error">{errors.difficulty.message}</p>}
     </div>
     
     <div className="formfield">
       <p>Vegetarian</p>
-      <input onInput={handleChange} name="vegetarian" type="checkbox" value={formData.vegetarian}/>
+      <input onInput={handleChange} name="vegetarian" type="checkbox" />
     </div>
 
     <div className="formfield">
       <p>Vegan</p>
-      <input onInput={handleChange} name="vegan" type="checkbox" value={formData.vegan}/>
+      <input onInput={handleChange} name="vegan" type="checkbox" />
     </div>
 
     <div className="formfield">
-    <ImageUpload value={formData.image} name="image" handleImageUrl={handleImageUrl}/>
-    {errors.image && <p className="error">{errors.image.message}</p>}
+    <ImageUpload name="image" handleImageUrl={handleImageUrl}/>
+    {errors.image.message && <p className="error">{errors.image.message}</p>}
     </div>
 
-    <button className="form-button">Create Recipe</button>
+    <button className="form-button">Submit changes</button>
 
   </form>    
   </div>
@@ -170,4 +171,4 @@ const RecipeNew = () => {
   )
 }
 
-export default RecipeNew
+export default RecipeEdit

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { useParams, Link, useHistory } from 'react-router-dom'
-import { getTokenFromLocalStorage, getPayload } from '../helpers/auth'
+import { getTokenFromLocalStorage, getPayload, userIsAuthenticated } from '../helpers/auth'
 
 const SingleRecipe = () => {
 
@@ -55,12 +55,16 @@ const SingleRecipe = () => {
             <div className='recipeNav'>
               <Link to="/searchrecipe">Back to recipes</Link>
               {
-                userIsOwner(recipe.owner) &&
+                userIsOwner(recipe.owner.id) ?
                 <div>
                   <Link to={`/searchrecipe/${recipe._id}/edit/`}>Edit Recipe</Link>
                   <button onClick={handleDeleteRecipe}>Delete</button>
                 </div>
+                :
+                userIsAuthenticated() &&
+                <Link className="navLink" to={`/searchrecipe/${recipe._id}/review/`}>Add Review</Link>
               }
+              </div>
               <div>
                 <div className='main'>
                   <div id='mainImage'>
@@ -78,7 +82,7 @@ const SingleRecipe = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            
             <hr />
             <div className='method'>
               <h3>Method</h3>

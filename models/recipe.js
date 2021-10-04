@@ -15,11 +15,11 @@ const recipeSchema = new mongoose.Schema({
   vegan: { type: Boolean, required: true },
   vegetarian: { type: Boolean, required: true },
   ingredients: [{ type: String, required: true }],
-  time: { type: Number },
+  time: { type: Number, required: true },
   image: { type: String, required: true },
-  cuisine: { type: String },
+  cuisine: { type: String, required: true },
   method: [{ type: String, required: true }],
-  difficulty: { type: String },
+  difficulty: { type: String, required: true },
   owner: { type: mongoose.Schema.ObjectId, ref: 'User' },
   reviews: [reviewSchema]
 })
@@ -33,7 +33,7 @@ recipeSchema.virtual('averageRating')
     return (sum / this.reviews.length).toFixed(2)
   })
 
-recipeSchema.set('toJSON', { virtual: true })
+recipeSchema.set('toJSON', { virtuals: true })
 
 
 export default mongoose.model('Recipe', recipeSchema)

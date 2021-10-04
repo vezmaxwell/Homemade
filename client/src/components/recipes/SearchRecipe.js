@@ -10,8 +10,6 @@ const SearchRecipe = () => {
   const [error, setError] = useState(false)
   const [includedInfo, setIncludedInfo] = useState([])
 
-  console.log(includedInfo)
-  console.log(error)
 
   useEffect(() => {
 
@@ -40,32 +38,22 @@ const SearchRecipe = () => {
           <div className="searchBackground">
             <p> Search recipe:  <input type='text' className='recipeSearch' placeholder='ex: Lasagna' id='search-field' onInput={handleSearch}></input></p>
           </div>
-          {recipes.length > 0 ?
-            recipes.map(recipe => {
-
-              return <div className="serachedCards">
-
-                <Link to={`/SearchRecipe/${recipe._id}`}>
-                  <div key={recipe.name} className='recipeCard'>
-                    <p>{recipe.name}</p>
-                    <p>{recipe.difficulty}</p>
-                    <img className="searchIMG" src={recipe.image} alt="recipe" />
+          <div className="cards" >
+            {recipes.filter(recipe => recipe.name.toLowerCase().includes(search)).map((recipe, i) =>
+              <Link key={recipe.name} className='recipeCard' to={`/SearchRecipe/${recipe._id}`}>
+                <img className="searchIMG" src={recipe.image} alt="recipe" />
+                <div className="cardDetails">
+                  <div className="tittle">
+                    <h4>{recipe.name}</h4>
                   </div>
-                </Link>
-              </div>
+                  <p className="avr">{recipe.averageRating}</p>
+                  {recipe.owner && <p>Created by: {recipe.owner.username}</p>}
 
-            })
-            :
-            <>
-              {error ?
-                <h2 className='display-5 text-center'> Something went wrong!</h2>
-                :
-                <h2 className='display-5 text-center'> Loading...</h2>
-              }
-            </>
-          }
+                </div>
+              </Link>
+            )}
+          </div>
         </div>
-
       </div>
     </>
   )
