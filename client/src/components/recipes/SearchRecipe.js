@@ -12,8 +12,6 @@ const SearchRecipe = () => {
   const [error, setError] = useState(false)
   const [includedInfo, setIncludedInfo] = useState([])
 
-  console.log(includedInfo)
-  console.log(error)
 
   useEffect(() => {
 

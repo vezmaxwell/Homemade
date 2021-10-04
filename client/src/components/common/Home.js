@@ -13,7 +13,6 @@ const Home = () => {
   useEffect(() => {
     const getData = async () => {
       const { data } = await axios.get('/api/recipes')
-      console.log(data)
       setRecipes(data)
     }
     getData()

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { useParams, Link, useHistory } from 'react-router-dom'
-import { getTokenFromLocalStorage, getPayload } from '../helpers/auth'
+import { getTokenFromLocalStorage, getPayload, userIsAuthenticated } from '../helpers/auth'
 
 const SingleRecipe = () => {
 
@@ -45,19 +45,6 @@ const SingleRecipe = () => {
     }
   }
 
-  const handleDeleteReview = async () => {
-    try {
-      await axios.delete(
-        `/api/recipes/${id}/review/`,
-        {
-          headers: { Authorization: `Bearer ${getTokenFromLocalStorage}` },
-        }
-      )
-      history.push('/searchrecipe')
-    } catch (error) {
-      console.log(error)
-    }
-  }
 
 
   return (
@@ -68,12 +55,16 @@ const SingleRecipe = () => {
             <div className='recipeNav'>
               <Link to="/searchrecipe">Back to recipes</Link>
               {
-                userIsOwner(recipe.owner) &&
+                userIsOwner(recipe.owner.id) ?
                 <div>
                   <Link to={`/searchrecipe/${recipe._id}/edit/`}>Edit Recipe</Link>
                   <button onClick={handleDeleteRecipe}>Delete</button>
                 </div>
+                :
+                userIsAuthenticated() &&
+                <Link className="navLink" to={`/searchrecipe/${recipe._id}/review/`}>Add Review</Link>
               }
+              </div>
               <div>
                 <div className='main'>
                   <div id='mainImage'>
@@ -91,7 +82,7 @@ const SingleRecipe = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            
             <hr />
             <div className='method'>
               <h3>Method</h3>
@@ -111,13 +102,6 @@ const SingleRecipe = () => {
                   {recipe.reviews.map(review => {
                     return <li key={recipe._id}>
                       <p><strong>By {review.owner.username}</strong></p>
-                      {/* {
-          userIsOwner(review.owner) &&
-          <div>
-          <Link to={`/searchrecipe/${recipe._id}/review/${review._id}`}>Edit Review</Link>
-          <button onClick={handleDelete}>Delete</button>
-          </div>
-        } */}
                       <img src={review.owner.image} alt="users avatar" />
                       <p>Rating: {review.rating}/5</p>
                       <p>{review.text}</p>

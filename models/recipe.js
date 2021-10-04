@@ -10,16 +10,16 @@ const reviewSchema = new mongoose.Schema({
 })
 
 const recipeSchema = new mongoose.Schema({
-  name: { type: String, required: true, unique: false },
-  summary: { type: String },
+  name: { type: String, required: true, unique: true },
+  summary: { type: String, maxlengt: 500 },
   vegan: { type: Boolean, required: true },
   vegetarian: { type: Boolean, required: true },
   ingredients: [{ type: String, required: true }],
-  time: { type: String },
+  time: { type: Number, required: true },
   image: { type: String, required: true },
-  cuisine: { type: String },
+  cuisine: { type: String, required: true },
   method: [{ type: String, required: true }],
-  difficulty: { type: String },
+  difficulty: { type: String, required: true },
   owner: { type: mongoose.Schema.ObjectId, ref: 'User' },
   reviews: [reviewSchema]
 })
