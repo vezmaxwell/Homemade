@@ -12,6 +12,16 @@ body, input {
   background-color: rgb(245, 245, 245);
 }
 
+.monthRecipes {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: $background;
+  align-items: center;
+  height: 90px;
+  font-size: 33px;
+  
+}
 .homePage {
   margin: 20px 10px 5px;
 }
@@ -40,10 +50,10 @@ border-radius: 5px;
 }
 
 .carouselImage {
-  margin-top: 10px;
+  
   img{
     object-fit: cover;
-    height: 550px;
+    height: 600px;
     width: 700px!important;
   }
 }
@@ -106,6 +116,7 @@ select {
 // }
 .carousel.carousel-slider .control-arrow {
   top: 0;
+ 
   font-size: 26px;
   bottom: 0;
   margin-top: 0;
@@ -123,7 +134,6 @@ select {
 }
 .carouselInfo {
   padding: 0 50px;
-  margin-top: 10px;
   flex: 1;
   display: flex;
   justify-content: center;
@@ -340,10 +350,5 @@ flex-direction: column;
 .logo, .homemade-logo {
   height: 100%;
   width: 100%;
-}
-
-.recipeNav{
-  display: flex;
-  justify-content: space-between;
 }
 
