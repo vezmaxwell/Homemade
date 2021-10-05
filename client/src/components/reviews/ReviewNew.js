@@ -3,7 +3,7 @@ import { useHistory, useParams } from 'react-router-dom'
 import axios from 'axios'
 import { getTokenFromLocalStorage } from '../helpers/auth'
 import ImageUpload from '../helpers/ImageUpload'
-
+import { Rating } from 'react-simple-star-rating'
 
 const ReviewNew = () => {
 
@@ -12,7 +12,7 @@ const ReviewNew = () => {
 
   const [formData, setFormData] = useState({
     text: '',
-    rating: 1,
+    rating: 3,
     image: '',
   })
 
@@ -20,7 +20,10 @@ const ReviewNew = () => {
     text: { message: '' }
   })
 
+  const handleRating = (rating) => {
+    setFormData({ ...formData, rating })
 
+  }
 
   const handleChange = event => {
     const target = event.target
@@ -66,14 +69,14 @@ const ReviewNew = () => {
         <form onSubmit={handleSubmit}>
 
           <div className="formfield">
-            <p>Review</p>
-            <textarea onInput={handleChange} name="text" type="text" placeholder="enter review here" maxLength='400' value={formData.text} />
+            <label htmlFor="review" >Review</label>
+            <textarea onInput={handleChange} name="text" id="review" type="text" placeholder="enter review here" maxLength='400' value={formData.text} />
             {errors.text && <p className="error">{errors.text.message}</p>}
           </div>
 
           <div className="formfield">
-            <p>Rating</p>
-            {/* <input onInput={handleChange} name="rating" type="number" min='1' max='5'value={formData.rating}/> */}
+            <label htmlFor="rating" >Rating</label>
+            <Rating onClick={handleRating} emptyColor="white" fillColor="yellow" ratingValue={formData.rating} /* Rating Props */ />
           </div>
 
           <div className="formfield">

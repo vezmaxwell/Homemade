@@ -3,7 +3,7 @@
 }
 
 .formfield {
-  margin: 30px 30px;
+  margin: 30px 30px 0;
   label{
     display: block;
     margin-bottom: 5px;
@@ -77,6 +77,8 @@ input[type=checkbox] {
   width: 5vh;
   vertical-align: middle;
   margin: 0;
+  cursor: pointer;
+  
 }
 
 .checkbox-container, input[type=file] {
