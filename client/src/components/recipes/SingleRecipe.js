@@ -59,6 +59,19 @@ const SingleRecipe = () => {
     }
   }
 
+  const handleDeleteReview = async () => {
+    try {
+      await axios.delete(
+        `/api/recipes/${id}/review/`,
+        {
+          headers: { Authorization: `Bearer ${getTokenFromLocalStorage}` },
+        }
+      )
+      history.push('/searchrecipe')
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
 
   return (
@@ -75,7 +88,6 @@ const SingleRecipe = () => {
                   <button onClick={handleDeleteRecipe}>Delete</button>
                 </div>
               }
-              </div>
               <div>
                 <div className='main'>
                   <div id='mainImage'>
@@ -93,7 +105,7 @@ const SingleRecipe = () => {
                   </div>
                 </div>
               </div>
-            
+            </div>
             <hr />
             <div className='method'>
               <h3>Method</h3>

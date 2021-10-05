@@ -3,9 +3,9 @@ import React from "react"
 const Stars = ({ rating }) => {
   const stars = ['⭐️', '⭐️', '⭐️', '⭐️', '⭐️'].map((star, index) => {
     if (index < Number(rating)) {
-      return <span>{star}</span>
+      return <span key={index}>{star}</span>
     } else {
-      return <span className="grey">{star}</span>
+      return <span key={index} className="grey">{star}</span>
     }
   })
   return (

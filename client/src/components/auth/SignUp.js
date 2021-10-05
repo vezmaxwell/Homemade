@@ -47,6 +47,7 @@ const SignUp = () => {
         if (error.response.data.errors) setErrors(error.response.data.errors)
       }
     }
+  
 
     const handleImageUrl = (url) => {
       try {
@@ -58,20 +59,18 @@ const SignUp = () => {
 
 
   return (
-    <>
-    <>
-      <div className="signUpPage">
+    <div className="signUpPage">
 
       <div className="form-header sign-up-form-header">
         <h2>Sign up for an account.</h2>
 
-        <h3>Already have an account? 
-          <a href="/login"> Login here.</a> 
-        </h3> 
-        
-        </div>
+        <h3>Already have an account?
+          <a href="/login"> Login here.</a>
+        </h3>
 
-        <div className="form-container sign-up-form-container">
+      </div>
+
+      <div className="form-container sign-up-form-container">
 
         <form onSubmit={handleSubmit}>
 
@@ -86,7 +85,7 @@ const SignUp = () => {
             <input onInput={handleChange} type="text" name="username" value={formData.username} placeholder="Your username goes here"/>
             {errors.username && <p className="error">Please enter a username</p>}
           </div>
-        
+
           <div className="formfield">
             <p>Password</p>
             <input onInput={handleChange} type="password" name="password" value={formData.password} placeholder="Your email goes here"/>
@@ -105,12 +104,10 @@ const SignUp = () => {
 
           <button className="form-button">SIGN UP</button>
 
-        </form>    
-        </div>
-
+        </form>
       </div>
-    </>
-    </>
+
+    </div>
   )
 }
 

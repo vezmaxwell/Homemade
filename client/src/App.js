@@ -14,6 +14,7 @@ import RecipeEdit from './components/recipes/RecipeEdit'
 import ReviewNew from './components/reviews/ReviewNew'
 import Profile from './components/helpers/Profile'
 
+import Footer from './components/common/Footer'
 
 function App() {
 
@@ -52,6 +53,7 @@ function App() {
           </Route>
           
         </Switch>
+        <Footer />
       </BrowserRouter>
     </div>
   )
