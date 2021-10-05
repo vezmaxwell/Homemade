@@ -125,7 +125,7 @@ export default [
       '6 ice cubes'
     ],
     time: 10,
-    image: 'https://144f2a3a2f948f23fc61-ca525f0a2beaec3e91ca498facd51f15.ssl.cf3.rackcdn.com/uploads/food_portal_data/recipes/recipe/hero_article_image/4090/bcac0b19cd80cea9786f/letterbox_FruitSalad5965.jpg',
+    image: '/images/smoothie.jpg',
     cuisine: 'Other',
     method: ['Peel, stone and roughly chop the mango, and put the flesh into a blender. ',
       'Halve 2 of the passion fruit and sieve the pulp into a bowl, then add to the blender. Peel and roughly chop the banana and 1½ kiwi fruit, and add them to the blender with the yogurt, juice and ice cubes.',

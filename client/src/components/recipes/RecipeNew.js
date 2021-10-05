@@ -69,12 +69,13 @@ const RecipeNew = () => {
   return (
 <div className="signUpPage">
 
-<div className="form-header sign-up-form-header">
+<div className="form-header new-recipe-header">
   <h2>New Recipe</h2> 
+  <h3>Share your favourite recipe using the form below.</h3>
   
   </div>
 
-  <div className="form-container sign-up-form-container">
+  <div className="form-container recipe-new-form-container">
 
   <form onSubmit={handleSubmit}>
 
@@ -103,7 +104,7 @@ const RecipeNew = () => {
 
     <div className="formfield">
       <p>Cuisine</p>
-      <select onInput={handleChange} name="cuisine" type="text" value={formData.cuisine}>
+      <select className="new-recipe-select" onInput={handleChange} name="cuisine" type="text" value={formData.cuisine}>
       <option value="" disabled></option>
         <option value="american">American</option>
         <option value="chinese">Chinese</option>
@@ -138,7 +139,7 @@ const RecipeNew = () => {
 
     <div className="formfield">
       <p>Difficulty</p>
-      <select onInput={handleChange} name="difficulty" type="text" value={formData.difficulty}>
+      <select className="new-recipe-select" onInput={handleChange} name="difficulty" type="text" value={formData.difficulty}>
         <option value="" disabled></option>
         <option value="easy">Easy</option>
         <option value="medium">Medium</option>
@@ -147,14 +148,16 @@ const RecipeNew = () => {
       {errors.difficulty && <p className="error">{errors.difficulty.message}</p>}
     </div>
     
-    <div className="formfield">
-      <p>Vegetarian</p>
-      <input onInput={handleChange} name="vegetarian" type="checkbox" value={formData.vegetarian}/>
-    </div>
+    <div className="checkbox-container">
+      <div className="formfield checkbox-field">
+        <label for="vegetarian-box">Vegetarian</label>
+        <input onInput={handleChange} id="vegetarian-box" name="vegetarian" type="checkbox" value={formData.vegetarian}/>
+      </div>
 
-    <div className="formfield">
-      <p>Vegan</p>
-      <input onInput={handleChange} name="vegan" type="checkbox" value={formData.vegan}/>
+      <div className="formfield checkbox-field">
+        <label for="vegan-box">Vegan</label>
+        <input onInput={handleChange} id="vegan-box" name="vegan" type="checkbox" value={formData.vegan}/>
+      </div>
     </div>
 
     <div className="formfield">

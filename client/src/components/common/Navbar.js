@@ -18,8 +18,6 @@ const Navbar = () => {
 
 
 
-  //* We can put this in and the below handleLogout function, and make it so you can only see 'Add Recipe' or 'Logout' if the user is logged in
-
   const handleLogout = () => {
     window.localStorage.removeItem('token')
     history.push('/')
@@ -27,16 +25,7 @@ const Navbar = () => {
 
   return (
 
-    <div className="navBar">
-      <div className="container">
-        <Link className="navLink" to='/'>
-
-{/* Logo Img */}
-
-          <div className="logo-container">
-            <img src={logo} alt="" className="logo" />
-          </div>
-        </Link>
+      <div className="navBar-container">
 
 {/* Logo Name */}
 
@@ -49,6 +38,13 @@ const Navbar = () => {
 {/* Navigation Links */}
 
         <div className="links">
+
+          {/* Logo Img */}
+        <Link className="navLink" to='/'>
+          <div className="logo-container">
+            <img src={logo} alt="" className="logo" />
+          </div>
+        </Link>
 
           <ul>
 
@@ -71,7 +67,6 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-    </div>
 
   )
 

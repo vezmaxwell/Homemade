@@ -67,24 +67,44 @@ const SearchRecipe = () => {
   }
   return (
     <>
+<<<<<<< Updated upstream
       <div className="container">
+=======
+>>>>>>> Stashed changes
 
         <div className='searchPage'>
           <div className="searchBackground">
-            <input type='text' className='recipeSearch' placeholder='Seach recipes 🔎' id='search-field' onInput={handleSearch}></input>
-            <div className="selectFilter">
+            <input type='text' className='recipeSearch' placeholder='🔎 Search recipes' id='search-field' onInput={handleSearch}></input>
+
+          </div>
+      
+        <div className="container">
+
+        <div className="selectFilter">
               <div className="selectFilterDiet">
                 <div>Diet:</div>
+<<<<<<< Updated upstream
                 <select id="recipes" onChange={handleDiet}>
                   <option value="all" default>All 🍕</option>
+=======
+                <select className="searchSelect" for="recipes" id="recipes" onChange={handleDiet}>
+                  {/* <option value="all" default>All 🍕</option> */}
+                  <option value="all" default></option>
+>>>>>>> Stashed changes
                   <option value="vegetarian">Vegetarian 🧀</option>
                   <option value="vegan">Vegan 🌱</option>
                 </select>
               </div>
               <div className="selectFilterRating">
                 <div>Average Rating:</div>
+<<<<<<< Updated upstream
                 <select id="recipes" onChange={handleRating}>
                   <option value="all" default> All ⭐️ </option>
+=======
+                <select className="searchSelect" for="recipes" id="recipes" onChange={handleRating}>
+                  {/* <option value="all" default> All ⭐️ </option> */}
+                  <option value="all" default></option>
+>>>>>>> Stashed changes
                   <option value="one">⭐️ or above</option>
                   <option value="two">⭐️⭐️ or above</option>
                   <option value="three">⭐️⭐️⭐️ or above</option>
@@ -93,8 +113,11 @@ const SearchRecipe = () => {
                 </select>
               </div>
             </div>
+<<<<<<< Updated upstream
           </div>
 
+=======
+>>>>>>> Stashed changes
 
           <div className="cards" >
             {filteredItems.slice(0, pageNumber * itemsPerPage).map((recipe, i) => {
