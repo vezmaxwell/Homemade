@@ -92,13 +92,12 @@ const RecipeNew = () => {
     <div className="formfield">
       <p>Ingredients</p>
       <textarea onInput={handleMultiEnter} name="ingredients" type="text" placeholder="Ingredients ex: 1 pepper, 2 cloves of garlic, 3 oranges,..." value={formData.ingredients}/>
-      {errors.ingredients && <p className="error">{errors.ingredients.message}</p>}
     </div>
 
     <div className="formfield">
-      <p>Time</p>
-      <input onInput={handleChange} name="time" type="number" placeholder="Time in mins" value={formData.time}/>
-      {errors.time && <p className="error">{errors.time.message}</p>}
+      <p>Time(mins)</p>
+      <input onInput={handleChange} name="time" type="number" value={formData.time}/>
+      {errors.time && <p className="error">Please enter time</p>}
     </div>
 
     <div className="formfield">
@@ -128,12 +127,12 @@ const RecipeNew = () => {
         <option value="vietnamese">Vietnamese</option>
         <option value="other">Other</option>
       </select>
-      {errors.cuisine && <p className="error">{errors.cuisine.message}</p>}
+      {errors.cuisine && <p className="error">Please select cuisine</p>}
     </div>
 
     <div className="formfield">
       <p>Method</p>
-      <textarea onInput={handleMultiEnter} name="method" type="text" placeholder="Method ex: 1 pepper, 2 cloves of garlic,..." value={formData.method}/>
+      <textarea onInput={handleMultiEnter} name="method" type="text" placeholder="Method example: Into a heated pan spray with the 1 squirt of the oil spray or add a tsp of oil add the onion garlic and ginger cook over a gentle heat for 3 mins, Add the spices red chilli and bay leaf along with a spoonful of water and cook for a few more mins stirring until the aromas are released" value={formData.method}/>
     </div>
 
     <div className="formfield">
@@ -144,7 +143,7 @@ const RecipeNew = () => {
         <option value="medium">Medium</option>
         <option value="hard">Hard</option>
       </select>
-      {errors.difficulty && <p className="error">{errors.difficulty.message}</p>}
+      {errors.difficulty && <p className="error">Please select difficulty</p>}
     </div>
     
     <div className="formfield">
@@ -159,7 +158,7 @@ const RecipeNew = () => {
 
     <div className="formfield">
     <ImageUpload value={formData.image} name="image" handleImageUrl={handleImageUrl}/>
-    {errors.image && <p className="error">{errors.image.message}</p>}
+    {errors.image && <p className="error">Please try uploading image again</p>}
     </div>
 
     <button className="form-button">Create Recipe</button>
