@@ -60,7 +60,7 @@ export const deleteRecipe = async (req, res) => {
   try {
     const recipeToDelete = await Recipe.findById(id)
     if (!recipeToDelete) throw new Error('Recipe not found')
-    await Recipe.findById(id)
+    await recipeToDelete.remove()
     return res.sendStatus(204)
   } catch (error) {
     console.log('Recipe not found')

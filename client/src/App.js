@@ -12,6 +12,7 @@ import SingleRecipe from './components/recipes/SingleRecipe'
 import RecipeNew from './components/recipes/RecipeNew'
 import RecipeEdit from './components/recipes/RecipeEdit'
 import ReviewNew from './components/reviews/ReviewNew'
+import Profile from './components/helpers/Profile'
 
 
 function App() {
@@ -45,6 +46,9 @@ function App() {
           </Route>
           <Route exact path='/searchRecipe/:id/review'>
             <ReviewNew />
+          </Route>
+          <Route exact path='/profile'>
+            <Profile />
           </Route>
           
         </Switch>

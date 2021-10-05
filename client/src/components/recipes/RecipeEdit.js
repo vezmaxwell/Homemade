@@ -52,7 +52,7 @@ const RecipeEdit = () => {
         formData,
         { headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` } }
       )
-      history.push('/searchrecipe')
+      history.push(`/searchrecipe/${id}`)
     } catch (error) {
       if (error.response.data.errors) setErrors(error.response.data.errors)
     }

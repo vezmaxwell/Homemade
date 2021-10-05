@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useHistory } from 'react-router-dom'
 
 
+
 const Login = () => {
 
   //* History
@@ -14,10 +15,15 @@ const Login = () => {
     password: ''
   })
 
+  const [ errors, setErrors ] = useState({
+    message: ''
+  })
+
   //* Functions 
   const handleChange = (event) => {
     const newObj = { ...formData, [event.target.name]: event.target.value }
     setFormData(newObj)
+    setErrors({ ...errors, [event.target.name]: '' })
   }
 
   const setTokenToLocalStorage = (token) => {
@@ -31,7 +37,8 @@ const Login = () => {
       setTokenToLocalStorage(data.token)
       history.push('/')
     } catch (error) {
-      console.log(error)
+      console.log('error ->', error.response.data)
+      if (error.response.data) setErrors(error.response.data)
     }
   }
 
@@ -55,7 +62,9 @@ const Login = () => {
           <div className="formfield">
             <p>Password</p>
             <input onInput={handleChange} type="password" name="password" value={formData.password} placeholder="Your email goes here"/>
+            {errors.message && <p className="error">You've entered an invalid email/password combination. Try again</p>}
           </div>
+
           <button className="form-button">LOGIN</button>
         </form>    
         </div>

@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import axios from 'axios'
- 
+import ImageUpload from '../helpers/ImageUpload'
+
+
 const SignUp = () => {
 
     //* History
@@ -12,13 +14,22 @@ const SignUp = () => {
       email: '',
       username: '',
       password: '',
-      passwordConfirmation: ''
+      passwordConfirmation: '',
+      profileImage:''
+    })
+
+    const [ errors, setErrors ] = useState({
+      email: { message: '' },
+      username: { message: '' },
+      password: { message: '' },
+      passwordConfirmation: { message: '' }
     })
   
     //* Functions 
     const handleChange = (event) => {
       const newObj = { ...formData, [event.target.name]: event.target.value }
       setFormData(newObj)
+      setErrors({ ...errors, [event.target.name]: '' })
     }
   
     const setTokenToLocalStorage = (token) => {
@@ -32,9 +43,19 @@ const SignUp = () => {
         setTokenToLocalStorage(data.token)
         history.push('/')
       } catch (error) {
-        console.log(error)
+        console.log('error ->', error.response)
+        if (error.response.data.errors) setErrors(error.response.data.errors)
       }
     }
+
+    const handleImageUrl = (url) => {
+      try {
+        setFormData({ ...formData, profileImage: url })
+      } catch (error) {
+        if (error.response.data.errors) setErrors(error.response.data.errors)
+      }
+    }
+
 
   return (
     <>
@@ -57,21 +78,29 @@ const SignUp = () => {
           <div className="formfield">
             <p>Email</p>
             <input onInput={handleChange} type="email" name="email" value={formData.email} placeholder="Your email goes here"/>
+            {errors.email && <p className="error">Please enter an email</p>}
           </div>
 
           <div className="formfield">
             <p>Username</p>
             <input onInput={handleChange} type="text" name="username" value={formData.username} placeholder="Your username goes here"/>
+            {errors.username && <p className="error">Please enter a username</p>}
           </div>
         
           <div className="formfield">
             <p>Password</p>
-            <input onInput={handleChange} type="text" name="password" value={formData.password} placeholder="Your email goes here"/>
+            <input onInput={handleChange} type="password" name="password" value={formData.password} placeholder="Your email goes here"/>
+            {errors.password && <p className="error">please enter a password</p>}
           </div>
 
           <div className="formfield">
-            <p>Password Confirmation</p>
-            <input onInput={handleChange} type="text" name="passwordConfirmation" value={formData.passwordConfirmation} placeholder="Confirm your password"/>
+            <p>Confirm Password</p>
+            <input onInput={handleChange} type="password" name="passwordConfirmation" value={formData.passwordConfirmation} placeholder="Confirm your password"/>
+            {errors.passwordConfirmation && <p className="error">The passwords didn’t match. Try again.</p>}
+          </div>
+
+          <div className="formfield">
+            <ImageUpload name="profileImage" handleImageUrl={handleImageUrl}/>
           </div>
 
           <button className="form-button">SIGN UP</button>

@@ -6,7 +6,8 @@ import uniqueValidator from 'mongoose-unique-validator'
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true, maxlength: 30 },
   email: { type: String, required: true, unique: true },
-  password: { type: String, required: true }
+  password: { type: String, required: true },
+  profileImage: { type: String }
 })
 
 //* Virtual Field

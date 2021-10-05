@@ -58,6 +58,7 @@ const Navbar = () => {
               <li className="navLink" onClick={handleLogout}>Logout</li>
               <li><Link className="navLink" to='/addRecipe'>Add Recipe</Link></li>
               <li><Link className="navLink" to='/SearchRecipe'>All Recipes</Link></li>
+              <li><Link className="navLink" to='/profile'>My Profile</Link></li>
             </>
             :
             <>

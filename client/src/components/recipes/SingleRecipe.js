@@ -2,15 +2,32 @@ import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { useParams, Link, useHistory } from 'react-router-dom'
 import { getTokenFromLocalStorage, getPayload, userIsAuthenticated } from '../helpers/auth'
+import Stars from '../Stars'
 
 const SingleRecipe = () => {
 
   const [recipe, setRecipe] = useState(null)
   const [hasError, setHasError] = useState(false)
 
+  const [recipes, setRecipes] = useState([])
+
   const { id } = useParams()
 
   const history = useHistory()
+
+  useEffect(() => {
+
+    const getData = async () => {
+      try {
+        const { data } = await axios.get('/api/recipes')
+        setRecipes(data)
+
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getData()
+  }, [])
 
 
   useEffect(() => {
@@ -34,10 +51,7 @@ const SingleRecipe = () => {
   const handleDeleteRecipe = async () => {
     try {
       await axios.delete(
-        `/api/recipes/${id}`,
-        {
-          headers: { Authorization: `Bearer ${getTokenFromLocalStorage}` },
-        }
+        `/api/recipes/${id}`, { headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` } }
       )
       history.push('/searchrecipe')
     } catch (error) {
@@ -55,14 +69,11 @@ const SingleRecipe = () => {
             <div className='recipeNav'>
               <Link to="/searchrecipe">Back to recipes</Link>
               {
-                userIsOwner(recipe.owner.id) ?
+                userIsOwner(recipe.owner.id) &&
                 <div>
                   <Link to={`/searchrecipe/${recipe._id}/edit/`}>Edit Recipe</Link>
                   <button onClick={handleDeleteRecipe}>Delete</button>
                 </div>
-                :
-                userIsAuthenticated() &&
-                <Link className="navLink" to={`/searchrecipe/${recipe._id}/review/`}>Add Review</Link>
               }
               </div>
               <div>
@@ -73,7 +84,7 @@ const SingleRecipe = () => {
                   <div className="mainInfo">
                     <h1>{recipe.name}</h1>
                     <p>Difficulty: {recipe.difficulty}</p>
-                    {/* Average Rating */}
+                    <Stars rating={recipe.averageRating} />
                     <ul>
                       {recipe.ingredients.map(ingredient => {
                         return <li key={recipe._id}>{ingredient}</li>
@@ -95,22 +106,43 @@ const SingleRecipe = () => {
               </ol>
             </div>
             <hr />
-            <div>
               <div className="review">
                 <h3>Reviews</h3>
+                {userIsAuthenticated() &&
+                <Link className="navLink" to={`/searchrecipe/${recipe._id}/review/`}>Add Review</Link>
+                  } 
                 <ul>
                   {recipe.reviews.map(review => {
-                    return <li key={recipe._id}>
+                    return <li key={review._id}> 
                       <p><strong>By {review.owner.username}</strong></p>
-                      <img src={review.owner.image} alt="users avatar" />
-                      <p>Rating: {review.rating}/5</p>
+                      { review.owner.image &&
+                        <img src={review.owner.image} alt="profilePhoto" />
+                      }
+                      <Stars rating={review.rating} />
                       <p>{review.text}</p>
+                      { review.image &&
                       <img src={review.image} alt="users attempt" />
+                      }
                     </li>
                   })}
                 </ul>
               </div>
-            </div>
+              <div className="related">
+                <h3>Related Recipes</h3>
+                <div className="cards" >
+                  { recipes.filter(rec => rec.cuisine.toLowerCase() === `${recipe.cuisine}` && rec.name !== `${recipe.name}`).map(rec => {
+                    return <Link key={rec._id} className='recipeCard' to={`/SearchRecipe/${rec._id}`}>
+                    <img className="searchIMG" src={rec.image} alt="recipe" />
+                    <div className="cardDetails">
+                      <div className="tittle">
+                        <h4>{rec.name}</h4>
+                      </div>
+                      <Stars rating={rec.averageRating} />
+                    </div>
+                  </Link>
+                  })}
+              </div>
+              </div>
           </>
 
           :

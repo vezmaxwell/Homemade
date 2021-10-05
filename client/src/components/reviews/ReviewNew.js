@@ -4,6 +4,7 @@ import axios from 'axios'
 import { getTokenFromLocalStorage } from '../helpers/auth'
 import ImageUpload from '../helpers/ImageUpload'
 
+
 const ReviewNew = () => {
 
   const { id } = useParams()
@@ -49,8 +50,8 @@ const ReviewNew = () => {
     } catch (error) {
       if (error.response.data.errors) setErrors(error.response.data.errors)
     }
-    
   }
+  
 
   return (
 <div className="signUpPage">
@@ -72,11 +73,11 @@ const ReviewNew = () => {
 
     <div className="formfield">
       <p>Rating</p>
-      <input onInput={handleChange} name="rating" type="number" min='1' max='5'value={formData.rating}/>
+      {/* <input onInput={handleChange} name="rating" type="number" min='1' max='5'value={formData.rating}/> */}
     </div>
 
     <div className="formfield">
-    <ImageUpload value={formData.image} name="image" handleImageUrl={handleImageUrl}/>
+    <ImageUpload name="image" handleImageUrl={handleImageUrl}/>
     </div>
 
     <button className="form-button">Submit</button>

@@ -81,17 +81,18 @@ const RecipeNew = () => {
     <div className="formfield">
       <p>Recipe Name</p>
       <input onInput={handleChange} name="name" type="text" placeholder="Recipe Name" value={formData.name}/>
-      {errors.name && <p className="error">{errors.name.message}</p>}
+      {errors.name && <p className="error">Please enter the recipe name</p>}
     </div>
 
     <div className="formfield">
       <p>Summary</p>
-      <textarea onInput={handleChange} name="summary" type="text" placeholder="Summary" maxLength="500" value={formData.summary}/>
+      <textarea onInput={handleChange} name="summary" type="text" placeholder="Please enter a summary if you wish" maxLength="500" value={formData.summary}/>
     </div>
   
     <div className="formfield">
       <p>Ingredients</p>
-      <textarea onInput={handleMultiEnter} name="ingredients" type="text" placeholder="Ingredients ex: 1 pepper, 2 cloves of garlic,..." value={formData.ingredients}/>
+      <textarea onInput={handleMultiEnter} name="ingredients" type="text" placeholder="Ingredients ex: 1 pepper, 2 cloves of garlic, 3 oranges,..." value={formData.ingredients}/>
+      {errors.ingredients && <p className="error">{errors.ingredients.message}</p>}
     </div>
 
     <div className="formfield">
