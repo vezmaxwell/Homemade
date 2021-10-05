@@ -62,7 +62,8 @@ background-color: $background;
 padding: 10px 20px;
 margin: 20px;
 font-size: 20px;
-// border-radius: 5px;
+border-radius: 5px;
+width: 250px;
 }
 
 .searchPage {
@@ -92,6 +93,7 @@ font-size: 20px;
     width: 700px!important;
   }
 }
+
 .carousel.carousel-slider .control-arrow {
   top: 0;
   font-size: 26px;
@@ -102,7 +104,9 @@ font-size: 20px;
   display: flex;
   align-items: center;
 }
-
+.carousel-name{
+  margin-bottom: 50px;
+}
 .carouselItem {
   display: flex;
   flex-direction: row;
