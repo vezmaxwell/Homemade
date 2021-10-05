@@ -66,7 +66,7 @@ const RecipeNew = () => {
   }
 
   return (
-    <div className="signUpPage page">
+    <div className="signUpPage">
 
       <div className="form-header new-recipe-header">
         <h2>New Recipe</h2>
@@ -79,31 +79,30 @@ const RecipeNew = () => {
         <form onSubmit={handleSubmit}>
 
           <div className="formfield">
-            <label htmlFor="recipeName" >Recipe Name</label>
-            <input onInput={handleChange} name="name" id="recipeName" type="text" placeholder="Recipe Name" value={formData.name} />
-            {errors.name && <p className="error">Please enter the recipe name</p>}
+            <p>Recipe Name</p>
+            <input onInput={handleChange} name="name" type="text" placeholder="Recipe Name" value={formData.name} />
+            {errors.name && <p className="error">Please enter recipe name</p>}
           </div>
 
           <div className="formfield">
-            <label htmlFor="summary" >Summary</label>
-            <textarea onInput={handleChange} name="summary" type="text" id="summary" placeholder="Please enter a summary if you wish" maxLength="500" value={formData.summary} />
+            <p>Summary</p>
+            <textarea onInput={handleChange} name="summary" type="text" placeholder="Please enter a summary if you wish" maxLength="500" value={formData.summary} />
           </div>
 
           <div className="formfield">
-            <label htmlFor="ingredients" >Ingredients</label>
+            <p>Ingredients</p>
             <textarea onInput={handleMultiEnter} name="ingredients" type="text" placeholder="Ingredients ex: 1 pepper, 2 cloves of garlic, 3 oranges,..." value={formData.ingredients} />
-            {errors.ingredients && <p className="error">{errors.ingredients.message}</p>}
           </div>
 
           <div className="formfield">
-            <label htmlFor="time" >Time</label>
-            <input onInput={handleChange} name="time" type="number" id="time" placeholder="Time in mins" value={formData.time} />
-            {errors.time && <p className="error">{errors.time.message}</p>}
+            <p>Time(mins)</p>
+            <input onInput={handleChange} name="time" type="number" value={formData.time} />
+            {errors.time && <p className="error">Please enter time</p>}
           </div>
 
           <div className="formfield">
-            <label htmlFor="cuisine" >Cuisine</label>
-            <select className="new-recipe-select" onInput={handleChange} id="cuisine" name="cuisine" type="text" value={formData.cuisine}>
+            <p>Cuisine</p>
+            <select className="new-recipe-select" onInput={handleChange} name="cuisine" type="text" value={formData.cuisine}>
               <option value="" disabled></option>
               <option value="american">American</option>
               <option value="chinese">Chinese</option>
@@ -128,23 +127,23 @@ const RecipeNew = () => {
               <option value="vietnamese">Vietnamese</option>
               <option value="other">Other</option>
             </select>
-            {errors.cuisine && <p className="error">{errors.cuisine.message}</p>}
+            {errors.cuisine && <p className="error">Please select cuisine</p>}
           </div>
 
           <div className="formfield">
-            <label htmlFor="method" >Method</label>
-            <textarea onInput={handleMultiEnter} name="method" type="text" id="method" placeholder="Method ex: 1 pepper, 2 cloves of garlic,..." value={formData.method} />
+            <p>Method</p>
+            <textarea onInput={handleMultiEnter} name="method" type="text" placeholder="Enter your each step of your method with a comma to distinguish each step e.g Prepare ingredients, cook all ingredients, serve food, ..." value={formData.method} />
           </div>
 
           <div className="formfield">
-            <label htmlFor="difficulty" >Difficulty</label>
-            <select className="new-recipe-select" onInput={handleChange} id="difficulty" name="difficulty" type="text" value={formData.difficulty}>
+            <p>Difficulty</p>
+            <select className="new-recipe-select" onInput={handleChange} name="difficulty" type="text" value={formData.difficulty}>
               <option value="" disabled></option>
               <option value="easy">Easy</option>
               <option value="medium">Medium</option>
               <option value="hard">Hard</option>
             </select>
-            {errors.difficulty && <p className="error">{errors.difficulty.message}</p>}
+            {errors.difficulty && <p className="error">Please select difficulty</p>}
           </div>
 
           <div className="checkbox-container">
@@ -161,7 +160,7 @@ const RecipeNew = () => {
 
           <div className="formfield">
             <ImageUpload value={formData.image} name="image" handleImageUrl={handleImageUrl} />
-            {errors.image && <p className="error">{errors.image.message}</p>}
+            {errors.image && <p className="error">Please try uploading image again</p>}
           </div>
 
           <button className="form-button">Create Recipe</button>

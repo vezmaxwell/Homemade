@@ -59,19 +59,6 @@ const SingleRecipe = () => {
     }
   }
 
-  const handleDeleteReview = async () => {
-    try {
-      await axios.delete(
-        `/api/recipes/${id}/review/`,
-        {
-          headers: { Authorization: `Bearer ${getTokenFromLocalStorage}` },
-        }
-      )
-      history.push('/searchrecipe')
-    } catch (error) {
-      console.log(error)
-    }
-  }
 
 
   return (
@@ -82,7 +69,7 @@ const SingleRecipe = () => {
             <div className='recipeNav'>
               <Link to="/searchrecipe">Back to recipes</Link>
               {
-                userIsOwner(recipe.owner.id) &&
+                userIsOwner(recipe.owner.id) && // Add recipe.owner.id instead
                 <div>
                   <Link to={`/searchrecipe/${recipe._id}/edit/`}>Edit Recipe</Link>
                   <button onClick={handleDeleteRecipe}>Delete</button>
