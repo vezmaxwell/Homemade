@@ -12,7 +12,7 @@ import SingleRecipe from './components/recipes/SingleRecipe'
 import RecipeNew from './components/recipes/RecipeNew'
 import RecipeEdit from './components/recipes/RecipeEdit'
 import ReviewNew from './components/reviews/ReviewNew'
-
+import Footer from './components/common/Footer'
 
 function App() {
 
@@ -46,8 +46,8 @@ function App() {
           <Route exact path='/searchRecipe/:id/review'>
             <ReviewNew />
           </Route>
-          
         </Switch>
+        <Footer />
       </BrowserRouter>
     </div>
   )
