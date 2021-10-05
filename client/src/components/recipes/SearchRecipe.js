@@ -71,20 +71,29 @@ const SearchRecipe = () => {
 
         <div className='searchPage'>
           <div className="searchBackground">
-            <input type='text' className='recipeSearch' placeholder='Seach recipes 🔎' id='search-field' onInput={handleSearch}></input>
-            <div className="selectFilter">
+            <input type='text' className='recipeSearch' placeholder='🔎 Search recipes' id='search-field' onInput={handleSearch}></input>
+
+          </div>
+      
+        <div className="container">
+
+        <div className="selectFilter">
               <div className="selectFilterDiet">
                 <div>Diet:</div>
-                <select id="recipes" onChange={handleDiet}>
-                  <option value="all" default>All 🍕</option>
+                  <option value="all" default></option>
+                <select className="searchSelect" for="recipes" id="recipes" onChange={handleDiet}>
+                  {/* <option value="all" default>All 🍕</option> */}
+                  <option value="all" default></option>
                   <option value="vegetarian">Vegetarian 🧀</option>
                   <option value="vegan">Vegan 🌱</option>
                 </select>
               </div>
               <div className="selectFilterRating">
                 <div>Average Rating:</div>
-                <select id="recipes" onChange={handleRating}>
-                  <option value="all" default> All ⭐️ </option>
+                  <option value="all" default></option>
+                <select className="searchSelect" for="recipes" id="recipes" onChange={handleRating}>
+                  {/* <option value="all" default> All ⭐️ </option> */}
+                  <option value="all" default></option>
                   <option value="one">⭐️ or above</option>
                   <option value="two">⭐️⭐️ or above</option>
                   <option value="three">⭐️⭐️⭐️ or above</option>
