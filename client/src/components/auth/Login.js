@@ -11,12 +11,12 @@ const Login = () => {
   const history = useHistory()
 
   //* State
-  const [ formData, setFormData ] = useState({
+  const [formData, setFormData] = useState({
     email: '',
     password: ''
   })
 
-  const [ errors, setErrors ] = useState({
+  const [errors, setErrors] = useState({
     message: ''
   })
 
@@ -45,35 +45,33 @@ const Login = () => {
 
   return (
     <>
-      <div className="loginPage">
+      <div className="loginPage page">
 
-      <div className="form-header">
-        <h2>Login to your account.</h2>
-        <h3>Don't have an account? 
-          <a href="/signup"> Get one here.</a> 
-        </h3> 
+        <div className="form-header">
+          <h2>Login to your account.</h2>
+          <h3>Don't have an account?
+            <a href="/signup"> Get one here.</a>
+          </h3>
         </div>
 
         <div className="form-container">
-        <form onSubmit={handleSubmit}>
-          <div className="formfield">
-            <p>Email</p>
-            <input onInput={handleChange} type="email" name="email" value={formData.email} placeholder="Your email goes here"/>
-          </div>
-          <div className="formfield">
-            <p>Password</p>
-            <input onInput={handleChange} type="password" name="password" value={formData.password} placeholder="Your email goes here"/>
-            {errors.message && <p className="error">You've entered an invalid email/password combination. Try again</p>}
-            <input onInput={handleChange} type="password" name="password" value={formData.password} placeholder="Your password goes here"/>
-          </div>
+          <form onSubmit={handleSubmit}>
 
-          <button className="form-button">LOGIN</button>
-        </form>    
+            <div className="formfield">
+              <label htmlFor="email" >Email</label>
+              <input onInput={handleChange} type="email" id="email" name="email" value={formData.email} placeholder="Your email goes here" />
+            </div>
+
+            <div className="formfield">
+              <label htmlFor="password" >Password</label>
+              {errors.message && <p className="error">You've entered an invalid email/password combination. Try again</p>}
+              <input onInput={handleChange} type="password" id="password" name="password" value={formData.password} placeholder="Your password goes here" />
+            </div>
+            <button className="form-button">LOGIN</button>
+          </form>
         </div>
-
       </div>
 
-      
     </>
   )
 }

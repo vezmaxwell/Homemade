@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <>
       <div className="container">
-        <div className="homePage">
+        <div className="homePage page">
 
           <Carousel showIndicators={false} showStatus={false} autoPlay infiniteLoop>
             {recipes.slice(0, 3).map(recipe => {

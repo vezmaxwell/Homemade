@@ -10,13 +10,13 @@ const ReviewNew = () => {
   const { id } = useParams()
   const history = useHistory()
 
-  const [ formData, setFormData ] = useState({
+  const [formData, setFormData] = useState({
     text: '',
     rating: 1,
     image: '',
   })
 
-  const [ errors, setErrors ] = useState({
+  const [errors, setErrors] = useState({
     text: { message: '' }
   })
 
@@ -51,41 +51,41 @@ const ReviewNew = () => {
       if (error.response.data.errors) setErrors(error.response.data.errors)
     }
   }
-  
+
 
   return (
-<div className="signUpPage">
+    <div className="signUpPage page">
 
-<div className="form-header sign-up-form-header">
-  <h2>Add review</h2> 
-  
-  </div>
+      <div className="form-header sign-up-form-header">
+        <h2>Add review</h2>
 
-  <div className="form-container sign-up-form-container">
+      </div>
 
-  <form onSubmit={handleSubmit}>
+      <div className="form-container sign-up-form-container">
 
-    <div className="formfield">
-      <p>Review</p>
-      <textarea onInput={handleChange} name="text" type="text" placeholder="enter review here"  maxLength='400' value={formData.text}/>
-      {errors.text && <p className="error">{errors.text.message}</p>}
+        <form onSubmit={handleSubmit}>
+
+          <div className="formfield">
+            <p>Review</p>
+            <textarea onInput={handleChange} name="text" type="text" placeholder="enter review here" maxLength='400' value={formData.text} />
+            {errors.text && <p className="error">{errors.text.message}</p>}
+          </div>
+
+          <div className="formfield">
+            <p>Rating</p>
+            {/* <input onInput={handleChange} name="rating" type="number" min='1' max='5'value={formData.rating}/> */}
+          </div>
+
+          <div className="formfield">
+            <ImageUpload name="image" handleImageUrl={handleImageUrl} />
+          </div>
+
+          <button className="form-button">Submit</button>
+
+        </form>
+      </div>
+
     </div>
-
-    <div className="formfield">
-      <p>Rating</p>
-      {/* <input onInput={handleChange} name="rating" type="number" min='1' max='5'value={formData.rating}/> */}
-    </div>
-
-    <div className="formfield">
-    <ImageUpload name="image" handleImageUrl={handleImageUrl}/>
-    </div>
-
-    <button className="form-button">Submit</button>
-
-  </form>    
-  </div>
-
-</div>
   )
 }
 
