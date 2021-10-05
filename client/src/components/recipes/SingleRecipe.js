@@ -60,30 +60,15 @@ const SingleRecipe = () => {
     }
   }
 
-  const handleDeleteReview = async () => {
-    try {
-      await axios.delete(
-        `/api/recipes/${id}/review/`,
-        {
-          headers: { Authorization: `Bearer ${getTokenFromLocalStorage}` },
-        }
-      )
-      history.push('/searchrecipe')
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-
   return (
-    <>
+    <div className="page">
       <div className="container">
         {recipe ?
           <>
             <div className='recipeNav'>
               <Link to="/searchrecipe">Back to recipes</Link>
               {
-                userIsOwner(recipe.owner) &&
+                userIsOwner(recipe.owner) && // Add recipe.owner.id instead
                 <div>
                   <Link to={`/searchrecipe/${recipe._id}/edit/`}>Edit Recipe</Link>
                   <button onClick={handleDeleteRecipe}>Delete</button>
@@ -127,32 +112,32 @@ const SingleRecipe = () => {
               </ol>
             </div>
             <hr />
-              <div className="review">
-                <h3>Reviews</h3>
-                {userIsAuthenticated() &&
+            <div className="review">
+              <h3>Reviews</h3>
+              {userIsAuthenticated() &&
                 <Link className="navLink" to={`/searchrecipe/${recipe._id}/review/`}>Add Review</Link>
-                  } 
-                <ul>
-                  {recipe.reviews.map(review => {
-                    return <li key={review._id}> 
-                      <p><strong>By {review.owner.username}</strong></p>
-                      { review.owner.image &&
-                        <img src={review.owner.image} alt="profilePhoto" />
-                      }
-                      <Stars rating={review.rating} />
-                      <p>{review.text}</p>
-                      { review.image &&
+              }
+              <ul>
+                {recipe.reviews.map(review => {
+                  return <li key={review._id}>
+                    <p><strong>By {review.owner.username}</strong></p>
+                    {review.owner.image &&
+                      <img src={review.owner.image} alt="profilePhoto" />
+                    }
+                    <Stars rating={review.rating} />
+                    <p>{review.text}</p>
+                    {review.image &&
                       <img src={review.image} alt="users attempt" />
-                      }
-                    </li>
-                  })}
-                </ul>
-              </div>
-              <div className="related">
-                <h3>Related Recipes</h3>
-                <div className="cards" >
-                  { recipes.filter(rec => rec.cuisine.toLowerCase() === `${recipe.cuisine}` && rec.name !== `${recipe.name}`).map(rec => {
-                    return <Link key={rec._id} className='recipeCard' to={`/SearchRecipe/${rec._id}`}>
+                    }
+                  </li>
+                })}
+              </ul>
+            </div>
+            <div className="related">
+              <h3>Related Recipes</h3>
+              <div className="cards" >
+                {recipes.filter(rec => rec.cuisine.toLowerCase() === `${recipe.cuisine}` && rec.name !== `${recipe.name}`).map(rec => {
+                  return <Link key={rec._id} className='recipeCard' to={`/SearchRecipe/${rec._id}`}>
                     <img className="searchIMG" src={rec.image} alt="recipe" />
                     <div className="cardDetails">
                       <div className="tittle">
@@ -161,9 +146,9 @@ const SingleRecipe = () => {
                       <Stars rating={rec.averageRating} />
                     </div>
                   </Link>
-                  })}
+                })}
               </div>
-              </div>
+            </div>
           </>
 
           :
@@ -176,7 +161,7 @@ const SingleRecipe = () => {
           </>
         }
       </div>
-    </>
+    </div>
 
   )
 

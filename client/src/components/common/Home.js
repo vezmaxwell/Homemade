@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <>
       <div className="container">
-        <div className="homePage">
+        <div className="homePage page">
 
           <Carousel showIndicators={false} showStatus={false} autoPlay infiniteLoop>
             {recipes.slice(0, 3).map(recipe => {
@@ -40,9 +40,10 @@ const Home = () => {
                       <img src={recipe.image} alt={recipe.name} />
                     </div>
                     <div className="carouselInfo">
-                      <h2 key={recipe._id}>{recipe.name}</h2>
+                      <h2 className="carousel-name" key={recipe._id}>{recipe.name}</h2>
                       <h3 >Average Rating:</h3>
                       <Stars rating={recipe.averageRating} />
+
                       <h3>Duration: {recipe.time} minutes</h3>
                       <Link className="viewRecipe" to={`SearchRecipe/${recipe._id}`}>See full recipe</Link>
                     </div>

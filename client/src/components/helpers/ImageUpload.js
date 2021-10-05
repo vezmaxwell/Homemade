@@ -14,8 +14,8 @@ const ImageUpload = ({ value, name, handleImageUrl }) => {
 
   return (
     <>
-      <p htmlFor={name}>Upload Image</p>
-      <input type="file" name={name} className="input" onChange={handleChange} />
+      <label htmlFor="image">Upload Image</label>
+      <input type="file" name={name} id="image" className="input" onChange={handleChange} />
     </>
   )
 

@@ -66,70 +66,71 @@ const SearchRecipe = () => {
     return <span>Something went wrong...</span>
   }
   return (
-    <>
-      <div className='searchPage'>
-          <div className="searchBackground">
-            <input type='text' className='recipeSearch' placeholder='🔎 Search recipes' id='search-field' onInput={handleSearch}></input>
 
-          </div>
+    <div className='searchPage page'>
+      <div className="searchBackground">
+        <input type='text' className='recipeSearch' placeholder='🔎 Search recipes' id='search-field' onInput={handleSearch}></input>
+
+      </div>
+
+
+
       <div className="container">
 
-      
-        <div className="container">
-
         <div className="selectFilter">
-              <div className="selectFilterDiet">
-                <div>Diet:</div>
-                  <option value="all" default></option>
-                <select className="searchSelect" for="recipes" id="recipes" onChange={handleDiet}>
-                  {/* <option value="all" default>All 🍕</option> */}
-                  <option value="all" default></option>
-                  <option value="vegetarian">Vegetarian 🧀</option>
-                  <option value="vegan">Vegan 🌱</option>
-                </select>
-              </div>
-              <div className="selectFilterRating">
-                <div>Average Rating:</div>
-                  <option value="all" default></option>
-                <select className="searchSelect" for="recipes" id="recipes" onChange={handleRating}>
-                  {/* <option value="all" default> All ⭐️ </option> */}
-                  <option value="all" default></option>
-                  <option value="one">⭐️ or above</option>
-                  <option value="two">⭐️⭐️ or above</option>
-                  <option value="three">⭐️⭐️⭐️ or above</option>
-                  <option value="four">⭐️⭐️⭐️⭐️ or above</option>
-                  <option value="five">⭐️⭐️⭐️⭐️⭐️ </option>
-                </select>
-              </div>
-            </div>
+          <div className="selectFilterDiet">
+            <div>Diet:</div>
+            <option value="all" default></option>
+            <select className="searchSelect" for="recipes" id="recipes" onChange={handleDiet}>
+              {/* <option value="all" default>All 🍕</option> */}
+              <option value="all" default></option>
+              <option value="vegetarian">Vegetarian 🧀</option>
+              <option value="vegan">Vegan 🌱</option>
+            </select>
           </div>
-
-
-          <div className="cards" >
-            {filteredItems.slice(0, pageNumber * itemsPerPage).map((recipe, i) => {
-              return <Link key={recipe._id} className='recipeCard' to={`/SearchRecipe/${recipe._id}`}>
-                <img className="searchIMG" src={recipe.image} alt="recipe" />
-                <div className="cardDetails">
-                  <div className="tittle">
-                    <h4>{recipe.name}</h4>
-                  </div>
-                  <Stars rating={recipe.averageRating} />
-                  <p>Duration: {recipe.time} minutes</p>
-                  {recipe.owner && <p>Created by: {recipe.owner.username}</p>}
-                </div>
-              </Link>
-            }
-
-            )}
-          </div>
-          <div className="loadBackground">
-            {
-              pageNumber < totalPages && <button className="pageNumber" onClick={() => setPageNumber(pageNumber + 1)}>Load more...</button>
-            }
+          <div className="selectFilterRating">
+            <div>Average Rating:</div>
+            <option value="all" default></option>
+            <select className="searchSelect" for="recipes" id="recipes" onChange={handleRating}>
+              {/* <option value="all" default> All ⭐️ </option> */}
+              <option value="all" default></option>
+              <option value="one">⭐️ or above</option>
+              <option value="two">⭐️⭐️ or above</option>
+              <option value="three">⭐️⭐️⭐️ or above</option>
+              <option value="four">⭐️⭐️⭐️⭐️ or above</option>
+              <option value="five">⭐️⭐️⭐️⭐️⭐️ </option>
+            </select>
           </div>
         </div>
+
+
+
+        <div className="cards" >
+          {filteredItems.slice(0, pageNumber * itemsPerPage).map((recipe, i) => {
+            return <Link key={recipe._id} className='recipeCard' to={`/SearchRecipe/${recipe._id}`}>
+              <img className="searchIMG" src={recipe.image} alt="recipe" />
+              <div className="cardDetails">
+                <div className="tittle">
+                  <h4>{recipe.name}</h4>
+                </div>
+                <Stars rating={recipe.averageRating} />
+                <p>Duration: {recipe.time} minutes</p>
+                {recipe.owner && <p>Created by: {recipe.owner.username}</p>}
+              </div>
+            </Link>
+          }
+
+          )}
+        </div>
+        <div className="loadBackground">
+          {
+            pageNumber < totalPages && <button className="pageNumber" onClick={() => setPageNumber(pageNumber + 1)}>Load more...</button>
+          }
+        </div>
       </div>
-    </>
+    </div>
+
+
   )
 }
 
