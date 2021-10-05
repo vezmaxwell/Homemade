@@ -63,7 +63,6 @@ const RecipeNew = () => {
     } catch (error) {
       if (error.response.data.errors) setErrors(error.response.data.errors)
     }
-    
   }
 
   return (

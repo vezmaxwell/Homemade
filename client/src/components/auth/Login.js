@@ -56,13 +56,14 @@ const Login = () => {
 
         <div className="form-container">
         <form onSubmit={handleSubmit}>
+  
           <div className="formfield">
             <p>Email</p>
             <input onInput={handleChange} type="email" name="email" value={formData.email} placeholder="Your email goes here"/>
           </div>
+
           <div className="formfield">
             <p>Password</p>
-            <input onInput={handleChange} type="password" name="password" value={formData.password} placeholder="Your email goes here"/>
             {errors.message && <p className="error">You've entered an invalid email/password combination. Try again</p>}
             <input onInput={handleChange} type="password" name="password" value={formData.password} placeholder="Your password goes here"/>
           </div>

@@ -67,13 +67,13 @@ const SearchRecipe = () => {
   }
   return (
     <>
-      <div className="container">
-
-        <div className='searchPage'>
+      <div className='searchPage'>
           <div className="searchBackground">
             <input type='text' className='recipeSearch' placeholder='🔎 Search recipes' id='search-field' onInput={handleSearch}></input>
 
           </div>
+      <div className="container">
+
       
         <div className="container">
 
