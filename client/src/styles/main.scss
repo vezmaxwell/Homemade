@@ -128,7 +128,7 @@ font-size: 20px;
   background-color: rgb(252, 246, 246);
   // border-radius: 5px;
   font-size: 18px;
-  width: 60vh;
+  width: 60vw;
   height: 6vh;
 }
 
@@ -163,7 +163,7 @@ font-size: 20px;
   // color: rgb(92, 92, 92);
   border: none;
   background: none;
-  width: 2vh;
+  width: 2vw;
 }
 
 .homemade {
@@ -185,6 +185,7 @@ font-size: 20px;
 .navLink {
   text-transform: uppercase;
   padding-right: 10px;
+  margin: unset;
 }
 
 .links {
@@ -273,9 +274,8 @@ h4 {
 }
 .stars {
   font-size: 30px;
-  margin: 20px;
-
 }
+
 .avrHome {
   font-size: 70px;
   color:#ff5353;

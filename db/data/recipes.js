@@ -22,7 +22,7 @@ export default [
       '1 avocado'
     ],
     time: 20,
-    image: 'https://thehappypear.ie/wp-content/uploads/2020/08/FullSizeRender-53-scaled.jpg',
+    image: 'https://imgur.com/WpqCaO5.jpg',
     cuisine: 'Indian',
     method: ['½ red onion',
       'Heat the oil on a medium heat.',
@@ -53,7 +53,7 @@ export default [
       '50g mature cheddar , grated',
       'green salad , to serve'],
     time: 55,
-    image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chickenbean-enchiladas-1044331.jpg?quality=90&webp=true&resize=440,400',
+    image: 'https://i.imgur.com/PqiPrVV.jpg',
     cuisine: 'Mexican',
     method: ['½ red onion',
       'Heat oven to 200C/180C fan/gas 6. Heat the oil in a large frying pan and add the onions, peppers and half the garlic. Cook for 15 mins, stirring now and then until the veg has softened. Stir in the chipotle paste, then fry for 1 min more. Add the chicken strips, turning them over in the mixture so they cook through, about 5-10 mins.',
@@ -75,7 +75,7 @@ export default [
       'fresh lasagne 250g, about 8 sheets',
       'parmesan (or veggie alternative) 30g, finely grated'],
     time: 50,
-    image: 'https://images.immediate.co.uk/production/volatile/sites/2/2017/10/OLI1117-CookEday-KaleLasagne_014954-21efe7d.jpg?webp=true&quality=45&crop=15px%2C1882px%2C5462px%2C2350px&resize=1880%2C799',
+    image: 'https://i.imgur.com/SRNzErg.jpg',
     cuisine: 'Other',
     method: ['½ red onion',
       'Heat the oven to 200C/fan 180C/gas 6. Drop the kale in boiling salted water, bring back to a simmer then cook for 5 minutes. Drain really well.',
@@ -103,7 +103,7 @@ export default [
       'Salt and pepper to taste'
     ],
     time: 20,
-    image: 'https://144f2a3a2f948f23fc61-ca525f0a2beaec3e91ca498facd51f15.ssl.cf3.rackcdn.com/uploads/food_portal_data/recipes/recipe/hero_article_image/4582/letterbox_prawn_still.jpg',
+    image: 'https://i.imgur.com/ryfqJSE.png',
     cuisine: 'Italian',
     method: ['In a bowl combine the teaspoons of chopped chervil and dill, the lemon juice and add a dash of olive oil, add the prawns to this mix to marinade for about 20 minutes',
       'Cook the peas to the packets instructions - and cool them in ice water and set aside ',
@@ -125,7 +125,7 @@ export default [
       '6 ice cubes'
     ],
     time: 10,
-    image: '/images/smoothie.jpg',
+    image: 'https://i.imgur.com/O7QDx4w.png',
     cuisine: 'Other',
     method: ['Peel, stone and roughly chop the mango, and put the flesh into a blender. ',
       'Halve 2 of the passion fruit and sieve the pulp into a bowl, then add to the blender. Peel and roughly chop the banana and 1½ kiwi fruit, and add them to the blender with the yogurt, juice and ice cubes.',
@@ -154,7 +154,7 @@ export default [
       '50ml skimmed milk'
     ],
     time: 10,
-    image: 'https://144f2a3a2f948f23fc61-ca525f0a2beaec3e91ca498facd51f15.ssl.cf3.rackcdn.com/uploads/food_portal_data/recipes/recipe/hero_article_image/4090/bcac0b19cd80cea9786f/letterbox_FruitSalad5965.jpg',
+    image: 'https://i.imgur.com/WbYrjbi.jpg',
     cuisine: 'Other',
     method: ['Into a heated, large pan, add the oil or Frylight and add the lamb, and fry for approx 8-10 mins, until browned, stirring occasionally to break any lumps',
       'Remove the meat, drain off any fat, and set aside. Spray the pan with the other squirt of spray, reduce the heat, add the diced onion, carrot, celery, and garlic, and cook over a medium heat for 8 mins, until the onion is softened',

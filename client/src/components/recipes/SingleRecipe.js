@@ -35,6 +35,7 @@ const SingleRecipe = () => {
       try {
         const { data } = await axios.get(`/api/recipes/${id}`)
         setRecipe(data)
+        console.log(data)
       } catch (error) {
         setHasError(true)
       }
@@ -82,7 +83,7 @@ const SingleRecipe = () => {
             <div className='recipeNav'>
               <Link to="/searchrecipe">Back to recipes</Link>
               {
-                userIsOwner(recipe.owner.id) &&
+                userIsOwner(recipe.owner) &&
                 <div>
                   <Link to={`/searchrecipe/${recipe._id}/edit/`}>Edit Recipe</Link>
                   <button onClick={handleDeleteRecipe}>Delete</button>
@@ -90,18 +91,26 @@ const SingleRecipe = () => {
               }
               <div>
                 <div className='main'>
-                  <div id='mainImage'>
+
+                  <div class='mainImage'>
                     <img src={recipe.image} alt={recipe.name} />
                   </div>
+
                   <div className="mainInfo">
-                    <h1>{recipe.name}</h1>
+
+                    <h1 className="recipe-name">{recipe.name}</h1>
                     <p>Difficulty: {recipe.difficulty}</p>
                     <Stars rating={recipe.averageRating} />
+
+                    <h3>Ingredients</h3>
+
+
                     <ul>
                       {recipe.ingredients.map(ingredient => {
-                        return <li key={recipe._id}>{ingredient}</li>
+                        return <li className="ingredients" key={recipe._id}>{ingredient}</li>
                       })}
                     </ul>
+
                   </div>
                 </div>
               </div>
