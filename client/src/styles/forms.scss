@@ -28,6 +28,10 @@
   width: 80vh;
 }
 
+.sign-up-form-container {
+  height: 65vh;
+}
+
 form {
   height: 100%;
 }
@@ -59,10 +63,6 @@ input {
 button:hover {
   background-color: rgba(250, 154, 102, 0.735);
   cursor: pointer;
-}
-
-.sign-up-form-container {
-  height: 65vh;
 }
 
 textarea {

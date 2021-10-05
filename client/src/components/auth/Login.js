@@ -62,12 +62,9 @@ const Login = () => {
           </div>
           <div className="formfield">
             <p>Password</p>
-<<<<<<< Updated upstream
             <input onInput={handleChange} type="password" name="password" value={formData.password} placeholder="Your email goes here"/>
             {errors.message && <p className="error">You've entered an invalid email/password combination. Try again</p>}
-=======
             <input onInput={handleChange} type="password" name="password" value={formData.password} placeholder="Your password goes here"/>
->>>>>>> Stashed changes
           </div>
 
           <button className="form-button">LOGIN</button>

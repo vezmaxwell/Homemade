@@ -1,11 +1,8 @@
 @import './singleRecipe';
-<<<<<<< Updated upstream
-$background: #f8bfb4;
-=======
 @import './forms.scss';
 
-$background: #ff5353;
->>>>>>> Stashed changes
+$background: #f8bfb4;
+
 * {
   margin: 0;
   padding: 0;
@@ -237,7 +234,6 @@ a {
   margin-left: 10px;
 }
 
-<<<<<<< Updated upstream
 input, button {
   height: 40px;
   width: 180px;
@@ -286,8 +282,6 @@ input {
 }
 
 
-=======
->>>>>>> Stashed changes
 .signUpPage, .loginPage {
  
   
@@ -298,7 +292,6 @@ input {
   flex-direction: column;
 }
 
-<<<<<<< Updated upstream
 .formfield > input, button {
   width: calc(var(--width) * 0.8);
   margin-top: 2vh;
@@ -321,8 +314,6 @@ button:hover {
   margin: 30px 0px 30px 0px;
 }
 
-=======
->>>>>>> Stashed changes
 h2 {
   font-size: 4vh;
   margin-bottom: 2vh;
@@ -428,7 +419,6 @@ flex-direction: column;
   width: 100%;
 }
 
-<<<<<<< Updated upstream
 .footer {
   margin-top: 30px;
   display: flex;
@@ -453,8 +443,3 @@ flex-direction: column;
   color:rgb(58, 58, 58);
   padding-bottom: 7px;
 }
-=======
-.selectFilter:hover .searchSelect {
-  cursor: pointer;
-}
->>>>>>> Stashed changes
