@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom'
-import { userIsAuthenticated } from '../helpers/auth'
+// import { userIsAuthenticated } from '../helpers/auth'
 
 
 
@@ -64,7 +64,6 @@ const Login = () => {
             <p>Password</p>
             <input onInput={handleChange} type="password" name="password" value={formData.password} placeholder="Your email goes here"/>
             {errors.message && <p className="error">You've entered an invalid email/password combination. Try again</p>}
-            <input onInput={handleChange} type="password" name="password" value={formData.password} placeholder="Your password goes here"/>
           </div>
 
           <button className="form-button">LOGIN</button>

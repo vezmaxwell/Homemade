@@ -27,9 +27,20 @@ const Profile = () => {
     getProfile()
   }, [])
 
+  const handleDeleteRecipe = async (id) => {
+    try {
+      await axios.delete(
+        `/api/recipes/${id}`, { headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` } }
+      )
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <>
     <p>{profile.username}</p>
+    <img src={profile.profileImage} alt="profile" />
     <h2>Recipes created</h2>
     <div className="cards" >
       { profile.createdRecipes &&
@@ -42,12 +53,13 @@ const Profile = () => {
         </div>
         <Stars rating={recipe.averageRating} />
       </div>
+      <Link to={`/searchrecipe/${recipe._id}/edit/`}>Edit Recipe</Link>
+      <button onClick={handleDeleteRecipe(recipe._id)}>Delete</button>
     </Link>
     })}
     </div>
     <div className="review">
     <h2>Reviews Left</h2>
-    <img src={profile.profileImage} alt="profile" />
     { profile.reviews && 
     profile.review.map(review => {
       return <li key={review._id}> 

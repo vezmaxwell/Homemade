@@ -59,19 +59,6 @@ const SingleRecipe = () => {
     }
   }
 
-  const handleDeleteReview = async () => {
-    try {
-      await axios.delete(
-        `/api/recipes/${id}/review/`,
-        {
-          headers: { Authorization: `Bearer ${getTokenFromLocalStorage}` },
-        }
-      )
-      history.push('/searchrecipe')
-    } catch (error) {
-      console.log(error)
-    }
-  }
 
 
   return (
