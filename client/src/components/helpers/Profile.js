@@ -39,7 +39,9 @@ const Profile = () => {
   }
 
   return (
-    <> <div className="profileHeader">
+    <> 
+    <div className="page">
+    <div className="profileHeader">
       {profile.profileImage &&
         <img id="profileImage" src={profile.profileImage} alt="profile" />
       }
@@ -70,7 +72,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
-
+      </div>
     </>
   )
 }
