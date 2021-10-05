@@ -67,19 +67,19 @@ const SearchRecipe = () => {
   }
   return (
     <>
-      <div className="container">
-
-        <div className='searchPage'>
+      <div className='searchPage'>
           <div className="searchBackground">
             <input type='text' className='recipeSearch' placeholder='🔎 Search recipes' id='search-field' onInput={handleSearch}></input>
 
           </div>
+      <div className="container">
+
       
         <div className="container">
 
         <div className="selectFilter">
               <div className="selectFilterDiet">
-                <div>Diet:</div>
+                <div>Diet</div>
                   <option value="all" default></option>
                 <select className="searchSelect" for="recipes" id="recipes" onChange={handleDiet}>
                   {/* <option value="all" default>All 🍕</option> */}
@@ -89,7 +89,7 @@ const SearchRecipe = () => {
                 </select>
               </div>
               <div className="selectFilterRating">
-                <div>Average Rating:</div>
+                <div>Average Rating</div>
                   <option value="all" default></option>
                 <select className="searchSelect" for="recipes" id="recipes" onChange={handleRating}>
                   {/* <option value="all" default> All ⭐️ </option> */}

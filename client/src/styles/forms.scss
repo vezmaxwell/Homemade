@@ -12,7 +12,7 @@
 }
 
 .form-container {
-  background-color: #ff5353;
+  background-color: #f8bfb4;
   --width: 60vh;
   width: 60vh;
   height: 45vh;
@@ -57,7 +57,8 @@ input {
   margin-bottom: 6vh;
   background-color: rgb(246,150,121);
   font-size: 4vh;
-  font-family: "Kefa";
+  font-family: "Nunito";
+  width: 100%;
 }
 
 button:hover {
@@ -92,4 +93,9 @@ input[type=file] {
 
 .new-recipe-header {
   margin: 6vh;
+}
+
+.error {
+  color: red;
+  font-size: 10px;
 }

@@ -63,7 +63,6 @@ const RecipeNew = () => {
     } catch (error) {
       if (error.response.data.errors) setErrors(error.response.data.errors)
     }
-    
   }
 
   return (
@@ -82,7 +81,7 @@ const RecipeNew = () => {
     <div className="formfield">
       <p>Recipe Name</p>
       <input onInput={handleChange} name="name" type="text" placeholder="Recipe Name" value={formData.name}/>
-      {errors.name && <p className="error">Please enter the recipe name</p>}
+      {errors.name && <p className="error">Please enter recipe name</p>}
     </div>
 
     <div className="formfield">
@@ -133,7 +132,7 @@ const RecipeNew = () => {
 
     <div className="formfield">
       <p>Method</p>
-      <textarea onInput={handleMultiEnter} name="method" type="text" placeholder="Method example: Into a heated pan spray with the 1 squirt of the oil spray or add a tsp of oil add the onion garlic and ginger cook over a gentle heat for 3 mins, Add the spices red chilli and bay leaf along with a spoonful of water and cook for a few more mins stirring until the aromas are released" value={formData.method}/>
+      <textarea onInput={handleMultiEnter} name="method" type="text" placeholder="Enter your each step of your method with a comma to distinguish each step e.g Prepare ingredients, cook all ingredients, serve food, ..." value={formData.method}/>
     </div>
 
     <div className="formfield">

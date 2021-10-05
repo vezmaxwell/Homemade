@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { getTokenFromLocalStorage } from './auth'
 import Stars from '../Stars'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 const Profile = () => {
 
   const [profile, setProfile] = useState({})
   const [hasError, setHasError] = useState(false)
 
-
+  const history = useHistory()
 
   useEffect(() => {
     const getProfile = async () => {
@@ -32,15 +32,22 @@ const Profile = () => {
       await axios.delete(
         `/api/recipes/${id}`, { headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` } }
       )
+      history.push('/profile')
     } catch (error) {
       console.log(error)
     }
   }
 
   return (
-    <>
-    <p>{profile.username}</p>
-    <img src={profile.profileImage} alt="profile" />
+    <> <div className="profileHeader">
+    { profile.profileImage &&
+    <img id="profileImage" src={profile.profileImage} alt="profile" />
+    }
+    <h1>Welcome, {profile.username}</h1>
+    <p>Manage your created recipes here</p>
+    </div>
+    <div className="container">
+    <div className="profileBody">
     <h2>Recipes created</h2>
     <div className="cards" >
       { profile.createdRecipes &&
@@ -53,28 +60,15 @@ const Profile = () => {
         </div>
         <Stars rating={recipe.averageRating} />
       </div>
-      <Link to={`/searchrecipe/${recipe._id}/edit/`}>Edit Recipe</Link>
-      <button onClick={handleDeleteRecipe(recipe._id)}>Delete</button>
+      <div className="profileButton">
+      <Link to={`/searchrecipe/${recipe._id}/edit/`}><button>Edit Recipe</button></Link>
+      <button onClick={() => handleDeleteRecipe(recipe._id)}>Delete</button>
+      </div>
     </Link>
-    })}
+    }) 
+      }
     </div>
-    <div className="review">
-    <h2>Reviews Left</h2>
-    { profile.reviews && 
-    profile.review.map(review => {
-      return <li key={review._id}> 
-        <p><strong>By {review.owner.username}</strong></p>
-        { review.owner.image &&
-          <img src={review.owner.image} alt="profilePhoto" />
-          }
-          <Stars rating={review.rating} />
-          <p>{review.text}</p>
-          { review.image &&
-          <img src={review.image} alt="users attempt" />
-          }
-  </li>
-    })
-    }
+    </div>
     </div>
 
     </>

@@ -92,6 +92,7 @@ font-size: 20px;
     width: 700px!important;
   }
 }
+
 .carousel.carousel-slider .control-arrow {
   top: 0;
   font-size: 26px;
@@ -165,24 +166,6 @@ font-size: 20px;
   width: 2vh;
 }
 
-
-
-// * {
-//   font-size: 93px;
-//   font-family: "Kefa";
-//   color: rgb(0, 0, 0);
-//   line-height: 1.2;
-//   text-align: center;
-//   -moz-transform: matrix( 0.17058187151651,0,0,0.17058187151651,0,0);
-//   -webkit-transform: matrix( 0.17058187151651,0,0,0.17058187151651,0,0);
-//   -ms-transform: matrix( 0.17058187151651,0,0,0.17058187151651,0,0);
-//   position: absolute;
-//   left: 740.264px;
-//   top: 406.162px;
-//   z-index: 11;
-// }
-
-
 .homemade {
   font-size: 40px;
   font-family: "WTR Gothic Open Shaded";
@@ -218,7 +201,6 @@ ul {
   display: flex;
   list-style-type: none;
 }
-
 
 
 a {
@@ -265,54 +247,6 @@ input {
   justify-content: center;
 }
 
-.form-header {
-  text-align: center;
-  margin-bottom: 5vh;
-}
-
-.form-container {
-  background-color: $background;
-  --width: 60vh;
-  width: 60vh;
-  height: 45vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-
-.signUpPage, .loginPage {
- 
-  
-  min-height: 85vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.formfield > input, button {
-  width: calc(var(--width) * 0.8);
-  margin-top: 2vh;
-}
-
-.form-button {
-  height: 8vh;
-  margin-bottom: 6vh;
-  background-color: rgb(250, 243, 241);
-  font-size: 4vh;
-  font-family: "Kefa";
-}
-
-button:hover {
-  background-color: rgb(248, 232, 225);
-  cursor: pointer;
-}
-
-.formfield {
-  margin: 30px 0px 30px 0px;
-}
 
 h2 {
   font-size: 4vh;
@@ -352,11 +286,12 @@ h4 {
 
 
 
-// .signUpPage {
-//   background-color: rgb(110, 236, 106);
-//   width: 100vw;
-//   min-height: 100vh;
-// }
+.signUpPage, .loginPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .cards {
   display: flex;
@@ -429,7 +364,6 @@ flex-direction: column;
 }
 
 .gitHubLink{
- 
   display: flex;
   justify-content: center;
   margin: 4px;
@@ -442,4 +376,46 @@ flex-direction: column;
   font-size: 14px;
   color:rgb(58, 58, 58);
   padding-bottom: 7px;
+}
+
+.profileHeader {
+  text-align: center;
+  text-transform: uppercase;
+
+  h1{
+    margin: 20px;
+    font-weight:lighter;
+  }
+
+  p{
+    color: grey;
+  }
+
+  #profileImage {
+    margin: 20px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+  }
+}
+.profileBody {
+  text-align: center;
+  margin: 60px 0 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+  
+  h2 {
+    font-weight:lighter;
+    font-size: 20px;
+  }
+}
+
+.profileButton{
+  display: flex;
+  justify-content: space-evenly;
+
+  button{
+    width: 100px;
+  }
+
 }
