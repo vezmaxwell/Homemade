@@ -67,8 +67,8 @@ const SingleRecipe = () => {
           <>
             <div className='recipeNav'>
               <Link to="/searchrecipe">Back to recipes</Link>
-              
-              { 
+
+              {
                 userIsOwner(recipe.owner.id) && // Add recipe.owner.id instead
                 <div>
                   <Link to={`/searchrecipe/${recipe._id}/edit/`}>Edit Recipe</Link>
@@ -80,26 +80,26 @@ const SingleRecipe = () => {
                   <h1 className="recipe-name">{recipe.name}</h1>
 
 
-                <div className="imageInfo">
-                  <div class='mainImage'>
-                    <img src={recipe.image} alt={recipe.name} />
-                  </div>
+                  <div className="imageInfo">
+                    <div class='mainImage'>
+                      <img src={recipe.image} alt={recipe.name} />
+                    </div>
 
-                  <div className="mainInfo">
+                    <div className="mainInfo">
 
-                    <Stars rating={recipe.averageRating} />
-                    
-                    
-
-                    <h3 className="singleh3">Ingredients</h3>
-                    <p>Difficulty: {recipe.difficulty}</p>
+                      <Stars rating={recipe.averageRating} />
 
 
-                    <ul>
-                      {recipe.ingredients.map(ingredient => {
-                        return <li className="ingredients" key={recipe._id}>{ingredient}</li>
-                      })}
-                    </ul>
+
+                      <h3 className="singleh3">Ingredients</h3>
+                      <p>Difficulty: {recipe.difficulty}</p>
+
+
+                      <ul>
+                        {recipe.ingredients.map(ingredient => {
+                          return <li className="ingredients" key={recipe._id}>{ingredient}</li>
+                        })}
+                      </ul>
                     </div>
 
                   </div>
@@ -146,7 +146,7 @@ const SingleRecipe = () => {
                   return <Link key={rec._id} className='recipeCard' to={`/SearchRecipe/${rec._id}`}>
                     <img className="searchIMG" src={rec.image} alt="recipe" />
                     <div className="cardDetails">
-                      <div className="tittle">
+                      <div className="title">
                         <h4>{rec.name}</h4>
                       </div>
                       <Stars rating={rec.averageRating} />

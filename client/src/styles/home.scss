@@ -1,0 +1,181 @@
+
+//Home page
+.monthRecipes {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: $background;
+  align-items: center;
+  height: 90px;
+  font-size: 33px; 
+}
+.homePage {
+  margin: 20px 10px 5px;
+}
+.stars {
+  font-size: 30px;
+}
+.avrHome {
+  font-size: 70px;
+  color:#ff5353;
+}
+.carousel-name {
+  font-size: 24px;
+}
+.create{
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+}
+.create-review {
+  margin-top: 50px;
+}
+.createbox {
+  margin: 50px 50px 80px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  letter-spacing: 1px;
+  p {
+    line-height: 1.45;
+    text-align: justify;
+  }
+}
+.createHomePage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.carouselImage {
+  img{
+    object-fit: cover;
+    height: 350px;
+  }
+}
+.control-arrow {
+  width: 30px;
+  height: 100%;
+.carousel.carousel-slider .control-arrow {
+  top: 0;
+  font-size: 26px;
+  bottom: 0;
+  margin-top: 0;
+  padding: 5px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+}
+}
+.carousel-name{
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.carouselItem {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.carouselInfo {
+  padding: 0 50px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  margin-top: 10px;
+  h2 {
+    font-size: 50px;
+  }
+}
+.title {
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+}
+.created {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  color:rgb(58, 58, 58);
+  padding-bottom: 7px;
+}
+.welcomeIMG {
+  height: 500px;
+}
+.createIMG {
+  height: 200px;
+  margin-left: 10px;
+}
+
+//Ipad full screen //
+@media screen and (min-width: 768px) {
+  .carouselImage {
+    img{
+      height: 700px;
+      width: 800px!important;
+    }
+  }
+  .carouselItem {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin: 50px auto 100px;
+
+  }
+  .control-arrow {
+    width: 80px;
+  }
+  .create-review {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .createbox {
+    width: 350px;
+  }
+  .create{
+    width: 200px;
+  }
+  .carousel-name{
+    margin-bottom: 50px;
+    font-size: 45px;
+  }
+  .carouselInfo{
+  margin-top: 0px;
+  
+   h2 {
+  font-size: 50px;
+  }
+}
+  .carousel-root{
+    margin-top: 30px;
+
+  }
+  @media screen and (min-width: 480px) {
+    .cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    }
+    .recipeCard {
+      width: calc(25% - 20px);
+      margin: 20px 10px;
+    }
+    .selectFilter{
+      font-size: 20px;
+      display: flex;
+      flex-direction: row;
+    }
+    .searchSelect{
+      width: 20px;
+    } 
+    .cards {
+    padding: 0;
+    }
+    }
+}

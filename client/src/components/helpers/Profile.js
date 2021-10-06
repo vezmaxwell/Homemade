@@ -39,50 +39,50 @@ const Profile = () => {
   }
 
   return (
-    <> 
-    {profile ?
-    <div className="page">
-    <div className="profileHeader">
-      {profile.profileImage &&
-        <img id="profileImage" src={profile.profileImage} alt="profile" />
-      }  
-      <h1>Welcome, {profile.username}</h1>
-      <p>Manage your created recipes here</p>
-    </div>
-      <div className="container">
-        <div className="profileBody">
-          <h2>Recipes created</h2>
-          <div className="cards" >
-            {profile.createdRecipes &&
-              profile.createdRecipes.map(recipe => {
-                return <Link key={recipe._id} className='recipeCard' to={`/SearchRecipe/${recipe._id}`}>
-                  <img className="searchIMG" src={recipe.image} alt="recipe" />
-                  <div className="cardDetails">
-                    <div className="tittle">
-                      <h4>{recipe.name}</h4>
-                    </div>
-                    <Stars rating={recipe.averageRating} />
-                  </div>
-                  <div className="profileButton">
-                    <Link to={`/searchrecipe/${recipe._id}/edit/`}><button>Edit Recipe</button></Link>
-                    <button onClick={() => handleDeleteRecipe(recipe._id)}>Delete</button>
-                  </div>
-                </Link>
-              })
+    <>
+      {profile ?
+        <div className="page">
+          <div className="profileHeader">
+            {profile.profileImage &&
+              <img id="profileImage" src={profile.profileImage} alt="profile" />
             }
+            <h1>Welcome, {profile.username}</h1>
+            <p>Manage your created recipes here</p>
+          </div>
+          <div className="container">
+            <div className="profileBody">
+              <h2>Recipes created</h2>
+              <div className="cards" >
+                {profile.createdRecipes &&
+                  profile.createdRecipes.map(recipe => {
+                    return <Link key={recipe._id} className='recipeCard' to={`/SearchRecipe/${recipe._id}`}>
+                      <img className="searchIMG" src={recipe.image} alt="recipe" />
+                      <div className="cardDetails">
+                        <div className="title">
+                          <h4>{recipe.name}</h4>
+                        </div>
+                        <Stars rating={recipe.averageRating} />
+                      </div>
+                      <div className="profileButton">
+                        <Link to={`/searchrecipe/${recipe._id}/edit/`}><button>Edit Recipe</button></Link>
+                        <button onClick={() => handleDeleteRecipe(recipe._id)}>Delete</button>
+                      </div>
+                    </Link>
+                  })
+                }
+              </div>
+            </div>
+
           </div>
         </div>
-      
-      </div>
-      </div>
-      :
-      <>
-            {hasError ?
-              <h2>Oops something went wrong.</h2>
-              :
-              <h2>Loading...</h2>
-            }
-          </>
+        :
+        <>
+          {hasError ?
+            <h2>Oops something went wrong.</h2>
+            :
+            <h2>Loading...</h2>
+          }
+        </>
       }
     </>
   )
