@@ -67,41 +67,41 @@ const SingleRecipe = () => {
           <>
             <div className='recipeNav'>
               <div className="navButtons">
-              <Link to="/searchrecipe"><button>Back to recipes</button></Link>
-              
-              { 
-                userIsOwner(recipe.owner.id) && // Add recipe.owner.id instead
-                <div>
-                  <Link to={`/searchrecipe/${recipe._id}/edit/`}><button>Edit Recipe</button></Link>
-                  <button onClick={handleDeleteRecipe}>Delete</button>
-                </div>
-              }
+                <Link to="/searchrecipe"><button>Back to recipes</button></Link>
+
+                {
+                  userIsOwner(recipe.owner.id) && // Add recipe.owner.id instead
+                  <div>
+                    <Link to={`/searchrecipe/${recipe._id}/edit/`}><button>Edit Recipe</button></Link>
+                    <button onClick={handleDeleteRecipe}>Delete</button>
+                  </div>
+                }
               </div>
               <div>
                 <div className='main'>
                   <h1 className="recipe-name">{recipe.name}</h1>
 
 
-                <div className="imageInfo">
-                  <div class='mainImage'>
-                    <img className="mainImg" src={recipe.image} alt={recipe.name} />
-                  </div>
+                  <div className="imageInfo">
+                    <div class='mainImage'>
+                      <img src={recipe.image} alt={recipe.name} />
+                    </div>
 
-                  <div className="mainInfo">
+                    <div className="mainInfo">
 
-                    <Stars rating={recipe.averageRating} />
-                    
-                    
-
-                    <h3 className="singleh3">Ingredients</h3>
-                    <p>Difficulty: {recipe.difficulty}</p>
+                      <Stars rating={recipe.averageRating} />
 
 
-                    <ul>
-                      {recipe.ingredients.map(ingredient => {
-                        return <li className="ingredients" key={recipe._id}>{ingredient}</li>
-                      })}
-                    </ul>
+
+                      <h3 className="singleh3">Ingredients</h3>
+                      <p>Difficulty: {recipe.difficulty}</p>
+
+
+                      <ul>
+                        {recipe.ingredients.map(ingredient => {
+                          return <li className="ingredients" key={recipe._id}>{ingredient}</li>
+                        })}
+                      </ul>
                     </div>
 
                   </div>
@@ -148,7 +148,7 @@ const SingleRecipe = () => {
                   return <Link key={rec._id} className='recipeCard' to={`/SearchRecipe/${rec._id}`}>
                     <img className="searchIMG" src={rec.image} alt="recipe" />
                     <div className="cardDetails">
-                      <div className="tittle">
+                      <div className="title">
                         <h4>{rec.name}</h4>
                       </div>
                       <Stars rating={rec.averageRating} />

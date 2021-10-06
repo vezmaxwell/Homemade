@@ -61,7 +61,7 @@ const Home = () => {
                     <div className="createHomePage">
                       <img className="create" src="https://pbs.twimg.com/profile_images/476011056582504449/8wW-GoJu.jpeg" alt="create recipe" />
                       <div className="createbox">
-                        <p>Felling inspired? Sign-up and create your own recipe, include the recipe's name, ingredients, time, cuisine, method, difficulty and upload an image from your own recipe and that's it! You have your own recipe and now you can share with your friends and family!</p>
+                        <p>Feeling inspired? Sign-up and create your own recipe, include the recipe's name, ingredients, time, cuisine, method, difficulty and upload an image for your own recipe and that's it! You have your own recipe and now you can share with your friends and family!</p>
                       </div>
                     </div>
                   </Link>
@@ -72,7 +72,7 @@ const Home = () => {
                     <div className="createHomePage">
                       <img className="create" src="https://pbs.twimg.com/profile_images/476011056582504449/8wW-GoJu.jpeg" alt="create recipe" />
                       <div className="createbox">
-                        <p>Felling inspired? Sign-up and create your own recipe, include the recipe's name, ingredients, time, cuisine, method, difficulty and upload an image from your own recipe and that's it! You have your own recipe and now you can share with your friends and family!</p>
+                        <p>Feeling inspired? Sign-up and create your own recipe, include the recipe's name, ingredients, time, cuisine, method, difficulty and upload an image for your own recipe and that's it! You have your own recipe and now you can share with your friends and family!</p>
                       </div>
                     </div>
                   </Link>
@@ -84,7 +84,7 @@ const Home = () => {
               <div className="createHomePage">
                 <img className="create" src="https://thumb9.shutterstock.com/mosaic_250/2836333/723703846/stock-vector-audit-icon-vector-723703846.jpg" alt="review recipe" />
                 <div className="createbox">
-                  <p>You've made one of our recipes and now you would like to give a feedback from the recipe? That is easy, just login, find the recipe and write your review! Easy as that!</p>
+                  <p>You've made one of our recipes and now you would like to give feedback for the recipe? That is easy, just login, find the recipe and write your review! Easy as that!</p>
                 </div>
               </div>
             </div>

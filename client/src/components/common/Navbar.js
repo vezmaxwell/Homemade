@@ -50,7 +50,7 @@ const Navbar = () => {
 
           {
             userIsAuthenticated() ?
-              <ul className="nav-links">
+              <ul className="nav-links-authenticated">
                 <li className="navLink" onClick={handleLogout}>Logout</li>
                 <li className="navLink"><Link to='/addRecipe'>Add Recipe</Link></li>
                 <li className="navLink"><Link to='/SearchRecipe'>All Recipes</Link></li>

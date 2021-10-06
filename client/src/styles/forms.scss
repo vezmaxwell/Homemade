@@ -21,7 +21,7 @@
 
 .form-container {
   background-color: #f8bfb4;
- width: 100%;
+ width: 90%;
  max-width: 500px;
  margin: 30px;
 }
@@ -29,8 +29,6 @@
 .recipe-new-form-container {
  max-width: 800px;
 }
-
-
 
 form {
   height: 100%;
@@ -96,10 +94,12 @@ input[type=file] {
   padding-left: unset;
 }
 
-.new-recipe-header {
-}
-
 .error {
   color: red;
   font-size: 10px;
+}
+@media screen and (min-width: 480px) {
+  .form-container {
+    width: 90%;
+  }
 }

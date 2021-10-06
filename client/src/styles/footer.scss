@@ -1,0 +1,15 @@
+//Footer 
+.footer {
+  display: flex;
+  flex-direction: column; 
+  background-color: $background;
+  justify-content: center;
+  height: $footerHeight;
+}
+.gitHubLink{
+  display: flex;
+  justify-content: center;
+  margin: 4px;
+  font-size: 19px;
+  color: rgb(12, 12, 12);
+}

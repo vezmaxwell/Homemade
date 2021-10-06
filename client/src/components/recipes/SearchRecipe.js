@@ -110,7 +110,7 @@ const SearchRecipe = () => {
             return <Link key={recipe._id} className='recipeCard' to={`/SearchRecipe/${recipe._id}`}>
               <img className="searchIMG" src={recipe.image} alt="recipe" />
               <div className="cardDetails">
-                <div className="tittle">
+                <div className="title">
                   <h4>{recipe.name}</h4>
                 </div>
                 <Stars rating={recipe.averageRating} />
