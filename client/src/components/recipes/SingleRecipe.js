@@ -129,8 +129,8 @@ const SingleRecipe = () => {
                 {recipe.reviews.map(review => {
                   return <li key={review._id}>
                     <p><strong>By {review.owner.username}</strong></p>
-                    {review.owner.image &&
-                      <img src={review.owner.image} alt="profilePhoto" />
+                    {review.owner.profileImage &&
+                      <img src={review.owner.profileImage} className="profileImage" alt="profilePhoto" />
                     }
                     <Stars rating={review.rating} />
                     <p>{review.text}</p>
