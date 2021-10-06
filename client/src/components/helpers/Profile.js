@@ -51,7 +51,7 @@ const Profile = () => {
     </div>
       <div className="container">
         <div className="profileBody">
-          <h2>Recipes created</h2>
+          <h2>My Recipes</h2>
           <div className="cards" >
             {profile.createdRecipes &&
               profile.createdRecipes.map(recipe => {

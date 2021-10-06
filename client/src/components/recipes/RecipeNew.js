@@ -66,7 +66,7 @@ const RecipeNew = () => {
   }
 
   return (
-    <div className="signUpPage">
+    <div className="signUpPage page">
 
       <div className="form-header new-recipe-header">
         <h2>New Recipe</h2>
