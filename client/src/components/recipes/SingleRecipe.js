@@ -66,15 +66,17 @@ const SingleRecipe = () => {
         {recipe ?
           <>
             <div className='recipeNav'>
-              <Link to="/searchrecipe">Back to recipes</Link>
+              <div className="navButtons">
+                <Link to="/searchrecipe"><button>Back to recipes</button></Link>
 
-              {
-                userIsOwner(recipe.owner.id) && // Add recipe.owner.id instead
-                <div>
-                  <Link to={`/searchrecipe/${recipe._id}/edit/`}>Edit Recipe</Link>
-                  <button onClick={handleDeleteRecipe}>Delete</button>
-                </div>
-              }
+                {
+                  userIsOwner(recipe.owner.id) && // Add recipe.owner.id instead
+                  <div>
+                    <Link to={`/searchrecipe/${recipe._id}/edit/`}><button>Edit Recipe</button></Link>
+                    <button onClick={handleDeleteRecipe}>Delete</button>
+                  </div>
+                }
+              </div>
               <div>
                 <div className='main'>
                   <h1 className="recipe-name">{recipe.name}</h1>
@@ -127,8 +129,8 @@ const SingleRecipe = () => {
                 {recipe.reviews.map(review => {
                   return <li key={review._id}>
                     <p><strong>By {review.owner.username}</strong></p>
-                    {review.owner.image &&
-                      <img src={review.owner.image} alt="profilePhoto" />
+                    {review.owner.profileImage &&
+                      <img src={review.owner.profileImage} className="profileImage" alt="profilePhoto" />
                     }
                     <Stars rating={review.rating} />
                     <p>{review.text}</p>

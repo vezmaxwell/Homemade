@@ -9,6 +9,7 @@ hr {
   display: flex;
   flex-direction: column;
   padding: 50px;
+  // margin-top: 50px;
 
   .mainInfo {
     display: flex;
@@ -78,7 +79,7 @@ hr {
   overflow: hidden;
 }
 
-img {
+.mainImg {
   width: 100%;
   object-fit: cover;
 }
@@ -92,4 +93,28 @@ img {
 .method, .ingredients {
   font-weight: lighter;
 }
+
+}
+
+.recipeNav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  .navButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+}
+
+
+.reviewImage {
+  width: 80px;
+  height: 80px;
+}
+
+.profileImage{
+  width: 40px;
+  height: 40px;
 }

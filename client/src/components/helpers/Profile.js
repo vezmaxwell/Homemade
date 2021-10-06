@@ -51,14 +51,14 @@ const Profile = () => {
           </div>
           <div className="container">
             <div className="profileBody">
-              <h2>Recipes created</h2>
+              <h2>My Recipes</h2>
               <div className="cards" >
                 {profile.createdRecipes &&
                   profile.createdRecipes.map(recipe => {
                     return <Link key={recipe._id} className='recipeCard' to={`/SearchRecipe/${recipe._id}`}>
                       <img className="searchIMG" src={recipe.image} alt="recipe" />
                       <div className="cardDetails">
-                        <div className="title">
+                        <div className="tittle">
                           <h4>{recipe.name}</h4>
                         </div>
                         <Stars rating={recipe.averageRating} />
@@ -69,6 +69,7 @@ const Profile = () => {
                       </div>
                     </Link>
                   })
+
                 }
               </div>
             </div>
