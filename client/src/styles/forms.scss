@@ -16,13 +16,14 @@
 
 .form-header {
   text-align: center;
-  margin-bottom: 5vh;
+  margin-top: 30px;
 }
 
 .form-container {
   background-color: #f8bfb4;
  width: 100%;
  max-width: 500px;
+ margin: 30px;
 }
 
 .recipe-new-form-container {
@@ -96,7 +97,6 @@ input[type=file] {
 }
 
 .new-recipe-header {
-  margin: 6vh;
 }
 
 .error {
