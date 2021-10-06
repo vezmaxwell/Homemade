@@ -66,15 +66,17 @@ const SingleRecipe = () => {
         {recipe ?
           <>
             <div className='recipeNav'>
-              <Link to="/searchrecipe">Back to recipes</Link>
+              <div className="navButtons">
+              <Link to="/searchrecipe"><button>Back to recipes</button></Link>
               
               { 
                 userIsOwner(recipe.owner.id) && // Add recipe.owner.id instead
                 <div>
-                  <Link to={`/searchrecipe/${recipe._id}/edit/`}>Edit Recipe</Link>
+                  <Link to={`/searchrecipe/${recipe._id}/edit/`}><button>Edit Recipe</button></Link>
                   <button onClick={handleDeleteRecipe}>Delete</button>
                 </div>
               }
+              </div>
               <div>
                 <div className='main'>
 

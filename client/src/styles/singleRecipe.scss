@@ -8,7 +8,7 @@ hr {
   align-items: center;
   justify-content: space-around;
   padding: 50px;
-  margin-top: 50px;
+  // margin-top: 50px;
 
   .mainInfo {
     display: flex;
@@ -85,4 +85,16 @@ img {
   width: 75px;
   height: 75px;
 
+}
+
+.recipeNav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  .navButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;;
+  }
 }
