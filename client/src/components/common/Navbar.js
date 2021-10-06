@@ -13,7 +13,7 @@ const Navbar = () => {
   const location = useLocation()
 
   useEffect(() => {
-// Triggers rerender with path change
+    // Triggers rerender with path change
   }, [location.pathname])
 
 
@@ -25,48 +25,48 @@ const Navbar = () => {
 
   return (
 
-      <div className="navBar-container">
+    <div className="navBar-container">
 
-{/* Logo Name */}
+      {/* Logo Name */}
 
-        <div className="homemade-container">
-          <Link className="navLink" to='/'>
-            <img src={homemade} alt="" className="homemade-logo" />
-          </Link>
-        </div>
+      <div className="homemade-container">
+        <Link className="navLink" to='/'>
+          <img src={homemade} alt="" className="homemade-logo" />
+        </Link>
+      </div>
 
-{/* Navigation Links */}
+      {/* Navigation Links */}
 
-        <div className="links">
+      <div className="links">
 
-          {/* Logo Img */}
+        {/* Logo Img */}
         <Link className="navLink" to='/'>
           <div className="logo-container">
             <img src={logo} alt="" className="logo" />
           </div>
         </Link>
 
-          <ul>
+        <ul>
 
-        { 
-          userIsAuthenticated() ?
-            <>
-              <li className="navLink" onClick={handleLogout}>Logout</li>
-              <li className="navLink"><Link  to='/addRecipe'>Add Recipe</Link></li>
-              <li className="navLink"><Link  to='/SearchRecipe'>All Recipes</Link></li>
-              <li className="navLink"><Link  to='/profile'>My Profile</Link></li>
-            </>
-            :
-            <>
-              <li className="navLink"><Link  to='/Login'>Login</Link></li>
-              <li className="navLink"><Link  to='/SignUp'>SignUp</Link></li>
-              <li className="navLink"><Link  to='/SearchRecipe'>All Recipes</Link></li>
-            </>
+          {
+            userIsAuthenticated() ?
+              <ul className="nav-links">
+                <li className="navLink" onClick={handleLogout}>Logout</li>
+                <li className="navLink"><Link to='/addRecipe'>Add Recipe</Link></li>
+                <li className="navLink"><Link to='/SearchRecipe'>All Recipes</Link></li>
+                <li className="navLink"><Link to='/profile'>My Profile</Link></li>
+              </ul>
+              :
+              <ul className="nav-links">
+                <li className="navLink"><Link to='/Login'>Login</Link></li>
+                <li className="navLink"><Link to='/SignUp'>SignUp</Link></li>
+                <li className="navLink"><Link to='/SearchRecipe'>All Recipes</Link></li>
+              </ul>
           }
 
-          </ul>
-        </div>
+        </ul>
       </div>
+    </div>
 
   )
 

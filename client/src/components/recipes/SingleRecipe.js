@@ -61,7 +61,7 @@ const SingleRecipe = () => {
   }
 
   return (
-    <div className="page">
+    <div className="page singleRecipePage">
       <div className="container">
         {recipe ?
           <>

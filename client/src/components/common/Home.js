@@ -41,10 +41,10 @@ const Home = () => {
                     </div>
                     <div className="carouselInfo">
                       <h2 className="carousel-name" key={recipe._id}>{recipe.name}</h2>
-                      <h3 >Average Rating:</h3>
+                      <h3 className="recipeTime">Average Rating:</h3>
                       <Stars rating={recipe.averageRating} />
 
-                      <h3>Duration: {recipe.time} minutes</h3>
+                      <h3 className="recipeTime">Duration: {recipe.time} minutes</h3>
                       <Link className="viewRecipe" to={`SearchRecipe/${recipe._id}`}>See full recipe</Link>
                     </div>
                   </div>
@@ -81,9 +81,11 @@ const Home = () => {
 
 
             <div>
-              <img className="create" src="https://thumb9.shutterstock.com/mosaic_250/2836333/723703846/stock-vector-audit-icon-vector-723703846.jpg" alt="review recipe" />
-              <div className="createbox">
-                <p>You've made one of our recipes and now you would like to give a feedback from the recipe? That is easy, just login, find the recipe and write your review! Easy as that!</p>
+              <div className="createHomePage">
+                <img className="create" src="https://thumb9.shutterstock.com/mosaic_250/2836333/723703846/stock-vector-audit-icon-vector-723703846.jpg" alt="review recipe" />
+                <div className="createbox">
+                  <p>You've made one of our recipes and now you would like to give a feedback from the recipe? That is easy, just login, find the recipe and write your review! Easy as that!</p>
+                </div>
               </div>
             </div>
           </div>
