@@ -81,7 +81,7 @@ const RecipeNew = () => {
           <div className="formfield">
             <p>Recipe Name</p>
             <input onInput={handleChange} name="name" type="text" placeholder="Recipe Name" value={formData.name} />
-            {errors.name && <p className="error">Please enter recipe name</p>}
+            {errors.name.message && <p className="error">Please enter recipe name</p>}
           </div>
 
           <div className="formfield">
@@ -97,7 +97,7 @@ const RecipeNew = () => {
           <div className="formfield">
             <p>Time(mins)</p>
             <input onInput={handleChange} name="time" type="number" value={formData.time} />
-            {errors.time && <p className="error">Please enter time</p>}
+            {errors.time.message && <p className="error">Please enter time</p>}
           </div>
 
           <div className="formfield">
@@ -127,7 +127,7 @@ const RecipeNew = () => {
               <option value="vietnamese">Vietnamese</option>
               <option value="other">Other</option>
             </select>
-            {errors.cuisine && <p className="error">Please select cuisine</p>}
+            {errors.cuisine.message && <p className="error">Please select cuisine</p>}
           </div>
 
           <div className="formfield">
@@ -143,7 +143,7 @@ const RecipeNew = () => {
               <option value="medium">Medium</option>
               <option value="hard">Hard</option>
             </select>
-            {errors.difficulty && <p className="error">Please select difficulty</p>}
+            {errors.difficulty.message && <p className="error">Please select difficulty</p>}
           </div>
 
           <div className="checkbox-container">
@@ -160,7 +160,7 @@ const RecipeNew = () => {
 
           <div className="formfield">
             <ImageUpload value={formData.image} name="image" handleImageUrl={handleImageUrl} />
-            {errors.image && <p className="error">Please try uploading image again</p>}
+            {errors.image.message && <p className="error">Please try uploading image again</p>}
           </div>
 
           <button className="form-button">Create Recipe</button>
