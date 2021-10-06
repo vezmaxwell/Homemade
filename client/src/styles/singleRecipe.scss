@@ -5,16 +5,13 @@ hr {
 
 .main {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  flex-direction: column;
   padding: 50px;
-  margin-top: 50px;
 
   .mainInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     text-align: center;
 
     p {
@@ -63,9 +60,12 @@ hr {
 
 .recipe-name {
   text-transform: uppercase;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 3em;
 }
 
-h3 {
+.singleh3 {
   text-transform: uppercase;
   margin: 50px 10px 30px 10px;
 }
@@ -79,4 +79,14 @@ h3 {
 img {
   width: 100%;
   object-fit: cover;
+}
+
+.imageInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.method, .ingredients {
+  font-weight: lighter;
 }

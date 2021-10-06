@@ -68,7 +68,6 @@ background-color: $background;
 padding: 10px 20px;
 margin: 20px;
 font-size: 20px;
-border-radius: 5px;
 width: 250px;
 }
 
@@ -109,6 +108,7 @@ width: 250px;
 }
 .carousel-name{
   margin-bottom: 50px;
+  text-transform: uppercase;
 }
 .carouselItem {
   display: flex;
@@ -125,14 +125,12 @@ width: 250px;
   flex-direction: column;
   background-color: rgb(255, 255, 255);
   margin-top: 10px;
-  border-radius: 5px;
    h2 {
      font-size: 50px;
    }
 }
 .recipeSearch {
   background-color: rgb(252, 246, 246);
-  // border-radius: 5px;
   font-size: 18px;
   width: 60vw;
   height: 6vh;
@@ -162,11 +160,6 @@ width: 250px;
 }
 
 .searchSelect {
-  // background-color: rgb(250, 249, 249);
-  // // border-radius: 5px;
-  // border: 5px;
-  // margin-left: 5px;
-  // color: rgb(92, 92, 92);
   border: none;
   background: none;
   width: 2vw;
@@ -316,7 +309,6 @@ h4 {
   flex-direction: column;
   width: calc(25% - 20px);
   background-size: cover;
-  // border-radius: 5px;
   color: rgb(0, 0, 0);
   margin: 10px 10px;
   box-shadow: 2px 7px 10px 0px rgba(204,204,204,0.6);

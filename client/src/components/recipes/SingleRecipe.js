@@ -76,18 +76,22 @@ const SingleRecipe = () => {
               }
               <div>
                 <div className='main'>
+                  <h1 className="recipe-name">{recipe.name}</h1>
 
+
+                <div className="imageInfo">
                   <div class='mainImage'>
                     <img src={recipe.image} alt={recipe.name} />
                   </div>
 
                   <div className="mainInfo">
 
-                    <h1 className="recipe-name">{recipe.name}</h1>
-                    <p>Difficulty: {recipe.difficulty}</p>
                     <Stars rating={recipe.averageRating} />
+                    
+                    
 
-                    <h3>Ingredients</h3>
+                    <h3 className="singleh3">Ingredients</h3>
+                    <p>Difficulty: {recipe.difficulty}</p>
 
 
                     <ul>
@@ -95,6 +99,7 @@ const SingleRecipe = () => {
                         return <li className="ingredients" key={recipe._id}>{ingredient}</li>
                       })}
                     </ul>
+                    </div>
 
                   </div>
                 </div>
@@ -113,7 +118,7 @@ const SingleRecipe = () => {
             </div>
             <hr />
             <div className="review">
-              <h3>Reviews</h3>
+              <h3 className="singleh3">Reviews</h3>
               {userIsAuthenticated() &&
                 <Link className="navLink" to={`/searchrecipe/${recipe._id}/review/`}>Add Review</Link>
               }
@@ -134,7 +139,7 @@ const SingleRecipe = () => {
               </ul>
             </div>
             <div className="related">
-              <h3>Related Recipes</h3>
+              <h3 className="singleh3">Related Recipes</h3>
               <div className="cards" >
                 {recipes.filter(rec => rec.cuisine.toLowerCase() === `${recipe.cuisine}` && rec.name !== `${recipe.name}`).map(rec => {
                   return <Link key={rec._id} className='recipeCard' to={`/SearchRecipe/${rec._id}`}>
