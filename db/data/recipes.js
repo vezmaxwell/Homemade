@@ -22,7 +22,7 @@ export default [
       '1 avocado'
     ],
     time: 20,
-    image: 'https://thehappypear.ie/wp-content/uploads/2020/08/FullSizeRender-53-scaled.jpg',
+    image: 'https://imgur.com/WpqCaO5.jpg',
     cuisine: 'Indian',
     method: ['½ red onion',
       'Heat the oil on a medium heat.',
@@ -33,7 +33,10 @@ export default [
       'Add the chopped tomatoes, coconut milk and chickpeas.',
       'Chop the coriander and add to the pan along with the lime zest',
       'Add the lime juice, season to taste and serve with avocado and the grain of your choice. Lovely!'],
-    difficulty: 'Easy'
+    difficulty: 'Easy',
+    owner: {
+      _id: '615c73f14fe2aea84aa36390'
+    }
   },
   {
     name: 'Chicken & bean enchiladas',
@@ -53,13 +56,16 @@ export default [
       '50g mature cheddar , grated',
       'green salad , to serve'],
     time: 55,
-    image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chickenbean-enchiladas-1044331.jpg?quality=90&webp=true&resize=440,400',
+    image: 'https://i.imgur.com/PqiPrVV.jpg',
     cuisine: 'Mexican',
     method: ['½ red onion',
       'Heat oven to 200C/180C fan/gas 6. Heat the oil in a large frying pan and add the onions, peppers and half the garlic. Cook for 15 mins, stirring now and then until the veg has softened. Stir in the chipotle paste, then fry for 1 min more. Add the chicken strips, turning them over in the mixture so they cook through, about 5-10 mins.',
       'Stir in the beans, coriander and 150ml of the passata, then take the pan off the heat. Mix the rest of the passata with the remaining crushed garlic and the ketchup.',
       'Divide the mixture between the tortillas, then fold the sides in and roll them up. Pour half the passata sauce into a 22cm square baking dish, then place the enchiladas on top, side by side. Dot over the remaining sauce and sprinkle over the grated cheese, then bake for 25-30 mins until golden brown.'],
-    difficulty: 'medium'
+    difficulty: 'medium',
+    owner: {
+      _id: '615c73f14fe2aea84aa36390'
+    }
   },
   {
     name: 'Vegetarian lasagne',
@@ -75,7 +81,7 @@ export default [
       'fresh lasagne 250g, about 8 sheets',
       'parmesan (or veggie alternative) 30g, finely grated'],
     time: 50,
-    image: 'https://images.immediate.co.uk/production/volatile/sites/2/2017/10/OLI1117-CookEday-KaleLasagne_014954-21efe7d.jpg?webp=true&quality=45&crop=15px%2C1882px%2C5462px%2C2350px&resize=1880%2C799',
+    image: 'https://i.imgur.com/SRNzErg.jpg',
     cuisine: 'Other',
     method: ['½ red onion',
       'Heat the oven to 200C/fan 180C/gas 6. Drop the kale in boiling salted water, bring back to a simmer then cook for 5 minutes. Drain really well.',
@@ -86,7 +92,10 @@ export default [
       'Top with 1 tbsp pesto then 2 sheets of lasagne. Repeat 3 times, ending with lasagne.',
       'Mix the rest of the ricotta with another splash of vegetable stock and spread over the top layer.',
       'Scatter over the parmesan and bake for 20 minutes until golden and bubbling.'],
-    difficulty: 'medium'
+    difficulty: 'medium',
+    owner: {
+      _id: '615c73f14fe2aea84aa36390'
+    }
   },
   {
     name: 'Prawn Spring pasta',
@@ -103,14 +112,17 @@ export default [
       'Salt and pepper to taste'
     ],
     time: 20,
-    image: 'https://144f2a3a2f948f23fc61-ca525f0a2beaec3e91ca498facd51f15.ssl.cf3.rackcdn.com/uploads/food_portal_data/recipes/recipe/hero_article_image/4582/letterbox_prawn_still.jpg',
+    image: 'https://i.imgur.com/ryfqJSE.png',
     cuisine: 'Italian',
     method: ['In a bowl combine the teaspoons of chopped chervil and dill, the lemon juice and add a dash of olive oil, add the prawns to this mix to marinade for about 20 minutes',
       'Cook the peas to the packets instructions - and cool them in ice water and set aside ',
       'Cook your spaghetti until al dente',
       'While the spaghetti is cooking, drain the marinated prawns and saute them in a small pan - for a few minutes untill cooked through ',
       'Drain the pasta, add the peas and prawns, with a tablespoon of pesto - mix together and serve with the spring onions and a drizzle of lemon juice, enjoy straight away! '],
-    difficulty: 'Easy'
+    difficulty: 'Easy',
+    owner: {
+      _id: '615c73f14fe2aea84aa36390'
+    }
   },
   {
     name: 'Exotic fruit salad smoothie',
@@ -125,12 +137,15 @@ export default [
       '6 ice cubes'
     ],
     time: 10,
-    image: '/images/smoothie.jpg',
+    image: 'https://i.imgur.com/O7QDx4w.png',
     cuisine: 'Other',
     method: ['Peel, stone and roughly chop the mango, and put the flesh into a blender. ',
       'Halve 2 of the passion fruit and sieve the pulp into a bowl, then add to the blender. Peel and roughly chop the banana and 1½ kiwi fruit, and add them to the blender with the yogurt, juice and ice cubes.',
       'Whizz everything together until smooth and pour into 4 glasses. Halve the remaining passion fruit, scoop out the pulp and drizzle a little on top of each smoothie. Slice the leftover half of kiwi fruit and finish each smoothie with a couple of slices. '],
-    difficulty: 'Easy'
+    difficulty: 'Easy',
+    owner: {
+      _id: '615c73f14fe2aea84aa36390'
+    }
   },
   {
     name: 'Lamb and lentil shepherd\'s pie',
@@ -154,7 +169,7 @@ export default [
       '50ml skimmed milk'
     ],
     time: 10,
-    image: 'https://144f2a3a2f948f23fc61-ca525f0a2beaec3e91ca498facd51f15.ssl.cf3.rackcdn.com/uploads/food_portal_data/recipes/recipe/hero_article_image/4090/bcac0b19cd80cea9786f/letterbox_FruitSalad5965.jpg',
+    image: 'https://i.imgur.com/WbYrjbi.jpg',
     cuisine: 'Other',
     method: ['Into a heated, large pan, add the oil or Frylight and add the lamb, and fry for approx 8-10 mins, until browned, stirring occasionally to break any lumps',
       'Remove the meat, drain off any fat, and set aside. Spray the pan with the other squirt of spray, reduce the heat, add the diced onion, carrot, celery, and garlic, and cook over a medium heat for 8 mins, until the onion is softened',
@@ -166,6 +181,9 @@ export default [
       'Spoon the mince into an oven proof baking dish, remove the bay leaf, and rosemary, (if left whole).',
       'Spread the mash over the top, fluffing with a fork if desired. Bake for 20-25 mins, until golden brown and bubbling',
       'Allow to stand for 5 mins before serving. Garnish with parsley immediately before serving '],
-    difficulty: 'Hard'
+    difficulty: 'Hard',
+    owner: {
+      _id: '615c73f14fe2aea84aa36390'
+    }
   }
 ]

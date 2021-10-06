@@ -40,11 +40,12 @@ const Profile = () => {
 
   return (
     <> 
+    {profile ?
     <div className="page">
     <div className="profileHeader">
       {profile.profileImage &&
         <img id="profileImage" src={profile.profileImage} alt="profile" />
-      }
+      }  
       <h1>Welcome, {profile.username}</h1>
       <p>Manage your created recipes here</p>
     </div>
@@ -71,8 +72,18 @@ const Profile = () => {
             }
           </div>
         </div>
+      
       </div>
       </div>
+      :
+      <>
+            {hasError ?
+              <h2>Oops something went wrong.</h2>
+              :
+              <h2>Loading...</h2>
+            }
+          </>
+      }
     </>
   )
 }

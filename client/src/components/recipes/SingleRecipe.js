@@ -35,6 +35,7 @@ const SingleRecipe = () => {
       try {
         const { data } = await axios.get(`/api/recipes/${id}`)
         setRecipe(data)
+        console.log(data)
       } catch (error) {
         setHasError(true)
       }
@@ -59,8 +60,6 @@ const SingleRecipe = () => {
     }
   }
 
-
-
   return (
     <div className="page">
       <div className="container">
@@ -68,7 +67,8 @@ const SingleRecipe = () => {
           <>
             <div className='recipeNav'>
               <Link to="/searchrecipe">Back to recipes</Link>
-              {
+              
+              { 
                 userIsOwner(recipe.owner.id) && // Add recipe.owner.id instead
                 <div>
                   <Link to={`/searchrecipe/${recipe._id}/edit/`}>Edit Recipe</Link>
@@ -77,18 +77,26 @@ const SingleRecipe = () => {
               }
               <div>
                 <div className='main'>
-                  <div id='mainImage'>
+
+                  <div class='mainImage'>
                     <img src={recipe.image} alt={recipe.name} />
                   </div>
+
                   <div className="mainInfo">
-                    <h1>{recipe.name}</h1>
+
+                    <h1 className="recipe-name">{recipe.name}</h1>
                     <p>Difficulty: {recipe.difficulty}</p>
                     <Stars rating={recipe.averageRating} />
+
+                    <h3>Ingredients</h3>
+
+
                     <ul>
                       {recipe.ingredients.map(ingredient => {
-                        return <li key={recipe._id}>{ingredient}</li>
+                        return <li className="ingredients" key={recipe._id}>{ingredient}</li>
                       })}
                     </ul>
+
                   </div>
                 </div>
               </div>
@@ -108,7 +116,7 @@ const SingleRecipe = () => {
             <div className="review">
               <h3>Reviews</h3>
               {userIsAuthenticated() &&
-                <Link className="navLink" to={`/searchrecipe/${recipe._id}/review/`}>Add Review</Link>
+                <Link className="navLink" to={`/searchrecipe/${recipe._id}/review/`}><button>Add Review</button></Link>
               }
               <ul>
                 {recipe.reviews.map(review => {
