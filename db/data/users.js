@@ -6,9 +6,11 @@ export default [
     passwordConfirmation: 'pass'
   },
   {
-    username: 'Sam',
-    email: 'sam@email.com',
+    username: 'Admin',
+    email: 'admin@email.com',
     password: 'pass',
-    passwordConfirmation: 'pass'
+    passwordConfirmation: 'pass',
+    profileImage: 'https://www.knowmuhammad.org/img/noavatarn.png',
+    _id: '615c73f14fe2aea84aa36390'
   }
 ]

@@ -67,8 +67,9 @@ const SingleRecipe = () => {
           <>
             <div className='recipeNav'>
               <Link to="/searchrecipe">Back to recipes</Link>
-              {
-                userIsOwner(recipe.owner) && // Add recipe.owner.id instead
+              
+              { 
+                userIsOwner(recipe.owner.id) && // Add recipe.owner.id instead
                 <div>
                   <Link to={`/searchrecipe/${recipe._id}/edit/`}>Edit Recipe</Link>
                   <button onClick={handleDeleteRecipe}>Delete</button>
@@ -120,7 +121,7 @@ const SingleRecipe = () => {
             <div className="review">
               <h3 className="singleh3">Reviews</h3>
               {userIsAuthenticated() &&
-                <Link className="navLink" to={`/searchrecipe/${recipe._id}/review/`}>Add Review</Link>
+                <Link className="navLink" to={`/searchrecipe/${recipe._id}/review/`}><button>Add Review</button></Link>
               }
               <ul>
                 {recipe.reviews.map(review => {
@@ -132,7 +133,7 @@ const SingleRecipe = () => {
                     <Stars rating={review.rating} />
                     <p>{review.text}</p>
                     {review.image &&
-                      <img src={review.image} alt="users attempt" />
+                      <img src={review.image} className='reviewImage' alt="users attempt" />
                     }
                   </li>
                 })}

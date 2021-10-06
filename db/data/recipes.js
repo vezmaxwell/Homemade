@@ -33,7 +33,10 @@ export default [
       'Add the chopped tomatoes, coconut milk and chickpeas.',
       'Chop the coriander and add to the pan along with the lime zest',
       'Add the lime juice, season to taste and serve with avocado and the grain of your choice. Lovely!'],
-    difficulty: 'Easy'
+    difficulty: 'Easy',
+    owner: {
+      _id: '615c73f14fe2aea84aa36390'
+    }
   },
   {
     name: 'Chicken & bean enchiladas',
@@ -59,7 +62,10 @@ export default [
       'Heat oven to 200C/180C fan/gas 6. Heat the oil in a large frying pan and add the onions, peppers and half the garlic. Cook for 15 mins, stirring now and then until the veg has softened. Stir in the chipotle paste, then fry for 1 min more. Add the chicken strips, turning them over in the mixture so they cook through, about 5-10 mins.',
       'Stir in the beans, coriander and 150ml of the passata, then take the pan off the heat. Mix the rest of the passata with the remaining crushed garlic and the ketchup.',
       'Divide the mixture between the tortillas, then fold the sides in and roll them up. Pour half the passata sauce into a 22cm square baking dish, then place the enchiladas on top, side by side. Dot over the remaining sauce and sprinkle over the grated cheese, then bake for 25-30 mins until golden brown.'],
-    difficulty: 'medium'
+    difficulty: 'medium',
+    owner: {
+      _id: '615c73f14fe2aea84aa36390'
+    }
   },
   {
     name: 'Vegetarian lasagne',
@@ -86,7 +92,10 @@ export default [
       'Top with 1 tbsp pesto then 2 sheets of lasagne. Repeat 3 times, ending with lasagne.',
       'Mix the rest of the ricotta with another splash of vegetable stock and spread over the top layer.',
       'Scatter over the parmesan and bake for 20 minutes until golden and bubbling.'],
-    difficulty: 'medium'
+    difficulty: 'medium',
+    owner: {
+      _id: '615c73f14fe2aea84aa36390'
+    }
   },
   {
     name: 'Prawn Spring pasta',
@@ -110,7 +119,10 @@ export default [
       'Cook your spaghetti until al dente',
       'While the spaghetti is cooking, drain the marinated prawns and saute them in a small pan - for a few minutes untill cooked through ',
       'Drain the pasta, add the peas and prawns, with a tablespoon of pesto - mix together and serve with the spring onions and a drizzle of lemon juice, enjoy straight away! '],
-    difficulty: 'Easy'
+    difficulty: 'Easy',
+    owner: {
+      _id: '615c73f14fe2aea84aa36390'
+    }
   },
   {
     name: 'Exotic fruit salad smoothie',
@@ -130,7 +142,10 @@ export default [
     method: ['Peel, stone and roughly chop the mango, and put the flesh into a blender. ',
       'Halve 2 of the passion fruit and sieve the pulp into a bowl, then add to the blender. Peel and roughly chop the banana and 1½ kiwi fruit, and add them to the blender with the yogurt, juice and ice cubes.',
       'Whizz everything together until smooth and pour into 4 glasses. Halve the remaining passion fruit, scoop out the pulp and drizzle a little on top of each smoothie. Slice the leftover half of kiwi fruit and finish each smoothie with a couple of slices. '],
-    difficulty: 'Easy'
+    difficulty: 'Easy',
+    owner: {
+      _id: '615c73f14fe2aea84aa36390'
+    }
   },
   {
     name: 'Lamb and lentil shepherd\'s pie',
@@ -166,6 +181,9 @@ export default [
       'Spoon the mince into an oven proof baking dish, remove the bay leaf, and rosemary, (if left whole).',
       'Spread the mash over the top, fluffing with a fork if desired. Bake for 20-25 mins, until golden brown and bubbling',
       'Allow to stand for 5 mins before serving. Garnish with parsley immediately before serving '],
-    difficulty: 'Hard'
+    difficulty: 'Hard',
+    owner: {
+      _id: '615c73f14fe2aea84aa36390'
+    }
   }
 ]
