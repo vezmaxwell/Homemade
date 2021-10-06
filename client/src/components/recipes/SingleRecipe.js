@@ -128,7 +128,7 @@ const SingleRecipe = () => {
                     <Stars rating={review.rating} />
                     <p>{review.text}</p>
                     {review.image &&
-                      <img src={review.image} alt="users attempt" />
+                      <img src={review.image} className='reviewImage' alt="users attempt" />
                     }
                   </li>
                 })}
