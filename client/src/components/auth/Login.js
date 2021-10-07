@@ -49,7 +49,7 @@ const Login = () => {
 
         <div className="form-header">
           <h2>Login to your account.</h2>
-          <h3>Don't have an account?
+          <h3><span>Don't have an account?</span>
             <a href="/signup"> Get one here.</a>
           </h3>
         </div>
@@ -57,7 +57,7 @@ const Login = () => {
         <div className="form-container">
           <form onSubmit={handleSubmit}>
 
-            <div className="formfield">
+            <div className="formfield">form-button
               <label htmlFor="email" >Email</label>
               <input onInput={handleChange} type="email" id="email" name="email" value={formData.email} placeholder="Your email goes here" />
             </div>

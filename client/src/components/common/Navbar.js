@@ -57,7 +57,7 @@ const Navbar = () => {
                 <li className="navLink"><Link to='/profile'>My Profile</Link></li>
               </ul>
               :
-              <ul className="nav-links">
+              <ul className="nav-links-authenticated">
                 <li className="navLink"><Link to='/Login'>Login</Link></li>
                 <li className="navLink"><Link to='/SignUp'>SignUp</Link></li>
                 <li className="navLink"><Link to='/SearchRecipe'>All Recipes</Link></li>

@@ -71,7 +71,7 @@ const SingleRecipe = () => {
 
                 {
                   userIsOwner(recipe.owner.id) && // Add recipe.owner.id instead
-                  <div>
+                  <div className="edit">
                     <Link to={`/searchrecipe/${recipe._id}/edit/`}><button>Edit Recipe</button></Link>
                     <button onClick={handleDeleteRecipe}>Delete</button>
                   </div>
@@ -83,8 +83,8 @@ const SingleRecipe = () => {
 
 
                   <div className="imageInfo">
-                    <div class='mainImage'>
-                      <img src={recipe.image} alt={recipe.name} />
+                    <div className='mainImage'>
+                      <img className="mainImg" src={recipe.image} alt={recipe.name} />
                     </div>
 
                     <div className="mainInfo">
@@ -98,8 +98,8 @@ const SingleRecipe = () => {
 
 
                       <ul>
-                        {recipe.ingredients.map(ingredient => {
-                          return <li className="ingredients" key={recipe._id}>{ingredient}</li>
+                        {recipe.ingredients.map((ingredient, n)=> {
+                          return <li key={n} className="ingredients">{ingredient}</li>
                         })}
                       </ul>
                     </div>
@@ -112,9 +112,9 @@ const SingleRecipe = () => {
             <div className='method'>
               <h3>Method</h3>
               <ol>
-                {recipe.method.map(method => {
+                {recipe.method.map((method, n) => {
                   return <>
-                    <li key={recipe._id}>{method}</li>
+                    <li key={n}>{method}</li>
                   </>
                 })}
               </ol>
@@ -126,12 +126,14 @@ const SingleRecipe = () => {
                 <Link className="navLink" to={`/searchrecipe/${recipe._id}/review/`}><button>Add Review</button></Link>
               }
               <ul>
-                {recipe.reviews.map(review => {
-                  return <li key={review._id}>
-                    <p><strong>By {review.owner.username}</strong></p>
+                {recipe.reviews.map((review, n) => {
+                  return <li key={n}>
+                    <div className="reviewHeader">
                     {review.owner.profileImage &&
                       <img src={review.owner.profileImage} className="profileImage" alt="profilePhoto" />
                     }
+                    <p><strong>By {review.owner.username}</strong></p>
+                    </div>
                     <Stars rating={review.rating} />
                     <p>{review.text}</p>
                     {review.image &&
@@ -144,8 +146,8 @@ const SingleRecipe = () => {
             <div className="related">
               <h3 className="singleh3">Related Recipes</h3>
               <div className="cards" >
-                {recipes.filter(rec => rec.cuisine.toLowerCase() === `${recipe.cuisine}` && rec.name !== `${recipe.name}`).map(rec => {
-                  return <Link key={rec._id} className='recipeCard' to={`/SearchRecipe/${rec._id}`}>
+                {recipes.filter(rec => rec.cuisine.toLowerCase() === `${recipe.cuisine}` && rec.name !== `${recipe.name}`).map((rec, n)=> {
+                  return <Link key={n} className='recipeCard' to={`/SearchRecipe/${rec._id}`}>
                     <img className="searchIMG" src={rec.image} alt="recipe" />
                     <div className="cardDetails">
                       <div className="title">

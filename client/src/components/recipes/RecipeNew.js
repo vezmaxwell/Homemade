@@ -22,11 +22,11 @@ const RecipeNew = () => {
   })
 
   const [errors, setErrors] = useState({
-    name: { message: '' },
-    time: { message: '' },
-    image: { message: '' },
-    cuisine: { message: '' },
-    difficulty: { message: '' }
+    name: {},
+    time: {},
+    image: {},
+    cuisine: {},
+    difficulty: {}
   })
 
 
@@ -39,6 +39,11 @@ const RecipeNew = () => {
   }
 
   const handleMultiEnter = event => {
+    const value = event.target.value.split(',')
+    setFormData({ ...formData, [event.target.name]: value })
+  }
+
+  const handleMultiMethod = event => {
     const value = event.target.value.split(',')
     setFormData({ ...formData, [event.target.name]: value })
   }
@@ -81,7 +86,7 @@ const RecipeNew = () => {
           <div className="formfield">
             <p>Recipe Name</p>
             <input onInput={handleChange} name="name" type="text" placeholder="Recipe Name" value={formData.name} />
-            {errors.name.message && <p className="error">Please enter recipe name</p>}
+            {errors.name && <p className="error">Please enter recipe name</p>}
           </div>
 
           <div className="formfield">
@@ -97,7 +102,7 @@ const RecipeNew = () => {
           <div className="formfield">
             <p>Time(mins)</p>
             <input onInput={handleChange} name="time" type="number" value={formData.time} />
-            {errors.time.message && <p className="error">Please enter time</p>}
+            {errors.time && <p className="error">Please enter time</p>}
           </div>
 
           <div className="formfield">
@@ -127,12 +132,12 @@ const RecipeNew = () => {
               <option value="vietnamese">Vietnamese</option>
               <option value="other">Other</option>
             </select>
-            {errors.cuisine.message && <p className="error">Please select cuisine</p>}
+            {errors.cuisine && <p className="error">Please select cuisine</p>}
           </div>
 
           <div className="formfield">
             <p>Method</p>
-            <textarea onInput={handleMultiEnter} name="method" type="text" placeholder="Enter your each step of your method with a comma to distinguish each step e.g Prepare ingredients, cook all ingredients, serve food, ..." value={formData.method} />
+            <textarea onInput={handleMultiMethod} name="method" type="text" placeholder="Enter your each step of your method with a semi-colon (;) to distinguish each step e.g Prepare ingredients; cook all ingredients; serve food; ..." value={formData.method} />
           </div>
 
           <div className="formfield">
@@ -143,7 +148,7 @@ const RecipeNew = () => {
               <option value="medium">Medium</option>
               <option value="hard">Hard</option>
             </select>
-            {errors.difficulty.message && <p className="error">Please select difficulty</p>}
+            {errors.difficulty && <p className="error">Please select difficulty</p>}
           </div>
 
           <div className="checkbox-container">
@@ -160,7 +165,7 @@ const RecipeNew = () => {
 
           <div className="formfield">
             <ImageUpload value={formData.image} name="image" handleImageUrl={handleImageUrl} />
-            {errors.image.message && <p className="error">Please try uploading image again</p>}
+            {errors.image && <p className="error">Please try uploading image again</p>}
           </div>
 
           <button className="form-button">Create Recipe</button>

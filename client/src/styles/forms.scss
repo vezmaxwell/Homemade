@@ -1,5 +1,6 @@
 .sign-up-form-header {
   margin-top: 3vh;
+  
 }
 
 .formfield {
@@ -60,6 +61,7 @@ border: 0 none;
   font-size: 4vh;
   font-family: "Nunito";
   width: calc(100% - 60px);
+  text-transform: uppercase;
 }
 
 button:hover {
@@ -97,6 +99,10 @@ input[type=file] {
 .error {
   color: red;
   font-size: 10px;
+}
+
+span{
+  color: gray;
 }
 @media screen and (min-width: 480px) {
   .form-container {

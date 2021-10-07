@@ -64,7 +64,7 @@ const SignUp = () => {
       <div className="form-header sign-up-form-header">
         <h2>Sign up for an account.</h2>
 
-        <h3>Already have an account?
+        <h3><span>Already have an account?</span>
           <a href="/login"> Login here.</a>
         </h3>
 

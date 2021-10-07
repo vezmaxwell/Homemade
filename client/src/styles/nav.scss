@@ -14,14 +14,20 @@ $footerHeight: 150px;
   align-items: center;
   cursor: pointer;
   width: 100%;
+  justify-content: space-between;
 }
 .navBar-container {
   background-color: $background;
   height: $headerHeight;
   width: 100%;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  li{
+    margin: 2px;
+  }
 }
 .logo-container {
   height: $headerHeight;
@@ -31,6 +37,7 @@ $footerHeight: 150px;
 .homemade-container {
   height: $headerHeight;
   position: absolute;
+  visibility: hidden;
 }
 
 .logo, .homemade-logo {
@@ -41,27 +48,32 @@ $footerHeight: 150px;
   visibility: hidden;
   z-index: -1;
 }
-// .nav-links-authenticated{
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   text-align: start;
-// }
+.nav-links-authenticated{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: end;
+  margin-right: 10px;
+}
 @media screen and (min-width: 480px) {
   .homemade-logo {
     visibility:visible;
   }
+  
   .navLink {
     padding-right: 10px;
     
   }
-  .links {
-    justify-content: space-between;
+
+  .nav-links-authenticated{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
   }
-  // .nav-links-authenticated{
-  //   display:flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  // }
+  .nav-links-authenticated{
+    flex-direction: row;
+    justify-content: center;
+    text-align: start;
+  }
 }
 

@@ -81,7 +81,7 @@ const SearchRecipe = () => {
           <div className="selectFilterDiet">
             <div>Diet:</div>
             <option value="all" default></option>
-            <select className="searchSelect" for="recipes" id="recipes" onChange={handleDiet}>
+            <select className="searchSelect" htmlFor="recipes" id="recipes" onChange={handleDiet}>
               {/* <option value="all" default>All 🍕</option> */}
               <option value="all" default></option>
               <option value="vegetarian">Vegetarian 🧀</option>
@@ -91,7 +91,7 @@ const SearchRecipe = () => {
           <div className="selectFilterRating">
             <div>Average Rating:</div>
             <option value="all" default></option>
-            <select className="searchSelect" for="recipes" id="recipes" onChange={handleRating}>
+            <select className="searchSelect" htmlFor="recipes" id="recipes" onChange={handleRating}>
               {/* <option value="all" default> All ⭐️ </option> */}
               <option value="all" default></option>
               <option value="one">⭐️ or above</option>
