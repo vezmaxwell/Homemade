@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { getTokenFromLocalStorage } from './auth'
-import Stars from '../Stars'
-import { Link } from 'react-router-dom'
 
-const Profile = () => {
+import Stars from './Stars'
+import { Link, useParams } from 'react-router-dom'
+
+const UserProfile = () => {
+  const { id } = useParams()
 
   const [profile, setProfile] = useState({})
   const [hasError, setHasError] = useState(false)
@@ -14,8 +15,8 @@ const Profile = () => {
     const getProfile = async () => {
       try {
         const { data } = await axios.get(
-          `/api/profile/`,
-          { headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` } }
+          `/api/user/${id}/`,
+
         )
         setProfile(data)
         console.log(data)
@@ -26,16 +27,6 @@ const Profile = () => {
     getProfile()
   }, [])
 
-  const handleDeleteRecipe = async (id) => {
-    try {
-      await axios.delete(
-        `/api/recipes/${id}`, { headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` } }
-      )
-      window.location.reload()
-    } catch (error) {
-      console.log(error)
-    }
-  }
 
   return (
     <>
@@ -45,9 +36,9 @@ const Profile = () => {
             {profile.profileImage &&
               <img id="profileImage" src={profile.profileImage} alt="profile" />
             }
-            <h1>Welcome, {profile.username}</h1>
-            <p>Manage your created recipes here</p>
+            <h1>{profile.username}</h1>
           </div>
+
           <div className="container">
             <div className="profileBody">
               <h2>My Recipes</h2>
@@ -66,10 +57,7 @@ const Profile = () => {
                         <Stars rating={recipe.averageRating} />
 
                       </div>
-                      <div className="profileButton">
-                        <Link to={`/searchrecipe/${recipe._id}/edit/`}><button >Edit Recipe</button></Link>
-                        <button onClick={() => handleDeleteRecipe(recipe._id)} >Delete</button>
-                      </div>
+
                     </div>
                   })
 
@@ -92,4 +80,4 @@ const Profile = () => {
   )
 }
 
-export default Profile
+export default UserProfile

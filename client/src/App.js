@@ -13,7 +13,7 @@ import RecipeNew from './components/recipes/RecipeNew'
 import RecipeEdit from './components/recipes/RecipeEdit'
 import ReviewNew from './components/reviews/ReviewNew'
 import Profile from './components/helpers/Profile'
-
+import UserProfile from './components/userProfile'
 import Footer from './components/common/Footer'
 
 function App() {
@@ -51,7 +51,9 @@ function App() {
           <Route exact path='/profile'>
             <Profile />
           </Route>
-          
+          <Route exact path='/user/:id'>
+            <UserProfile />
+          </Route>
         </Switch>
         <Footer />
       </BrowserRouter>
