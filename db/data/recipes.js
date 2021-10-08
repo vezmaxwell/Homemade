@@ -33,6 +33,7 @@ export default [
       'Chop the coriander and add to the pan along with the lime zest',
       'Add the lime juice, season to taste and serve with avocado and the grain of your choice. Lovely!'],
     difficulty: 'Easy',
+    serves: 4,
     owner: {
       _id: '615c73f14fe2aea84aa36390'
     }

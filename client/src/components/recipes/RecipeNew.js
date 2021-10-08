@@ -12,6 +12,7 @@ const RecipeNew = () => {
     name: '',
     summary: '',
     ingredients: [],
+    serves: '',
     time: '',
     image: '',
     cuisine: '',
@@ -24,6 +25,7 @@ const RecipeNew = () => {
   const [errors, setErrors] = useState({
     name: {},
     time: {},
+    serves: {},
     image: {},
     cuisine: {},
     difficulty: {},
@@ -100,6 +102,12 @@ const RecipeNew = () => {
             <p>Ingredients</p>
             <textarea onInput={handleMultiEnter} name="ingredients" type="text" placeholder="Ingredients ex: 1 pepper, 2 cloves of garlic, 3 oranges,..." value={formData.ingredients} />
             {errors.ingredients && <p className="error">Please enter ingredients</p>}
+          </div>
+
+          <div className="formfield">
+            <p>Serves</p>
+            <input onInput={handleChange} name="serves" type="number" value={formData.serves} />
+            {errors.serves && <p className="error">Please enter the number of people this recipe serves</p>}
           </div>
 
           <div className="formfield">
