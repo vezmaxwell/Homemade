@@ -63,6 +63,7 @@ export default [
       'Stir in the beans, coriander and 150ml of the passata, then take the pan off the heat. Mix the rest of the passata with the remaining crushed garlic and the ketchup.',
       'Divide the mixture between the tortillas, then fold the sides in and roll them up. Pour half the passata sauce into a 22cm square baking dish, then place the enchiladas on top, side by side. Dot over the remaining sauce and sprinkle over the grated cheese, then bake for 25-30 mins until golden brown.'],
     difficulty: 'medium',
+    serves: 4,
     owner: {
       _id: '000000000000000000000002'
     }
@@ -93,6 +94,7 @@ export default [
       'Mix the rest of the ricotta with another splash of vegetable stock and spread over the top layer.',
       'Scatter over the parmesan and bake for 20 minutes until golden and bubbling.'],
     difficulty: 'medium',
+    serves: 4,
     owner: {
       _id: '000000000000000000000003'
     }
@@ -120,6 +122,7 @@ export default [
       'While the spaghetti is cooking, drain the marinated prawns and saute them in a small pan - for a few minutes untill cooked through ',
       'Drain the pasta, add the peas and prawns, with a tablespoon of pesto - mix together and serve with the spring onions and a drizzle of lemon juice, enjoy straight away! '],
     difficulty: 'Easy',
+    serves: 2,
     owner: {
       _id: '000000000000000000000001'
     }
@@ -143,6 +146,7 @@ export default [
       'Halve 2 of the passion fruit and sieve the pulp into a bowl, then add to the blender. Peel and roughly chop the banana and 1½ kiwi fruit, and add them to the blender with the yogurt, juice and ice cubes.',
       'Whizz everything together until smooth and pour into 4 glasses. Halve the remaining passion fruit, scoop out the pulp and drizzle a little on top of each smoothie. Slice the leftover half of kiwi fruit and finish each smoothie with a couple of slices. '],
     difficulty: 'Easy',
+    serves: 2,
     owner: {
       _id: '000000000000000000000002'
     }
@@ -182,6 +186,7 @@ export default [
       'Spread the mash over the top, fluffing with a fork if desired. Bake for 20-25 mins, until golden brown and bubbling',
       'Allow to stand for 5 mins before serving. Garnish with parsley immediately before serving '],
     difficulty: 'Hard',
+    serves: 6,
     owner: {
       _id: '000000000000000000000003'
     }
@@ -214,6 +219,7 @@ export default [
       ' Serve immediately with the chopped spring onions sprinkled over the top.'
     ],
     difficulty: 'medium',
+    serves: 4,
     owner: {
       _id: '000000000000000000000001'
     }
@@ -254,8 +260,294 @@ export default [
       'To build, spread a little burger sauce onto each toasted brioche base, then pile up with a lettuce leaf, a cheesy beef patty, crispy bacon and top with a toasted brioche lid – this is your ultimate bacon cheeseburger. Serve the ultimate bacon cheeseburger with the rosemary salted fries, dressed gem wedges and any remaining burger sauce to the side. Enjoy! '
     ],
     difficulty: 'medium',
+    serves: 2,
     owner: {
       _id: '000000000000000000000002'
     }
+  },
+  {
+    name: 'Chicken Adobo',
+    summary: 'Filipino Chicken Adobo is the national dish of the Philippines and like all traditional dishes, there are many variations – including different proteins like pork and beef. Fundamentally though, the key ingredients are the right balance of soy sauce, vinegar, black pepper and sugar that create an incredibly sticky glaze that has a depth of flavour like it’s been slow cooked – but it’s not!',
+    vegan: false,
+    vegetarian: false,
+    ingredients: [
+      '750g chicken thigh fillets - boneless and skinless',
+      '3 garlic cloves - minced',
+      '1/3 cup (85ml) soy sauce - ordinary all purpose or light',
+      '1/3 cup + 2 tbsp white vinegar',
+      '4 bay leaves (fresh) or 3 dried',
+      '2 tbsp any unflavoured oil',
+      '3 garlic cloves - minced',
+      '1 small brown onion - diced',
+      '1 1/2 cups (375 ml) water',
+      '2 tbsp brown sugar',
+      '1 tbsp whole black pepper (sub 2 tsp coarse cracked pepper)',
+      '2 green onions/scallions ',
+      'sliced (garnish)'
+    ],
+    time: 55,
+    image: 'http://res.cloudinary.com/dqqidr9eg/image/upload/v1633616688/image_upload_test/uficc37urwax2mi4txmj.jpg',
+    cuisine: 'other',
+    method: [
+      'Combine Chicken and Marinade ingredients in a bowl. Marinate for at least 20 minutes',
+      ' or up to overnight. ',
+      '' +
+      'Heat 1 tbsp oil in a skillet over high heat. Remove chicken from marinade (reserve marinade) and place in the pan. Sear both sides until browned – about 1 minute on each side. Do not cook the chicken all the way through. ',
+      'Remove chicken skillet and set aside. ',
+      ' Heat the remaining oil in skillet. Add garlic and onion',
+      ' cook 1 1/2 minutes. ',
+      'Add the reserved marinade',
+      ' water',
+      ' sugar and black pepper. Bring it to a simmer then turn heat down to medium high. Simmer 5 minutes. ',
+      '' +
+      'Add chicken smooth side down. Simmer uncovered for 20 to 25 minutes (no need to stir)',
+      ' turning chicken at around 15 minutes',
+      ' until the sauce reduces down to a thick jam-like syrup. ',
+      'If the sauce isn\'t thick enough',
+      ' remove chicken onto a plate and let the sauce simmer by itself - it will thicken much quicker - then return chicken to the skillet to coat in the glaze. ',
+      'Coat chicken in glaze then serve over rice. Pictured in post as a healthy dinner plate (415 calories) with cauliflower rice and Ginger Smashed Cucumbers. '
+    ],
+    difficulty: 'easy',
+    owner: {
+      _id: '000000000000000000000003'
+    }
+  },
+  {
+    name: 'Honey Soy Salmon',
+    vegan: 'false',
+    vegetarian: 'false',
+    ingredients: [
+      '91 scallion sliced thinly, plus some to serve',
+      '2 tablespoons low sodium soy sauce',
+      '1 tablespoon rice vinegar' ,
+      '1 tablespoon honey',
+      '1 teaspoon minced fresh ginger',
+      '4 6- ounce pieces salmon',
+      '1 teaspoon toasted sesame seeds' ,
+      'Rice to serve.'
+    ],
+    time: 30,
+    image: 'https://i.imgur.com/ybbRzZL.jpg',
+    cuisine: 'Other',
+    method: ['Mix all the ingredients apart from the salmon.',  
+      'Leave the salmon to marinate in them for at least 15 minutes (can marinate up to overnight in the fridge!',
+      'Preheat the oven to 180 whilst the salmon marinates.' ,
+      'Put the salmon in the oven.',
+      'Whilst the salmon is cooking, cook your rice.' ,
+      'Serve up the salmon and rice, pouring the marinade over. Top with scallions. Enjoy!'
+    ],
+    Serves: 4,
+    difficulty: 'Easy',
+    owner: {
+      _id: '000000000000000000000001'
+    }
+  },
+  {
+    name: 'Flank Steak with Chimichurri Sauce',
+    vegan: 'false',
+    vegetarian: 'false',
+    ingredients: [
+      '1 ½ pounds flank steak',
+      '¼ + ⅓ cup oil',
+      '1 teaspoon chilli powder' ,
+      '1 teaspoon onion powder',
+      '1 teaspoon salt',
+      'juice of 1 lime',
+      '½ cup cilantro' ,
+      '½ cup parsley',
+      '½ onion - diced',
+      '1 teaspoon salt - or to taste',
+      '¼ teaspoon pepper - or to taste',
+      '1 tablespoon garlic',
+      '½ teaspoon Italian blend seasoning',
+      '½ teaspoon crushed red pepper flakes',
+      '2 tablespoons red wine vinegar - or apple cider vinegar'
+    ],
+    time: 35,
+    image: 'https://i.imgur.com/tuaX2Fg.jpg',
+    cuisine: 'Other',
+    method: ['Whisk together marinade ingredients. Combine marinade and steak in a large ziplock bag. Seal and chill for 30 minutes, or up to overnight.', 
+      'Combine all Chimichurri ingredients in a blender or a food processor, and pulse until smooth.' ,
+      'Preheat a an oiled skillet or grill to medium-high heat. Sear steak for 6-8 minutes on each side until heavily browned on the outside and slightly pink in the middle.',
+      'Let the steak rest for 5 minutes.' ,
+      'Thinly slice steak across the grain and serve with chimichurri sauce on top.'
+    ],
+    Serves: 4,
+    difficulty: 'Medium',
+    owner: {
+      _id: '000000000000000000000002'
+    }
+  },
+  {
+    name: 'Fluffy Pancakes',
+    vegan: 'false',
+    vegetarian: 'true',
+    ingredients: [
+      '135g/4¾oz plain flour',
+      '1 tsp baking powder',
+      '½ tsp salt' ,
+      '2 tbsp caster sugar',
+      '130ml/4½fl oz milk',
+      '1 large egg, lightly beaten',
+      '2 tbsp melted butter (allowed to cool slightly) or olive oil, plus extra for cooking' ,
+      'Maple syrup & butter to serve'
+    ],
+    time: 15,
+    image: 'https://i.imgur.com/CfP9Cjc.jpg',
+    cuisine: 'American',
+    method: ['Sift the flour, baking powder, salt and caster sugar into a large bowl. In a separate bowl or jug, lightly whisk together the milk and egg, then whisk in the melted butter.', 
+      'Pour the milk mixture into the flour mixture and, using a fork, beat until you have a smooth batter. Any lumps will soon disappear with a little mixing. Let the batter stand for a few minutes.' ,
+      'Heat a non-stick frying pan over a medium heat and add a knob of butter. When it\'s melted, add a ladle of batter (or two if your frying pan is big enough to cook two pancakes at the same time). It will seem very thick but this is how it should be. Wait until the top of the pancake begins to bubble, then turn it over and cook until both sides are golden brown and the pancake has risen to about 1cm/½in thick.',
+      'Repeat until all the batter is used up. You can keep the pancakes warm in a low oven, but they taste best fresh out the pan.' ,
+      'Serve with lashings of real maple syrup and extra butter, if you like.'
+    ],
+    Serves: 4,
+    difficulty: 'Medium',
+    owner: {
+      _id: '000000000000000000000003'
+    }
+  },
+  {
+    name: 'Beef Ramen',
+    vegan: 'false',
+    vegetarian: 'false',
+    ingredients: [
+      '1 tablespoon vegetable oil',
+      '2 garlic cloves, crushed',
+      '2cm piece ginger, peeled, grated' ,
+      '1 long red chilli, deseeded, finely chopped',
+      '1l (4 cups) chicken stock',
+      '2 tablespoons salt-reduced soy',
+      '2 tablespoons rice wine vinegar' ,
+      '1 cob of corn, husks and silk removed',
+      '1 bunch broccolini, trimmed, halved lengthways',
+      '200g mange tout',
+      '200g Swiss brown mushrooms, halved',
+      '270g ramen noodles',
+      '2 teaspoons vegetable oil',
+      '400g eye fillet steak',
+      '4 eggs',
+      '2 green onions, thinly sliced diagonally',
+      '1 tablespoon toasted sesame seeds',
+      'Extra sliced chilli, to serve'
+    ],
+    time: 45,
+    image: 'https://i.imgur.com/R86weGh.jpg',
+    cuisine: 'Japanese',
+    method: ['Heat oil in a large deep saucepan over medium heat. Add garlic, ginger and chilli. Cook for 2 minutes or until aromatic. Add chicken stock, soy sauce, rice wine vinegar and 3 cups of water and bring to the boil.', 
+      'Add corn and broccolini to stock. Cook broccolini and mange tout for 2 minutes and corn for 5 minutes or until tender. Remove corn and place on a chopping board. Transfer broccolini and mange tout to a bowl. Add mushrooms to stock and cook for 3 minutes. Remove with a slotted spoon to bowl with broccolini. Add noodles to stock and cook for 4 minutes. Cut kernels from corn' ,
+      'Meanwhile, heat a frying pan over a medium high heat. Rub oil over steak and season. Cook for 3-4 minutes each side for medium-rare. Transfer to a plate and stand for 10 minutes. Thinly slice',
+      'Boil eggs for 6 minutes and then place into a bowl of cold water for a couple minutes. Open the boiled eggs and slice them in half.' ,
+      'Place noodles and stock into serving bowls. Top soup with broccolini, corn, mushrooms, beef and an egg. Sprinkle with onions, sesame seeds and chilli. Serve.'
+    ],
+    Serves: 4,
+    difficulty: 'Medium',
+    owner: {
+      _id: '000000000000000000000001'
+    }
+  },
+  {
+    name: 'Lamb kebabs & Greek salad',
+    vegan: 'false',
+    vegetarian: 'false',
+    ingredients: [
+      'juice ½ lemon',
+      '2 tbsp olive oil',
+      '1 garlic clove, crushed',
+      '600g diced lamb leg',
+      '4 large tomatoes, chopped',
+      '1 cucumber, chopped',
+      'large handful black olives, roughly chopped',
+      '200g pack feta cheese, crumbled',
+      'bunch of mint, chopped'
+    ],
+    time: 20,
+    image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-984614_10-15fa948.jpg?quality=90&webp=true&resize=300,272',
+    cuisine: 'greek',
+    method: ['Mix the lemon juice',
+      'olive oil and garlic in a mixing bowl',
+      ' Pour half into a jug and set aside for later',
+      'Add the lamb to the bowl, stir to coat',
+      'then thread onto 8 small skewers If using wooden skewers',
+      'soak in water for at least 30 mins before use',
+      'Pour over any excess marinade and let stand for 10 mins.',
+      'Meanwhile, mix all salad ingredients together, except the mint, and pour over the reserved lemon juice and oil mix',
+      'Heat a griddle pan. Cook the lamb for 8 mins, turning every couple of mins, until cooked through and slightly charred.',
+      'Mix the mint through the salad and serve immediately with the kebabs.'
+    ],
+    difficulty: 'easy',
+    serves: 4,
+    owner: {
+      _id: '000000000000000000000001'
+    }
+  },
+  {
+    name: 'Spiced feta with watermelon salsa',
+    vegan: 'false',
+    vegetarian: 'true',
+    ingredients: [
+      '¼ tsp cumin seed',
+      '¼ tsp coriander seed',
+      '200g block feta cheese ',
+      'a little olive oil',
+      '2 handfuls mixed salad leaves',
+      'small handful flat-leaf parsley',
+      '2 mint sprigs, leaves picked',
+      '2 large pitta breads',
+      '175g pack watermelon chunks,',
+      'juice 2 limes',
+      '1 red chilli , finely chopped',
+      '½ red onion , finely chopped'
+    ],
+    time: 15,
+    image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/feta-ce97a94.jpg?quality=90&webp=true&resize=300,272',
+    cuisine: 'greek',
+    method: ['Using a pestle and mortar, crush the cumin and coriander seeds with a coarse grinding of pepper',
+      'Sit the feta on a plate, sprinkle over the spice mix – turning the feta so all sides are coated – and finish with a little olive oil. Set aside.',
+      'Mix the salsa ingredients together and season.',
+      'Mix together the salad leaves, parsley and mint.',
+      'Brush the pittas with a little more oil and pop under a grill to heat through.',
+      'Put a block of feta each on 2 plates, and serve with a spoonful of salsa, salad and pitta.'
+    ],
+    difficulty: 'easy',
+    serves: 6,
+    owner: {
+      _id: '000000000000000000000002'
+    }
+  },
+  {
+    name: 'Spiced feta with watermelon salsa',
+    vegan: 'true',
+    vegetarian: 'true',
+    ingredients: [
+      '1 cup raw cashews ',
+      '6-7 medium potatoes thinly sliced  ',
+      '1 cup Califia Farms Unsweetened Almond milk (or your preferred vegan milk)',
+      '½ tsp onion powder',
+      '1 tsp salt + pinch of pepper',
+      '1 tbsp corn starch',
+      '2 tsp apple cider vinegar',
+      '1 tsp Dijon mustard',
+      '1 onion thinly sliced',
+      'Vegan cheese grated (optional'
+    ],
+    time: 30,
+    image: 'https://veganuary.com/wp-content/uploads/2021/01/Cheesy-vegan-potato-bake-1200x1800.jpg',
+    cuisine: 'american',
+    method: ['Place the cashews in a heat proof bowl and cover with boiling water, set aside for 15 minutes',
+      'Pre heat your oven to 200 degrees Celsius',
+      'Drain the cashews and place them into a blender with the Califia Farms Unsweetened Almond Milk, onion powder, salt, pepper, corn starch, vinegar and mustard and blend until smooth',
+      'Place the sliced potatoes into a bowl and pour over ¼ of the sauce mixture, stir to coat each potato slice',
+      'Once the tray is full, pour over the remaining sauce to fill the tray, if using cheese add that on top now',
+      'Cover tightly with foil and bake for 35 minutes, then remove the foil and bake for a further 30 minutes or until browned and the potatoes are soft',
+      'Sprinkle some fresh rosemary or chives on top and serve immediately'
+    ],
+    difficulty: 'easy',
+    serves: 4,
+    owner: {
+      _id: '000000000000000000000003'
+    }
   }
+  
+  
 ]

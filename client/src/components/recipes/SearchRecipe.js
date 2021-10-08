@@ -127,11 +127,9 @@ const SearchRecipe = () => {
         </div>
 
 
-        {filteredItems.length > 0 ?
-          filteredItems.map(recipe => (
-            <>
+        
               <div className="cards" >
-                {filteredItems.sort((a, b) => a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 1).slice(0, pageNumber * itemsPerPage).map((recipe, i) => {
+                {filteredItems.sort((a, b) => a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 1).slice(0, pageNumber * itemsPerPage).map(recipe => {
                   return <Link key={recipe._id} className='recipeCard' to={`/SearchRecipe/${recipe._id}`}>
                     <img className="searchIMG" src={recipe.image} alt="recipe" />
                     <div className="cardDetails">
@@ -150,12 +148,6 @@ const SearchRecipe = () => {
                   pageNumber < totalPages && <button className="pageNumber" onClick={() => setPageNumber(pageNumber + 1)}>Load more...</button>
                 }
               </div>
-            </>
-          )) : (
-            <div className="error">
-              <h2> Sorry, we cannot find this recipe!</h2>
-            </div>
-          )}
       </div>
     </div>
   )

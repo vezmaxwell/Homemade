@@ -118,7 +118,7 @@ const SingleRecipe = () => {
               </div>
               <div className="owner-recipe">
                 <Link to={`/user/${recipe.owner._id}`}>
-                  <p>{recipe.owner.username}'s recipe</p>
+                  <p className="username">{recipe.owner.username}'s recipe</p>
                 </Link>
               </div>
             </div>
