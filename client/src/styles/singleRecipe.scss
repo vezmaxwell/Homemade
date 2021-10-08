@@ -143,20 +143,24 @@ hr {
     padding: 10px 0;
   }
 }
-.owner-recipe {
-  padding: 20px;
-  background-color: rgb(255, 255, 255);
-  font-size: 20px;
-  width: 200px;
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-  text-transform: capitalize;
+.profileImg{
+  width: 90px;
+  height: 90px;
+  border-radius: 100px;
 }
 
-.serves {
-  font-style: italic;
-  color: gray;
+.owner-recipe {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 18px;
+  margin: 10px 0 10px 20px;
+  color: grey;
+}
+.owner-profile {
+  display: flex;
+  margin: 50px 30px 20px;
+  align-items: columns;
 }
 
 @media screen and (max-width: 480px) {

@@ -79,6 +79,7 @@ const SearchRecipe = () => {
   if (error) {
     return <span>Something went wrong...</span>
   }
+
   return (
 
     <div className='searchPage page'>
@@ -86,9 +87,6 @@ const SearchRecipe = () => {
         <input type='text' className='recipeSearch' placeholder='🔎 Search recipes' id='search-field' onInput={handleSearch}></input>
 
       </div>
-
-
-
       <div className="container">
 
         <div className="selectFilter">
@@ -129,33 +127,37 @@ const SearchRecipe = () => {
         </div>
 
 
-
-        <div className="cards" >
-          {filteredItems.sort((a, b) => a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 1).slice(0, pageNumber * itemsPerPage).map((recipe, i) => {
-            return <Link key={recipe._id} className='recipeCard' to={`/SearchRecipe/${recipe._id}`}>
-              <img className="searchIMG" src={recipe.image} alt="recipe" />
-              <div className="cardDetails">
-                <div className="title">
-                  <h4>{recipe.name}</h4>
-                </div>
-                <Stars rating={recipe.averageRating} />
-                <p>Duration: {recipe.time} minutes</p>
-                {recipe.owner && <p>Created by: {recipe.owner.username}</p>}
+        {filteredItems.length > 0 ?
+          filteredItems.map(recipe => (
+            <>
+              <div className="cards" >
+                {filteredItems.sort((a, b) => a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 1).slice(0, pageNumber * itemsPerPage).map((recipe, i) => {
+                  return <Link key={recipe._id} className='recipeCard' to={`/SearchRecipe/${recipe._id}`}>
+                    <img className="searchIMG" src={recipe.image} alt="recipe" />
+                    <div className="cardDetails">
+                      <div className="title">
+                        <h4>{recipe.name}</h4>
+                      </div>
+                      <Stars rating={recipe.averageRating} />
+                      <p>Duration: {recipe.time} minutes</p>
+                      {recipe.owner && <p>Created by: {recipe.owner.username}</p>}
+                    </div>
+                  </Link>
+                })}
               </div>
-            </Link>
-          }
-
+              <div className="loadBackground">
+                {
+                  pageNumber < totalPages && <button className="pageNumber" onClick={() => setPageNumber(pageNumber + 1)}>Load more...</button>
+                }
+              </div>
+            </>
+          )) : (
+            <div className="error">
+              <h2> Sorry, we cannot find this recipe!</h2>
+            </div>
           )}
-        </div>
-        <div className="loadBackground">
-          {
-            pageNumber < totalPages && <button className="pageNumber" onClick={() => setPageNumber(pageNumber + 1)}>Load more...</button>
-          }
-        </div>
       </div>
     </div>
-
-
   )
 }
 

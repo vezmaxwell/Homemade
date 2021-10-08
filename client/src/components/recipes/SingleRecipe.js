@@ -109,6 +109,19 @@ const SingleRecipe = () => {
                 </div>
               </div>
             </div>
+
+            <div className="owner-profile">
+              <div>
+                {recipe.owner.profileImage &&
+                  <img className="profileImg" src={recipe.owner.profileImage} alt="profile" />
+                }
+              </div>
+              <div className="owner-recipe">
+                <Link to={`/user/${recipe.owner._id}`}>
+                  <p>{recipe.owner.username}'s recipe</p>
+                </Link>
+              </div>
+            </div>
             <hr />
             <div className='method'>
               <h3 className="singleh3">Method</h3>
@@ -121,12 +134,7 @@ const SingleRecipe = () => {
               </ol>
             </div>
             <hr />
-            <div className="owner-recipe">
-              <Link to={`/user/${recipe.owner._id}`}>
-                <p> Owner's recipe</p>
-              </Link>
-            </div>
-            <hr />
+
             <div className="review">
               <h3 className="singleh3">Reviews</h3>
               {userIsAuthenticated() ?

@@ -251,7 +251,7 @@ export default [
       'Chop the remaining gem lettuce into quarters, then add to a bowl and toss with 1 tbsp [2 tbsp] olive oil and season lightly with salt and pepper – these are your dressed gem wedges',
       'Once the burgers are almost done, top each patty with the grated cheddar and return the tray to the oven for 3 min or until the cheese is melted – these are your cheesy beef patties',
       'Heat a large, dry, wide-based pan (preferably non-stick) over a medium heat and add the brioche halves, cut side down, and cook for 3 min or until toasted and charred',
-      'To build, spread a little burger sauce onto each toasted brioche base, then pile up with a lettuce leaf, a cheesy beef patty, crispy bacon and top with a toasted brioche lid – this is your ultimate bacon cheeseburger. Serve the ultimate bacon cheeseburger with the rosemary salted fries, dressed gem wedges and any remaining burger sauce to the side. Enjoy! ' 
+      'To build, spread a little burger sauce onto each toasted brioche base, then pile up with a lettuce leaf, a cheesy beef patty, crispy bacon and top with a toasted brioche lid – this is your ultimate bacon cheeseburger. Serve the ultimate bacon cheeseburger with the rosemary salted fries, dressed gem wedges and any remaining burger sauce to the side. Enjoy! '
     ],
     difficulty: 'medium',
     owner: {
