@@ -20,6 +20,7 @@ const recipeSchema = new mongoose.Schema({
   cuisine: { type: String, required: true },
   method: [{ type: String, required: true }],
   difficulty: { type: String, required: true },
+  serves: { type: Number },
   owner: { type: mongoose.Schema.ObjectId, ref: 'User' },
   reviews: [reviewSchema]
 })

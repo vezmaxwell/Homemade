@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 import axios from 'axios'
 import ImageUpload from '../helpers/ImageUpload'
 import { getTokenFromLocalStorage } from '../helpers/auth'
@@ -59,6 +59,8 @@ const ProfileEdit = () => {
 
 
   return (
+    <>
+    <Link to="/profile"><button>Back</button></Link>
     <div className="signUpPage page">
 
       <div className="form-header sign-up-form-header">
@@ -85,6 +87,7 @@ const ProfileEdit = () => {
       </div>
 
     </div>
+    </>
   )
 }
 

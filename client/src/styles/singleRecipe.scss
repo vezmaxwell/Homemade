@@ -19,7 +19,7 @@ hr {
     text-align: center;
 
     p {
-      margin: 20px;
+      margin: 7px;
     }
 
     ul {
@@ -151,6 +151,12 @@ hr {
   display: flex;
   justify-content: center;
   margin: 20px;
+  text-transform: capitalize;
+}
+
+.serves {
+  font-style: italic;
+  color: gray;
 }
 
 @media screen and (max-width: 480px) {

@@ -95,6 +95,7 @@ const SingleRecipe = () => {
 
                       <h3 className="singleh3">Ingredients</h3>
                       <p>Difficulty: {recipe.difficulty}</p>
+                      <p className="serves">Serves {recipe.serves} people</p>
 
 
                       <ul>
