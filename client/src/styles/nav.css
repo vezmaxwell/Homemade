@@ -1,0 +1,111 @@
+.navLink {
+  text-transform: uppercase;
+  margin: unset;
+  margin-left: 5px;
+}
+
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navBar-container {
+  background-color: #f8bfb4;
+  height: 80px;
+  width: 100%;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navBar-container li {
+  margin: 2px;
+}
+
+.logo-container {
+  height: 80px;
+  width: 80px;
+}
+
+.homemade-container {
+  height: 80px;
+  position: absolute;
+  visibility: hidden;
+}
+
+.logo, .homemade-logo {
+  height: 100%;
+  width: 100%;
+}
+
+.homemade-logo {
+  visibility: hidden;
+  z-index: -1;
+}
+
+.nav-links-authenticated {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: end;
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 480px) {
+  .homemade-logo {
+    visibility: visible;
+  }
+  .navLink {
+    padding-right: 10px;
+  }
+  .nav-links-authenticated {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nav-links-authenticated {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: start;
+  }
+  .navBar-container {
+    height: 80px;
+  }
+}
+/*# sourceMappingURL=nav.css.map */

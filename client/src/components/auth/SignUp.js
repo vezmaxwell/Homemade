@@ -15,7 +15,7 @@ const SignUp = () => {
     username: '',
     password: '',
     passwordConfirmation: '',
-    profileImage: 'https://image.shutterstock.com/image-vector/continuous-line-drawing-chef-cooking-260nw-1518511619.jpg'
+    profileImage: 'https://i.imgur.com/gYQmnSa.jpg'
   })
 
   const [errors, setErrors] = useState({
@@ -43,7 +43,7 @@ const SignUp = () => {
       setTokenToLocalStorage(data.token)
       history.push('/')
     } catch (error) {
-      console.log('error ->', error.response)
+      console.log('error ->', error.response.data.errors)
       if (error.response.data.errors) setErrors(error.response.data.errors)
     }
   }
@@ -95,7 +95,7 @@ const SignUp = () => {
           <div className="formfield">
             <label htmlFor="comfirmPassword" >Confirm Password</label>
             <input onInput={handleChange} type="password" id="comfirmPassword" name="passwordConfirmation" value={formData.passwordConfirmation} placeholder="Confirm your password" />
-            {errors.passwordConfirmation && <p className="error">The passwords didn’t match. Try again.</p>}
+            {errors.passwordConfirmation && <p className="error">Password don't match</p>}
           </div>
 
           <div className="formfield">

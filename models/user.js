@@ -25,6 +25,7 @@ userSchema.virtual('createdRecipes', {
   foreignField: 'owner'
 })
 
+
 //* Remove password
 userSchema.set('toJSON', {
   virtuals: true,

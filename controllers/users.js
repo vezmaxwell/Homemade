@@ -11,3 +11,16 @@ export const getProfile = async (req, res) => {
     return res.status(404).json({ message: error.message })
   }
 }
+
+export const editProfile = async (req, res) => {
+  try {
+    const user = await User.findById(req.currentUser._id)
+    if (!user) throw new Error('User not found')
+    await user.update(req.body)
+    return res.status(202).json(user)
+  } catch (error) {
+    console.log('User not updated')
+    console.log(error)
+    return res.status(404).json(error)
+  }
+}

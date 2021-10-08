@@ -63,7 +63,7 @@ const RecipeNew = () => {
     }
   }
 
-  const handleImageUrl = (event, url) => {
+  const handleImageUrl = (url) => {
     try {
       setFormData({ ...formData, image: url })
       // setFormData({ ...formData, [event.target.name]: url })

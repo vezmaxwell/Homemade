@@ -1,0 +1,53 @@
+.profileHeader {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.profileHeader h1 {
+  margin: 20px;
+  font-weight: lighter;
+}
+
+.profileHeader p {
+  color: grey;
+}
+
+.profileHeader #profileImage {
+  margin: 20px 0 0 0;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.profileBody {
+  text-align: center;
+  margin: 60px 0 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.profileBody h2 {
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+.profileButton {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.profileButton button {
+  width: 100px;
+}
+
+.editButton {
+  font-size: 25px;
+  margin: -10px 0 40px 0;
+  opacity: 50%;
+}
+/*# sourceMappingURL=profile.css.map */

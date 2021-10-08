@@ -34,7 +34,7 @@ export default [
       'Add the lime juice, season to taste and serve with avocado and the grain of your choice. Lovely!'],
     difficulty: 'Easy',
     owner: {
-      _id: '615c73f14fe2aea84aa36390'
+      _id: '000000000000000000000001'
     }
   },
   {
@@ -63,7 +63,7 @@ export default [
       'Divide the mixture between the tortillas, then fold the sides in and roll them up. Pour half the passata sauce into a 22cm square baking dish, then place the enchiladas on top, side by side. Dot over the remaining sauce and sprinkle over the grated cheese, then bake for 25-30 mins until golden brown.'],
     difficulty: 'medium',
     owner: {
-      _id: '615c73f14fe2aea84aa36390'
+      _id: '000000000000000000000002'
     }
   },
   {
@@ -93,7 +93,7 @@ export default [
       'Scatter over the parmesan and bake for 20 minutes until golden and bubbling.'],
     difficulty: 'medium',
     owner: {
-      _id: '615c73f14fe2aea84aa36390'
+      _id: '000000000000000000000003'
     }
   },
   {
@@ -120,7 +120,7 @@ export default [
       'Drain the pasta, add the peas and prawns, with a tablespoon of pesto - mix together and serve with the spring onions and a drizzle of lemon juice, enjoy straight away! '],
     difficulty: 'Easy',
     owner: {
-      _id: '615c73f14fe2aea84aa36390'
+      _id: '000000000000000000000001'
     }
   },
   {
@@ -143,7 +143,7 @@ export default [
       'Whizz everything together until smooth and pour into 4 glasses. Halve the remaining passion fruit, scoop out the pulp and drizzle a little on top of each smoothie. Slice the leftover half of kiwi fruit and finish each smoothie with a couple of slices. '],
     difficulty: 'Easy',
     owner: {
-      _id: '615c73f14fe2aea84aa36390'
+      _id: '000000000000000000000002'
     }
   },
   {
@@ -182,7 +182,7 @@ export default [
       'Allow to stand for 5 mins before serving. Garnish with parsley immediately before serving '],
     difficulty: 'Hard',
     owner: {
-      _id: '615c73f14fe2aea84aa36390'
+      _id: '000000000000000000000003'
     }
   },
   {
@@ -214,12 +214,7 @@ export default [
     ],
     difficulty: 'medium',
     owner: {
-      _id: '615c73f14fe2aea84aa36390',
-      username: 'Admin',
-      email: 'admin@email.com',
-      password: '$2b$10$HActXy6mTr16j79D81VQ2usW/uffIuc0xY1BZFtjzo6FWfln5BZ6K',
-      profileImage: 'https://www.knowmuhammad.org/img/noavatarn.png',
-      __v: 0
+      _id: '000000000000000000000001'
     }
   },
   {
@@ -259,7 +254,7 @@ export default [
     ],
     difficulty: 'medium',
     owner: {
-      _id: '615c73f14fe2aea84aa36390'
+      _id: '000000000000000000000002'
     }
   }
 ]

@@ -98,7 +98,7 @@ const SingleRecipe = () => {
 
 
                       <ul>
-                        {recipe.ingredients.map((ingredient, n)=> {
+                        {recipe.ingredients.map((ingredient, n) => {
                           return <li key={n} className="ingredients">{ingredient}</li>
                         })}
                       </ul>
@@ -120,6 +120,12 @@ const SingleRecipe = () => {
               </ol>
             </div>
             <hr />
+            <div className="owner-recipe">
+              <Link to={`/user/${recipe.owner._id}`}>
+                <p> Owner's recipe</p>
+              </Link>
+            </div>
+            <hr />
             <div className="review">
               <h3 className="singleh3">Reviews</h3>
               {userIsAuthenticated() ?
@@ -130,17 +136,19 @@ const SingleRecipe = () => {
               <ul>
                 {recipe.reviews.map((review, n) => {
                   return <li key={n}>
+                    <Link to={`/user/${review.owner._id}`}>
                     <div className="reviewHeader">
-                    {review.owner.profileImage &&
-                      <img src={review.owner.profileImage} className="profileImage" alt="profilePhoto" />
-                    }
-                    <p><strong>By {review.owner.username}</strong></p>
+                      {review.owner.profileImage &&
+                        <img src={review.owner.profileImage} className="profileImage" alt="profilePhoto" />
+                      }
+                      <p><strong>By {review.owner.username}</strong></p>
                     </div>
                     <Stars rating={review.rating} />
                     <p>{review.text}</p>
                     {review.image &&
                       <img src={review.image} className='reviewImage' alt="users attempt" />
                     }
+                    </Link>
                   </li>
                 })}
               </ul>
@@ -148,7 +156,7 @@ const SingleRecipe = () => {
             <div className="related">
               <h3 className="singleh3">Related Recipes</h3>
               <div className="cards" >
-                {recipes.filter(rec => rec.cuisine.toLowerCase() === `${recipe.cuisine}` && rec.name !== `${recipe.name}`).map((rec, n)=> {
+                {recipes.filter(rec => rec.cuisine.toLowerCase() === `${recipe.cuisine}` && rec.name !== `${recipe.name}`).map((rec, n) => {
                   return <Link key={n} className='recipeCard' to={`/SearchRecipe/${rec._id}`}>
                     <img className="searchIMG" src={rec.image} alt="recipe" />
                     <div className="cardDetails">

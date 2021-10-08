@@ -26,6 +26,8 @@ const Home = () => {
   if (!recipes.length) {
     return <p>Loading</p>
   }
+
+
   return (
     <>
       <div className="container">
@@ -33,21 +35,21 @@ const Home = () => {
 
           <Carousel showIndicators={false} showStatus={false} autoPlay infiniteLoop>
             {recipes.sort((a, b) => b.averageRating - a.averageRating).slice(0, 3).map(recipe => {
-              
-              return (
-                  <div key={recipe.name} className='carouselItem'>
-                    <div className="carouselImage">
-                      <img src={recipe.image} alt={recipe.name} />
-                    </div>
-                    <div className="carouselInfo">
-                      <h2 className="carousel-name" key={recipe._id}>{recipe.name}</h2>
-                      <h3 className="recipeTime">Average Rating:</h3>
-                      <Stars rating={recipe.averageRating} />
 
-                      <h3 className="recipeTime">Duration: {recipe.time} minutes</h3>
-                      <Link className="viewRecipe" to={`SearchRecipe/${recipe._id}`}>See full recipe</Link>
-                    </div>
+              return (
+                <div key={recipe.name} className='carouselItem'>
+                  <div className="carouselImage">
+                    <img src={recipe.image} alt={recipe.name} />
                   </div>
+                  <div className="carouselInfo">
+                    <h2 className="carousel-name" key={recipe._id}>{recipe.name}</h2>
+                    <h3 className="recipeTime">Average Rating:</h3>
+                    <Stars rating={recipe.averageRating} />
+
+                    <h3 className="recipeTime">Duration: {recipe.time} minutes</h3>
+                    <Link className="viewRecipe" to={`SearchRecipe/${recipe._id}`}>See full recipe</Link>
+                  </div>
+                </div>
               )
             })
             }

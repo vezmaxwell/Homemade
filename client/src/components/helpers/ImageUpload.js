@@ -15,7 +15,7 @@ const ImageUpload = ({ value, name, handleImageUrl }) => {
   return (
     <>
       <label htmlFor="image">Upload Image</label>
-      <input type="file" name={name} id="image" className="input" onChange={handleChange} />
+      <input type="file" name={name} id="image" className="input" onChange={handleChange}/>
     </>
   )
 
