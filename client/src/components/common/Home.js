@@ -32,7 +32,8 @@ const Home = () => {
         <div className="homePage page">
 
           <Carousel showIndicators={false} showStatus={false} autoPlay infiniteLoop>
-            {recipes.slice(0, 3).map(recipe => {
+            {recipes.sort((a, b) => b.averageRating - a.averageRating).slice(0, 3).map(recipe => {
+              
               return (
                   <div key={recipe.name} className='carouselItem'>
                     <div className="carouselImage">

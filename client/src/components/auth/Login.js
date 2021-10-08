@@ -57,7 +57,7 @@ const Login = () => {
         <div className="form-container">
           <form onSubmit={handleSubmit}>
 
-            <div className="formfield">form-button
+            <div className="formfield">
               <label htmlFor="email" >Email</label>
               <input onInput={handleChange} type="email" id="email" name="email" value={formData.email} placeholder="Your email goes here" />
             </div>

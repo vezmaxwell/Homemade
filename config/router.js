@@ -32,6 +32,9 @@ router.route('/login')
 router.route('/profile')
   .get(secureRoute, getProfile)
 
+router.route('/profile/:id')
+// .get(secureRoute, getProfile)
+
 
 
 
