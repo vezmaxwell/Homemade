@@ -15,7 +15,7 @@ const SignUp = () => {
     username: '',
     password: '',
     passwordConfirmation: '',
-    profileImage: ''
+    profileImage: 'https://image.shutterstock.com/image-vector/continuous-line-drawing-chef-cooking-260nw-1518511619.jpg'
   })
 
   const [errors, setErrors] = useState({
@@ -77,25 +77,25 @@ const SignUp = () => {
           <div className="formfield">
             <label htmlFor="email" >Email</label>
             <input onInput={handleChange} type="email" id="email" name="email" value={formData.email} placeholder="Your email goes here" />
-            {errors.email.message && <p className="error">Please enter an email</p>}
+            {errors.email && <p className="error">Please enter an email</p>}
           </div>
 
           <div className="formfield">
             <label htmlFor="userName" >Username</label>
             <input onInput={handleChange} type="text" id="userName" name="username" value={formData.username} placeholder="Your username goes here" />
-            {errors.username.message && <p className="error">Please enter a username</p>}
+            {errors.username && <p className="error">Please enter a username</p>}
           </div>
 
           <div className="formfield">
             <label htmlFor="password" >Password</label>
             <input onInput={handleChange} type="password" id="password" name="password" value={formData.password} placeholder="Your email goes here" />
-            {errors.password.message && <p className="error">please enter a password</p>}
+            {errors.password && <p className="error">please enter a password</p>}
           </div>
 
           <div className="formfield">
             <label htmlFor="comfirmPassword" >Confirm Password</label>
             <input onInput={handleChange} type="password" id="comfirmPassword" name="passwordConfirmation" value={formData.passwordConfirmation} placeholder="Confirm your password" />
-            {errors.passwordConfirmation.message && <p className="error">The passwords didn’t match. Try again.</p>}
+            {errors.passwordConfirmation && <p className="error">The passwords didn’t match. Try again.</p>}
           </div>
 
           <div className="formfield">
