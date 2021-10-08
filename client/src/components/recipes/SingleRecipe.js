@@ -110,7 +110,7 @@ const SingleRecipe = () => {
             </div>
             <hr />
             <div className='method'>
-              <h3>Method</h3>
+              <h3 className="singleh3">Method</h3>
               <ol>
                 {recipe.method.map((method, n) => {
                   return <>
@@ -128,12 +128,10 @@ const SingleRecipe = () => {
             <hr />
             <div className="review">
               <h3 className="singleh3">Reviews</h3>
-
-
-
-
-              {userIsAuthenticated() &&
+              {userIsAuthenticated() ?
                 <Link className="navLink" to={`/searchrecipe/${recipe._id}/review/`}><button>Add Review</button></Link>
+                :
+                <Link className="navLink" to={`/login`}><button>Add Review</button></Link>
               }
               <ul>
                 {recipe.reviews.map((review, n) => {

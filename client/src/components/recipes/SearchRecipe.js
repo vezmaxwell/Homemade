@@ -10,8 +10,11 @@ const SearchRecipe = () => {
   const [recipes, setRecipes] = useState([])
   const [diet, setDiet] = useState('all')
   const [rating, setRating] = useState('all')
+  const [difficulty, setDifficulty] = useState('all')
   const [search, setSearch] = useState('')
   const [error, setError] = useState(false)
+
+
 
   const [pageNumber, setPageNumber] = useState(1)
 
@@ -44,6 +47,11 @@ const SearchRecipe = () => {
     setPageNumber(1)
   }
 
+  const handleDifficulty = (event) => {
+    setDifficulty(event.target.value)
+    setPageNumber(1)
+  }
+
   const filteredItems = recipes.filter(recipe => recipe.name.toLowerCase().includes(search)).filter(recipe => {
     if (diet === 'all') return true
     if (diet === 'vegetarian' && recipe.vegetarian) return true
@@ -56,6 +64,12 @@ const SearchRecipe = () => {
     if (rating === 'three' && Number(recipe.averageRating) >= 3) return true
     if (rating === 'four' && Number(recipe.averageRating) >= 4) return true
     if (rating === 'five' && Number(recipe.averageRating) >= 5) return true
+    return false
+  }).filter(recipe => {
+    if (difficulty === 'all') return true
+    if (difficulty === 'Easy' && recipe.difficulty === 'Easy') return true
+    if (difficulty === 'Medium' && recipe.difficulty === 'Medium') return true
+    if (difficulty === 'Hard' && recipe.difficulty === 'Hard') return true
     return false
   })
 
@@ -79,7 +93,7 @@ const SearchRecipe = () => {
 
         <div className="selectFilter">
           <div className="selectFilterDiet">
-            <div>Diet:</div>
+            <div>Diet</div>
             <option value="all" default></option>
             <select className="searchSelect" htmlFor="recipes" id="recipes" onChange={handleDiet}>
               {/* <option value="all" default>All 🍕</option> */}
@@ -88,8 +102,19 @@ const SearchRecipe = () => {
               <option value="vegan">Vegan 🌱</option>
             </select>
           </div>
+          <div className="selectFilterDiet">
+            <div>Difficulty</div>
+            <option value="all" default></option>
+            <select className="searchSelect" htmlFor="recipes" id="recipes" onChange={handleDifficulty}>
+              {/* <option value="all" default>All 🍕</option> */}
+              <option value="all" default></option>
+              <option value="Easy">Easy</option>
+              <option value="Medium">Medium</option>
+              <option value="Hard">Hard</option>
+            </select>
+          </div>
           <div className="selectFilterRating">
-            <div>Average Rating:</div>
+            <div>Average Rating</div>
             <option value="all" default></option>
             <select className="searchSelect" htmlFor="recipes" id="recipes" onChange={handleRating}>
               {/* <option value="all" default> All ⭐️ </option> */}
@@ -106,7 +131,7 @@ const SearchRecipe = () => {
 
 
         <div className="cards" >
-          {filteredItems.slice(0, pageNumber * itemsPerPage).map((recipe, i) => {
+          {filteredItems.sort((a, b) => a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 1).slice(0, pageNumber * itemsPerPage).map((recipe, i) => {
             return <Link key={recipe._id} className='recipeCard' to={`/SearchRecipe/${recipe._id}`}>
               <img className="searchIMG" src={recipe.image} alt="recipe" />
               <div className="cardDetails">

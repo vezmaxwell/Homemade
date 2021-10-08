@@ -82,6 +82,7 @@ hr {
 
 .mainImg {
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -111,8 +112,8 @@ hr {
 
 
 .reviewImage {
-  width: 80px;
-  height: 80px;
+  max-width: 120px;
+  max-height: 120px;
 }
 
 .profileImage{

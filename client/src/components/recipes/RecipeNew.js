@@ -26,7 +26,8 @@ const RecipeNew = () => {
     time: {},
     image: {},
     cuisine: {},
-    difficulty: {}
+    difficulty: {},
+    ingredients: {}
   })
 
 
@@ -62,9 +63,10 @@ const RecipeNew = () => {
     }
   }
 
-  const handleImageUrl = (url) => {
+  const handleImageUrl = (event, url) => {
     try {
       setFormData({ ...formData, image: url })
+      // setFormData({ ...formData, [event.target.name]: url })
     } catch (error) {
       if (error.response.data.errors) setErrors(error.response.data.errors)
     }
@@ -97,6 +99,7 @@ const RecipeNew = () => {
           <div className="formfield">
             <p>Ingredients</p>
             <textarea onInput={handleMultiEnter} name="ingredients" type="text" placeholder="Ingredients ex: 1 pepper, 2 cloves of garlic, 3 oranges,..." value={formData.ingredients} />
+            {errors.ingredients && <p className="error">Please enter ingredients</p>}
           </div>
 
           <div className="formfield">
@@ -137,7 +140,7 @@ const RecipeNew = () => {
 
           <div className="formfield">
             <p>Method</p>
-            <textarea onInput={handleMultiMethod} name="method" type="text" placeholder="Enter your each step of your method with a semi-colon (;) to distinguish each step e.g Prepare ingredients; cook all ingredients; serve food; ..." value={formData.method} />
+            <textarea onInput={handleMultiMethod} name="method" type="text" placeholder="Enter your each step of your method with a comma to distinguish each step e.g Prepare ingredients, cook all ingredients, serve food,..." value={formData.method} />
           </div>
 
           <div className="formfield">
