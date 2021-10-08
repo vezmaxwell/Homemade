@@ -1,8 +1,8 @@
 import express from 'express'
 import { secureRoute } from './secureRoute.js'
 import { loginUser, registerUser } from '../controllers/auth.js'
-import { getAllRecipes, createRecipe, getSingleRecipe, editRecipe, deleteRecipe, addReview, deleteReview } from '../controllers/recipes.js'
-import { getProfile } from '../controllers/users.js' 
+import { getAllRecipes, createRecipe, getSingleRecipe, editRecipe, deleteRecipe, addReview, deleteReview, getUserProfile } from '../controllers/recipes.js'
+import { getProfile } from '../controllers/users.js'
 
 const router = express.Router()
 
@@ -32,7 +32,8 @@ router.route('/login')
 router.route('/profile')
   .get(secureRoute, getProfile)
 
-
+router.route('/user/:id')
+  .get(getUserProfile)
 
 
 export default router

@@ -10,7 +10,7 @@ const reviewSchema = new mongoose.Schema({
 })
 
 const recipeSchema = new mongoose.Schema({
-  name: { type: String, required: true, unique: true },
+  name: { type: String, required: false, unique: true },
   summary: { type: String, maxlengt: 500 },
   vegan: { type: Boolean, required: true },
   vegetarian: { type: Boolean, required: true },
