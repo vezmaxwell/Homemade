@@ -15,6 +15,7 @@ const SingleRecipe = () => {
 
   const history = useHistory()
 
+  
   useEffect(() => {
 
     const getData = async () => {

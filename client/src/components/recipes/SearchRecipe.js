@@ -143,6 +143,7 @@ const SearchRecipe = () => {
                   </Link>
                 })}
               </div>
+              
               <div className="loadBackground">
                 {
                   pageNumber < totalPages && <button className="pageNumber" onClick={() => setPageNumber(pageNumber + 1)}>Load more...</button>
