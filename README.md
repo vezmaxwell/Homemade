@@ -31,6 +31,7 @@ Day 1 was planning day. Iury came up with the idea of a recipe site quickly, so 
 
 
 **Day 2 - 3**
+
 Days 2-3 were coded with a shared screen in order to build the back-end using Express JS and Mongo DB. We coded this together via screen-sharing in order to avoid any clashing and so we all knew where everything was when it came to implementing the front end. These days included making the recipe and review schemas with a few seeded recipes so that we had some content to work with whilst building the front-end. 
 
     const  reviewSchema  =  new  mongoose.Schema({
