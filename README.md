@@ -1,10 +1,12 @@
 ## **Homemade**
 
 **Team mates**
+
 <a href="https://github.com/iuryliberato" target="_blank">Iury Liberato</a>
 <a href="https://github.com/joinSamBalboa" target="_blank">Jason Abimbola</a>
 
 **Overview**
+
 A recipe website application where users can login in order to add recipes and leave reviews and customise their profile. 
 
 **Technologies Used**
