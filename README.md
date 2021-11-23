@@ -1,5 +1,9 @@
 ## **Homemade**
 
+**Team mates**
+<a href="https://github.com/iuryliberato" target="_blank">Iury Liberato</a>
+<a href="https://github.com/joinSamBalboa" target="_blank">Jason Abimbola</a>
+
 **Overview**
 A recipe website application where users can login in order to add recipes and leave reviews and customise their profile. 
 
@@ -25,7 +29,7 @@ A recipe website application where users can login in order to add recipes and l
 
 **Day 1**
 
-Day 1 was planning day. Iury came up with the idea of a recipe site quickly, so we started by looking at other recipe sites for inspiration. We had a main site we used for referencing (bon appetit). I made some photoshop mockups of site design for us to reference towards which everyone contributed ideas to.
+Day 1 was planning day. Iury came up with the idea of a recipe site quickly, so we started by looking at other recipe sites for inspiration. We had a main site we used for referencing (bon appetit). I made some photoshop mockups of site design for us to reference towards which everyone contributed ideas to via screen sharing.
 
 ![homemade_singleRecipe](https://user-images.githubusercontent.com/81028718/140305746-2fd8247d-4356-4270-8cfa-5d22979c39ed.png)
 
@@ -62,6 +66,7 @@ Days 2-3 were coded with a shared screen in order to build the back-end using Ex
 
 
 **Day 4**
+
 Day 4 we began to build the front-end using React JS. We started by planning out the main components we were going to need: nav-bar, login, sign-up, footer, home, auth, image upload, profile, profile-edit, recipe-edit, recipe-new, search-recipe, single-recipe, review-edit, review-new, stars, user-profile. 
 
 We started by focusing on nav-bar, reviews, login, homepage. My focus for this day was on the nav-bar and the login form. 
@@ -69,11 +74,13 @@ We started by focusing on nav-bar, reviews, login, homepage. My focus for this d
 <img width="880" alt="Screenshot 2021-11-04 at 11 33 10" src="https://user-images.githubusercontent.com/81028718/140306545-567b155f-c6ad-48b2-8208-e5eec4a56422.png">
 
 **Day 5**
+
 Day 5 we created virtual fields for the average ratings, map methods for the reviews and filter methods for all recipes. The filter and map methods were used on the all recipes page in order to filter in different ways what recipes you would want to look at. We made the nav-bar functional and connected the built components to the links and added a carousel for the homepage. 
 
 <img width="1680" alt="Screenshot 2021-11-04 at 11 34 18" src="https://user-images.githubusercontent.com/81028718/140306678-d4315c5f-b78d-426e-b7a2-6677a9f010df.png">
 
 **Day 6**
+
 On day 6 authentication and the secure route were worked on. Login, signup and review components were connected with this. The add reviews section was also added to the bottom of each recipe page. With the authentication sorted, I made sure the nav-bar was also made to change when somebody logins so they could see logout and create recipe.
 
     <Link  className="navLink"  to='/'>    
@@ -105,15 +112,18 @@ On day 6 authentication and the secure route were worked on. Login, signup and r
 The star rating system was added so you could see what the average star ratings for each recipe were. 
 
 **Day 7**
+
 We started by designing the all recipes page together by screen sharing photoshop. Then focused on searching for all recipes using the filter method. I added the functionality to the forms. New forms were added for creating recipes and adding reviews following the same format as the other forms. 
 
 Later in the day we screen shared to begin making the website responsive for different screen sizes.
 
 **Day 8**
+
 The add review component was completed. The load more function was added so that the all recipes page doesn't display an endless stream of recipes. Login and signup errors were added. General css was tidied up and added in, better quality photos were added in and we finished making it responsive.
 
 
 **Day 9**
+
 On day 9 we added some final functionality. On each recipe page the recipe displayed the owner of the recipe which lead to the owners profile. We added in a way for people to change their name and profile image. We added in some more seeds to fill out the site some more.  
 
 <img width="819" alt="Screenshot 2021-11-04 at 13 19 14" src="https://user-images.githubusercontent.com/81028718/140320273-df41ff0d-02d1-4bf3-b299-0f33ef6bff4a.png">
